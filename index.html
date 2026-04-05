@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0044)https://www.genspark.ai/api/files/s/0HV9bAxX -->
+<!-- saved from url=(0044)https://www.genspark.ai/api/files/s/jkpnpDr5 -->
 <html lang="pt-BR" data-theme="dark"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -300,8 +300,8 @@
         fill: none;
         stroke-width: 18;
         stroke-linecap: round;
-        stroke-dasharray: 314; /* PI * 100 (raio) */
-        stroke-dashoffset: 314;
+        stroke-dasharray: 251.3; /* PI * 80 (raio real do SVG) */
+        stroke-dashoffset: 251.3;
         transition:
           stroke-dashoffset 1.5s ease-out,
           stroke 0.5s;
@@ -789,9 +789,10 @@
       <div class="logo-projeto-large">
         <img src="./index_files/logo.png" alt="Projeto Ascensão" style="height:120px; width:auto; display:block; margin:0 auto 20px;">
       </div>
-      <p class="text-muted" style="max-width: 400px; margin: 0 auto">
+      <p class="text-muted" style="max-width: 400px; margin: 0 auto 30px">
         Acesse através do link enviado após seu cadastro no Projeto Ascensão.
       </p>
+      <button class="btn-primary" style="max-width:260px" onclick="loadDemo()">🧪 MODO DEMONSTRAÇÃO</button>
     </div>
 
     <!-- TELA PRINCIPAL -->
@@ -816,12 +817,12 @@
 
       <div class="tabs-container">
         <nav class="tabs-nav">
-          <button class="tab-btn active" onclick="switchTab(&#39;dashboard&#39;)">🏠 DASHBOARD</button>
-          <button class="tab-btn" onclick="switchTab(&#39;treino&#39;)">🏋️ TREINO</button>
-          <button class="tab-btn" onclick="switchTab(&#39;dieta&#39;)">🥗 DIETA</button>
-          <button class="tab-btn" onclick="switchTab(&#39;agenda&#39;)">📅 AGENDA</button>
-          <button class="tab-btn" onclick="switchTab(&#39;avaliacoes&#39;)">📊 AVALIAÇÕES</button>
-          <button class="tab-btn" onclick="switchTab(&#39;suporte&#39;)">📞 SUPORTE</button>
+          <button class="tab-btn active" onclick="switchTab(&#39;dashboard&#39;,this)">🏠 DASHBOARD</button>
+          <button class="tab-btn" onclick="switchTab(&#39;treino&#39;,this)">🏋️ TREINO</button>
+          <button class="tab-btn" onclick="switchTab(&#39;dieta&#39;,this)">🥗 DIETA</button>
+          <button class="tab-btn" onclick="switchTab(&#39;agenda&#39;,this)">📅 AGENDA</button>
+          <button class="tab-btn" onclick="switchTab(&#39;avaliacoes&#39;,this)">📊 AVALIAÇÕES</button>
+          <button class="tab-btn" onclick="switchTab(&#39;suporte&#39;,this)">📞 SUPORTE</button>
         </nav>
 
         <!-- ABA: DASHBOARD -->
@@ -831,14 +832,14 @@
             <div class="gauge-container">
               <svg class="gauge-svg" viewBox="0 0 200 110">
                 <path class="gauge-bg" d="M 20 100 A 80 80 0 0 1 180 100"></path>
-                <path id="gauge-path" class="gauge-arc" d="M 20 100 A 80 80 0 0 1 180 100" style="stroke-dashoffset: 314; stroke: rgb(220, 38, 38);"></path>
+                <path id="gauge-path" class="gauge-arc" d="M 20 100 A 80 80 0 0 1 180 100" style="stroke-dashoffset: 251.3; stroke: rgb(220, 38, 38);"></path>
               </svg>
               <div class="gauge-value">
                 <span class="gauge-pct" id="gauge-text">0%</span>
                 <span class="gauge-label">FREQUÊNCIA</span>
               </div>
             </div>
-            <div class="gauge-subtext"><span id="gauge-sessions">0</span> sessões realizadas este mês</div>
+            <div class="gauge-subtext"><span id="gauge-sessions">0/20</span> sessões realizadas este mês</div>
             <div id="unlock-badge" class="unlock-badge">🔓 NOVA PLANILHA DESBLOQUEADA!</div>
           </div>
 
@@ -874,6 +875,15 @@
               </div>
             </div>
             <button class="btn-outline" onclick="switchTab(&#39;dieta&#39;)">VER PLANO →</button>
+          </div>
+
+          <!-- ALERTA LIMITAÇÕES -->
+          <div id="limitacao-alert" class="hidden" style="background:rgba(220,38,38,0.08);border:1px solid var(--highlight);border-radius:4px;padding:15px;margin-bottom:20px;display:flex;gap:12px;align-items:flex-start">
+            <span style="font-size:1.4rem">⚠️</span>
+            <div>
+              <div style="color:var(--highlight);font-family:&#39;Cinzel&#39;,serif;font-size:0.8rem;margin-bottom:4px">ATENÇÃO — LIMITAÇÃO INFORMADA</div>
+              <div id="limitacao-text" style="color:#ccc;font-size:0.85rem"></div>
+            </div>
           </div>
 
           <!-- WEEK MINI -->
@@ -1926,10 +1936,22 @@
           if (rawNivel.includes('inter')) nivel = 'intermediario';
           else if (rawNivel.includes('avan')) nivel = 'avancado';
 
-          // Mapeia objetivo
+          // Mapeia objetivo (com textos exatos do Tally)
           let objetivo = 'gain';
-          if (rawObj.includes('cut') || rawObj.includes('defin') || rawObj.includes('emagrec') || rawObj.includes('perd')) objetivo = 'cut';
-          else if (rawObj.includes('recomp') || rawObj.includes('manter')) objetivo = 'recomp';
+          if (rawObj.includes('reduz') || rawObj.includes('lev') || rawObj.includes('cut') ||
+              rawObj.includes('emagrec') || rawObj.includes('perd') || rawObj.includes('defin')) objetivo = 'cut';
+          else if (rawObj.includes('reestru') || rawObj.includes('composi') || rawObj.includes('recomp') ||
+                   rawObj.includes('saude') || rawObj.includes('melhor') || rawObj.includes('manter') ||
+                   rawObj.includes('disposi')) objetivo = 'recomp';
+          // "Forjar um físico mais forte" e qualquer outra → gain (padrão)
+
+          // Mapeia frequência semanal ("5 dias" → 5)
+          const rawFreq = normalizeStr(params.get('frequencia') || params.get('dias') || '5');
+          const freqNum = parseInt(rawFreq.replace(/\D/g, '')) || 5;
+          const plannedMonth = freqNum * 4; // sessões previstas no mês
+
+          // Mapeia limitações/lesões
+          const limitacao = params.get('limitacao') || params.get('lesao') || '';
 
           const existing = state.profile; // preserva histórico se já existe
           state.profile = {
@@ -1939,6 +1961,10 @@
             weight: parseFloat(params.get('peso')) || (existing && existing.weight) || 70,
             height: parseInt(params.get('altura')) || (existing && existing.height) || 170,
             age: parseInt(params.get('idade')) || (existing && existing.age) || 25,
+            gender: params.get('genero') || (existing && existing.gender) || '',
+            frequencia: freqNum,
+            plannedMonth: plannedMonth,
+            limitacao: limitacao,
             start: (existing && existing.start) || new Date().toISOString(),
           };
           save();
@@ -1972,7 +1998,15 @@
         const pct = Math.min(100, Math.round((freq.done / freq.planned) * 100));
         updateGauge(pct);
         document.getElementById('gauge-text').textContent = pct + '%';
-        document.getElementById('gauge-sessions').textContent = freq.done;
+        document.getElementById('gauge-sessions').textContent = freq.done + '/' + freq.planned;
+
+        // Alerta de limitações
+        if (p.limitacao && p.limitacao.trim().length > 2) {
+          const alertEl = document.getElementById('limitacao-alert');
+          alertEl.classList.remove('hidden');
+          alertEl.style.display = 'flex';
+          document.getElementById('limitacao-text').textContent = p.limitacao;
+        }
 
         if (pct >= 90) {
           document.getElementById('unlock-badge').classList.add('visible');
@@ -2006,21 +2040,24 @@
       }
 
       function calcFrequency() {
-        // Conta datas únicas com treino salvo nos últimos 30 dias
+        // Usa a frequência declarada pelo aluno no Tally (padrão 5 dias/sem)
+        const planned = (state.profile && state.profile.plannedMonth) || 20;
+        // Conta dias únicos com treino salvo nos últimos 30 dias
         const cutoff = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000);
         const doneDates = new Set();
         Object.values(state.logs).forEach(exArr => {
+          if (!Array.isArray(exArr)) return;
           exArr.forEach(entry => {
-            if (new Date(entry.date) >= cutoff) doneDates.add(entry.date);
+            if (entry && entry.date && new Date(entry.date) >= cutoff) doneDates.add(entry.date);
           });
         });
         const done = doneDates.size;
-        const planned = 22; // ~5 dias/semana em 30 dias
         return { done, planned, pct: Math.min(100, Math.round((done / planned) * 100)) };
       }
 
       function updateGauge(pct) {
-        const offset = 314 - (314 * pct) / 100;
+        const total = 251.3;
+        const offset = total - (total * pct) / 100;
         const path = document.getElementById('gauge-path');
         path.style.strokeDashoffset = offset;
         path.style.stroke = pct < 60 ? '#dc2626' : pct < 85 ? '#f97316' : '#16a34a';
@@ -2280,11 +2317,11 @@
       }
 
       // UTILS
-      function switchTab(id) {
+      function switchTab(id, btn) {
         document.querySelectorAll('.tab-content').forEach((el) => el.classList.add('hidden'));
         document.getElementById('tab-' + id).classList.remove('hidden');
         document.querySelectorAll('.tab-btn').forEach((b) => b.classList.remove('active'));
-        event.target.classList.add('active');
+        if (btn) btn.classList.add('active');
         if (id === 'avaliacoes') drawChart();
       }
 
