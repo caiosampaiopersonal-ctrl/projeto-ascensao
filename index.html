@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0044)https://www.genspark.ai/api/files/s/jkpnpDr5 -->
+<!-- saved from url=(0044)https://www.genspark.ai/api/files/s/GBb6w83x -->
 <html lang="pt-BR" data-theme="dark"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -839,7 +839,7 @@
                 <span class="gauge-label">FREQUÊNCIA</span>
               </div>
             </div>
-            <div class="gauge-subtext"><span id="gauge-sessions">0/20</span> sessões realizadas este mês</div>
+            <div class="gauge-subtext"><span id="gauge-sessions">0</span> sessões realizadas · meta: <span id="gauge-planned">20 (5x/sem)</span>/mês</div>
             <div id="unlock-badge" class="unlock-badge">🔓 NOVA PLANILHA DESBLOQUEADA!</div>
           </div>
 
@@ -874,7 +874,7 @@
                 <span>G: <span id="dash-fat">72</span></span>
               </div>
             </div>
-            <button class="btn-outline" onclick="switchTab(&#39;dieta&#39;)">VER PLANO →</button>
+            <button class="btn-outline" onclick="switchTab(&#39;dieta&#39;, document.querySelectorAll(&#39;.tab-btn&#39;)[2])">VER PLANO →</button>
           </div>
 
           <!-- ALERTA LIMITAÇÕES -->
@@ -1936,18 +1936,18 @@
           if (rawNivel.includes('inter')) nivel = 'intermediario';
           else if (rawNivel.includes('avan')) nivel = 'avancado';
 
-          // Mapeia objetivo (com textos exatos do Tally)
+          // Mapeia objetivo — 3 opções do Tally:
+          // A: "Forjar um físico mais forte"        → gain (padrão)
+          // B: "Reduzir peso a ganhar leveza"       → cut
+          // C: "Reestruturar composição do meu corpo" → recomp
           let objetivo = 'gain';
-          if (rawObj.includes('reduz') || rawObj.includes('lev') || rawObj.includes('cut') ||
-              rawObj.includes('emagrec') || rawObj.includes('perd') || rawObj.includes('defin')) objetivo = 'cut';
-          else if (rawObj.includes('reestru') || rawObj.includes('composi') || rawObj.includes('recomp') ||
-                   rawObj.includes('saude') || rawObj.includes('melhor') || rawObj.includes('manter') ||
-                   rawObj.includes('disposi')) objetivo = 'recomp';
-          // "Forjar um físico mais forte" e qualquer outra → gain (padrão)
+          if (rawObj.includes('reduz') || rawObj.includes('lev') || rawObj.includes('perd') ||
+              rawObj.includes('cut') || rawObj.includes('emagrec') || rawObj.includes('defin')) objetivo = 'cut';
+          else if (rawObj.includes('reestru') || rawObj.includes('composi') || rawObj.includes('recomp')) objetivo = 'recomp';
 
-          // Mapeia frequência semanal ("5 dias" → 5)
+          // Mapeia frequência semanal ("3 dias" → 3, mínimo 3x/sem)
           const rawFreq = normalizeStr(params.get('frequencia') || params.get('dias') || '5');
-          const freqNum = parseInt(rawFreq.replace(/\D/g, '')) || 5;
+          const freqNum = Math.max(3, parseInt(rawFreq.replace(/\D/g, '')) || 5); // mín. 3
           const plannedMonth = freqNum * 4; // sessões previstas no mês
 
           // Mapeia limitações/lesões
@@ -1998,7 +1998,8 @@
         const pct = Math.min(100, Math.round((freq.done / freq.planned) * 100));
         updateGauge(pct);
         document.getElementById('gauge-text').textContent = pct + '%';
-        document.getElementById('gauge-sessions').textContent = freq.done + '/' + freq.planned;
+        document.getElementById('gauge-sessions').textContent = freq.done;
+        document.getElementById('gauge-planned').textContent = freq.planned + ' (' + (state.profile.frequencia || 5) + 'x/sem)';
 
         // Alerta de limitações
         if (p.limitacao && p.limitacao.trim().length > 2) {
@@ -2369,6 +2370,9 @@
           weight: 75,
           height: 175,
           age: 25,
+          frequencia: 5,
+          plannedMonth: 20,
+          limitacao: '',
           start: new Date().toISOString(),
         };
         save();
