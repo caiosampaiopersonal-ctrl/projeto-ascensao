@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0044)https://www.genspark.ai/api/files/s/GBb6w83x -->
+<!-- saved from url=(0044)https://www.genspark.ai/api/files/s/YtqXmYfP -->
 <html lang="pt-BR" data-theme="dark"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -1532,6 +1532,7 @@
             </div>
           </div>
 
+          <div id="diet-obs"></div>
           <h3 class="text-red" style="margin: 30px 0 15px">REFEIÇÕES SUGERIDAS</h3>
           <div id="diet-container">
           <div class="meal-accordion">
@@ -1539,7 +1540,7 @@
               <span class="meal-title">Café da Manhã</span>
               <span class="text-red">+</span>
             </div>
-            <div class="meal-content">Ovos, aveia, fruta <br><small class="text-muted">Quantidades ajustadas para 2800kcal</small></div>
+            <div class="meal-content">Ovos mexidos (3 un) + Aveia com fruta + Café sem açúcar <br><small class="text-muted">Quantidades ajustadas para 2800kcal</small></div>
           </div>
         
           <div class="meal-accordion">
@@ -1547,7 +1548,7 @@
               <span class="meal-title">Almoço</span>
               <span class="text-red">+</span>
             </div>
-            <div class="meal-content">Carne magra, arroz, vegetais <br><small class="text-muted">Quantidades ajustadas para 2800kcal</small></div>
+            <div class="meal-content">Frango grelhado ou carne magra + Arroz + Feijão + Salada verde <br><small class="text-muted">Quantidades ajustadas para 2800kcal</small></div>
           </div>
         
           <div class="meal-accordion">
@@ -1555,15 +1556,15 @@
               <span class="meal-title">Pré-treino</span>
               <span class="text-red">+</span>
             </div>
-            <div class="meal-content">Banana, mel, whey <br><small class="text-muted">Quantidades ajustadas para 2800kcal</small></div>
+            <div class="meal-content">Banana + Pasta de amendoim + Whey protein (opcional) <br><small class="text-muted">Quantidades ajustadas para 2800kcal</small></div>
           </div>
         
           <div class="meal-accordion">
             <div class="meal-header" onclick="this.nextElementSibling.classList.toggle(&#39;open&#39;)">
-              <span class="meal-title">Jantar</span>
+              <span class="meal-title">Pós-treino / Jantar</span>
               <span class="text-red">+</span>
             </div>
-            <div class="meal-content">Peixe/Frango, salada, azeite <br><small class="text-muted">Quantidades ajustadas para 2800kcal</small></div>
+            <div class="meal-content">Tilápia ou frango + Batata doce + Brócolis + Azeite <br><small class="text-muted">Quantidades ajustadas para 2800kcal</small></div>
           </div>
         </div>
 
@@ -1950,22 +1951,32 @@
           const freqNum = Math.max(3, parseInt(rawFreq.replace(/\D/g, '')) || 5); // mín. 3
           const plannedMonth = freqNum * 4; // sessões previstas no mês
 
-          // Mapeia limitações/lesões
-          const limitacao = params.get('limitacao') || params.get('lesao') || '';
+          // Mapeia limitações (aceita 'limitacoes' ou 'limitacao')
+          const limitacao = params.get('limitacoes') || params.get('limitacao') || params.get('lesao') || '';
+
+          // Dados extras do Tally (armazenados para uso futuro na dieta)
+          const alimentacao  = params.get('alimentacao')  || '';
+          const compulsao    = params.get('compulsao')    || '';
+          const medicamentos = params.get('medicamentos') || '';
+          const email        = params.get('email')        || '';
 
           const existing = state.profile; // preserva histórico se já existe
           state.profile = {
-            name: params.get('nome'),
-            level: nivel,
-            goal: objetivo,
-            weight: parseFloat(params.get('peso')) || (existing && existing.weight) || 70,
-            height: parseInt(params.get('altura')) || (existing && existing.height) || 170,
-            age: parseInt(params.get('idade')) || (existing && existing.age) || 25,
-            gender: params.get('genero') || (existing && existing.gender) || '',
-            frequencia: freqNum,
-            plannedMonth: plannedMonth,
-            limitacao: limitacao,
-            start: (existing && existing.start) || new Date().toISOString(),
+            name:          params.get('nome'),
+            level:         nivel,
+            goal:          objetivo,
+            weight:        parseFloat(params.get('peso'))    || (existing && existing.weight)    || 70,
+            height:        parseInt(params.get('altura'))    || (existing && existing.height)    || 170,
+            age:           parseInt(params.get('idade'))     || (existing && existing.age)       || 25,
+            gender:        params.get('genero')              || (existing && existing.gender)    || '',
+            email:         email                             || (existing && existing.email)     || '',
+            frequencia:    freqNum,
+            plannedMonth:  plannedMonth,
+            limitacao:     limitacao,
+            alimentacao:   alimentacao,
+            compulsao:     compulsao,
+            medicamentos:  medicamentos,
+            start:         (existing && existing.start)      || new Date().toISOString(),
           };
           save();
         }
@@ -2227,11 +2238,17 @@
         document.getElementById('diet-carb').textContent = m.c;
         document.getElementById('diet-fat').textContent = m.f;
 
+        // Observação sobre alimentação declarada
+        const p = state.profile;
+        const dietObs = p.alimentacao ? `<div style="background:rgba(220,38,38,0.06);border-left:3px solid var(--highlight);padding:12px 15px;margin-bottom:20px;border-radius:0 4px 4px 0;font-size:0.85rem;color:#ccc"><b style="color:var(--highlight)">Seu perfil alimentar declarado:</b> ${p.alimentacao}${p.compulsao && p.compulsao.toLowerCase().includes('sim') ? ' · ⚠️ Episódios de compulsão relatados' : ''}${p.medicamentos && p.medicamentos.toLowerCase().includes('sim') ? ' · 💊 Uso de medicamentos relatado' : ''}</div>` : '';
+        const dietObsEl = document.getElementById('diet-obs');
+        if (dietObsEl) dietObsEl.innerHTML = dietObs;
+
         const meals = [
-          { t: 'Café da Manhã', d: 'Ovos, aveia, fruta' },
-          { t: 'Almoço', d: 'Carne magra, arroz, vegetais' },
-          { t: 'Pré-treino', d: 'Banana, mel, whey' },
-          { t: 'Jantar', d: 'Peixe/Frango, salada, azeite' },
+          { t: 'Café da Manhã', d: 'Ovos mexidos (3 un) + Aveia com fruta + Café sem açúcar' },
+          { t: 'Almoço', d: 'Frango grelhado ou carne magra + Arroz + Feijão + Salada verde' },
+          { t: 'Pré-treino', d: 'Banana + Pasta de amendoim + Whey protein (opcional)' },
+          { t: 'Pós-treino / Jantar', d: 'Tilápia ou frango + Batata doce + Brócolis + Azeite' },
         ];
 
         document.getElementById('diet-container').innerHTML = meals
