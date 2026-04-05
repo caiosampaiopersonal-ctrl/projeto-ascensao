@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0044)https://www.genspark.ai/api/files/s/YtqXmYfP -->
+<!-- saved from url=(0044)https://www.genspark.ai/api/files/s/6SvfmtLC -->
 <html lang="pt-BR" data-theme="dark"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -926,7 +926,7 @@
               <div class="accordion-header" onclick="this.nextElementSibling.classList.toggle(&#39;open&#39;); this.querySelector(&#39;span.acc-icon&#39;).textContent = this.nextElementSibling.classList.contains(&#39;open&#39;) ? &#39;−&#39; : &#39;+&#39;">
                 <div>
                   <div class="day-title brand-font">DIA 1 · PUSH</div>
-                  <div class="day-muscles">undefined</div>
+                  <div class="day-muscles">Peito, Ombro, Tríceps</div>
                 </div>
                 <span class="acc-icon text-red" style="font-size:1.4rem;font-weight:700">+</span>
               </div>
@@ -1047,7 +1047,7 @@
               <div class="accordion-header" onclick="this.nextElementSibling.classList.toggle(&#39;open&#39;); this.querySelector(&#39;span.acc-icon&#39;).textContent = this.nextElementSibling.classList.contains(&#39;open&#39;) ? &#39;−&#39; : &#39;+&#39;">
                 <div>
                   <div class="day-title brand-font">DIA 2 · PULL</div>
-                  <div class="day-muscles">undefined</div>
+                  <div class="day-muscles">Costas, Bíceps, Deltoide Post.</div>
                 </div>
                 <span class="acc-icon text-red" style="font-size:1.4rem;font-weight:700">+</span>
               </div>
@@ -1168,7 +1168,7 @@
               <div class="accordion-header" onclick="this.nextElementSibling.classList.toggle(&#39;open&#39;); this.querySelector(&#39;span.acc-icon&#39;).textContent = this.nextElementSibling.classList.contains(&#39;open&#39;) ? &#39;−&#39; : &#39;+&#39;">
                 <div>
                   <div class="day-title brand-font">DIA 3 · LEGS</div>
-                  <div class="day-muscles">undefined</div>
+                  <div class="day-muscles">Quadríceps, Posterior, Panturrilha</div>
                 </div>
                 <span class="acc-icon text-red" style="font-size:1.4rem;font-weight:700">+</span>
               </div>
@@ -1289,7 +1289,7 @@
               <div class="accordion-header" onclick="this.nextElementSibling.classList.toggle(&#39;open&#39;); this.querySelector(&#39;span.acc-icon&#39;).textContent = this.nextElementSibling.classList.contains(&#39;open&#39;) ? &#39;−&#39; : &#39;+&#39;">
                 <div>
                   <div class="day-title brand-font">DIA 4 · UPPER</div>
-                  <div class="day-muscles">undefined</div>
+                  <div class="day-muscles">Superior Completo</div>
                 </div>
                 <span class="acc-icon text-red" style="font-size:1.4rem;font-weight:700">+</span>
               </div>
@@ -1410,7 +1410,7 @@
               <div class="accordion-header" onclick="this.nextElementSibling.classList.toggle(&#39;open&#39;); this.querySelector(&#39;span.acc-icon&#39;).textContent = this.nextElementSibling.classList.contains(&#39;open&#39;) ? &#39;−&#39; : &#39;+&#39;">
                 <div>
                   <div class="day-title brand-font">DIA 5 · LOWER</div>
-                  <div class="day-muscles">undefined</div>
+                  <div class="day-muscles">Inferior + Glúteos</div>
                 </div>
                 <span class="acc-icon text-red" style="font-size:1.4rem;font-weight:700">+</span>
               </div>
@@ -1767,6 +1767,7 @@
             {
               id: 'd1',
               name: 'DIA 1 · PUSH',
+              muscles: 'Peito, Ombro, Tríceps',
               exs: [
                 { name: 'Supino Inclinado Halteres', s: 3, r: '6-10' },
                 { name: 'Supino Máquina', s: 3, r: '8-10' },
@@ -1779,6 +1780,7 @@
             {
               id: 'd2',
               name: 'DIA 2 · PULL',
+              muscles: 'Costas, Bíceps, Deltoide Post.',
               exs: [
                 { name: 'Puxada Alta', s: 3, r: '8-12' },
                 { name: 'Remada Baixa', s: 3, r: '8-12' },
@@ -1791,6 +1793,7 @@
             {
               id: 'd3',
               name: 'DIA 3 · LEGS',
+              muscles: 'Quadríceps, Posterior, Panturrilha',
               exs: [
                 { name: 'Agachamento Livre', s: 3, r: '6-10' },
                 { name: 'Leg Press 45', s: 3, r: '10-15' },
@@ -1803,6 +1806,7 @@
             {
               id: 'd4',
               name: 'DIA 4 · UPPER',
+              muscles: 'Superior Completo',
               exs: [
                 { name: 'Supino Inclinado Máq', s: 3, r: '8-12' },
                 { name: 'Puxada Neutra', s: 3, r: '8-12' },
@@ -1815,6 +1819,7 @@
             {
               id: 'd5',
               name: 'DIA 5 · LOWER',
+              muscles: 'Inferior + Glúteos',
               exs: [
                 { name: 'Terra Romeno', s: 3, r: '6-10' },
                 { name: 'Bulgarian Split', s: 3, r: '8-10' },
@@ -1825,38 +1830,56 @@
             },
           ],
           alt: [
-            /* Placeholder 4 days */
             {
               id: 'da',
-              name: 'A · PUSH',
+              name: 'A · PUSH ALT',
+              muscles: 'Peito, Ombros, Tríceps',
               exs: [
-                { name: 'Supino Reto', s: 4, r: '6-10' },
-                { name: 'Desenv. Barra', s: 3, r: '8-12' },
+                { name: 'Supino Reto Barra', s: 4, r: '6-10' },
+                { name: 'Desenvolvimento Barra', s: 3, r: '8-12' },
+                { name: 'Elevação Lateral Cabo', s: 3, r: '12-20' },
+                { name: 'Crossover Cabo', s: 3, r: '12-15' },
+                { name: 'Tríceps Corda Polia Alta', s: 3, r: '10-15' },
+                { name: 'Tríceps Mergulho Banco', s: 2, r: '10-12' },
               ],
             },
             {
               id: 'db',
-              name: 'B · PULL',
+              name: 'B · PULL ALT',
+              muscles: 'Costas, Bíceps',
               exs: [
                 { name: 'Barra Fixa', s: 4, r: 'Falha' },
                 { name: 'Remada Curvada', s: 3, r: '8-12' },
+                { name: 'Remada Serrote', s: 3, r: '10-12' },
+                { name: 'Pulldown Frente', s: 3, r: '10-12' },
+                { name: 'Rosca Direta Barra', s: 3, r: '8-12' },
+                { name: 'Rosca Concentrada', s: 2, r: '10-12' },
               ],
             },
             {
               id: 'dc',
-              name: 'C · LEGS',
+              name: 'C · LEGS ALT',
+              muscles: 'Pernas Completo',
               exs: [
-                { name: 'Agachamento', s: 4, r: '6-10' },
-                { name: 'Stiff', s: 3, r: '8-12' },
+                { name: 'Agachamento Sumô', s: 3, r: '8-12' },
+                { name: 'Leg Press Fechado', s: 3, r: '10-15' },
+                { name: 'Stiff Halteres', s: 3, r: '8-12' },
+                { name: 'Mesa Flexora', s: 3, r: '10-15' },
+                { name: 'Cadeira Extensora', s: 2, r: '12-15' },
+                { name: 'Panturrilha Máquina', s: 4, r: '12-20' },
               ],
             },
             {
               id: 'dd',
-              name: 'D · FULL',
+              name: 'D · FULL BODY',
+              muscles: 'Corpo Completo',
               exs: [
-                { name: 'Supino', s: 3, r: '8' },
-                { name: 'Agachamento', s: 3, r: '8' },
-                { name: 'Remada', s: 3, r: '8' },
+                { name: 'Supino Inclinado Halteres', s: 3, r: '8-10' },
+                { name: 'Puxada Alta', s: 3, r: '8-10' },
+                { name: 'Agachamento Goblet', s: 3, r: '10-12' },
+                { name: 'Desenvolvimento Halteres', s: 2, r: '10-12' },
+                { name: 'Rosca Direta', s: 2, r: '10-12' },
+                { name: 'Panturrilha em Pé', s: 3, r: '12-15' },
               ],
             },
           ],
@@ -2027,10 +2050,10 @@
 
         // Metrics
         document.getElementById('dash-weight').textContent = p.weight;
-        document.getElementById('dash-goal').textContent = p.goal === 'gain' ? '+ Massa' : '- Gordura';
+        document.getElementById('dash-goal').textContent = p.goal === 'gain' ? '+ Massa' : p.goal === 'cut' ? '- Gordura' : 'Recomp.';
         document.getElementById('dash-workouts').textContent = Object.keys(state.logs).length;
         const avgDiet = state.checkins.length
-          ? Math.round((state.checkins.reduce((a, c) => a + (c.diet || 0), 0) / state.checkins.length) * 10)
+          ? Math.round((state.checkins.reduce((a, c) => a + (parseFloat(c.diet) || 0), 0) / state.checkins.length) * 10)
           : '--';
         document.getElementById('dash-diet').textContent = avgDiet;
 
@@ -2155,7 +2178,7 @@
               <div class="accordion-header" onclick="this.nextElementSibling.classList.toggle('open'); this.querySelector('span.acc-icon').textContent = this.nextElementSibling.classList.contains('open') ? '−' : '+'">
                 <div>
                   <div class="day-title brand-font">${day.name}</div>
-                  <div class="day-muscles">${day.muscles}</div>
+                  <div class="day-muscles">${day.muscles || ''}</div>
                 </div>
                 <span class="acc-icon text-red" style="font-size:1.4rem;font-weight:700">+</span>
               </div>
