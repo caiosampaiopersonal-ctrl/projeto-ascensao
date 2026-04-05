@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0044)https://www.genspark.ai/api/files/s/6SvfmtLC -->
+<!-- saved from url=(0044)https://www.genspark.ai/api/files/s/cSyJL6ws -->
 <html lang="pt-BR" data-theme="dark"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -249,19 +249,33 @@
 
       .tab-btn {
         flex: 1;
-        min-width: 100px;
-        padding: 12px;
+        min-width: 70px;
+        padding: 10px 6px;
         background: transparent;
         border: none;
         color: var(--text-muted);
         font-family: 'Cinzel', serif;
-        font-size: 0.9rem;
+        font-size: 0.75rem;
         font-weight: 600;
         cursor: pointer;
         border-radius: 2px;
         transition: all 0.3s;
         white-space: nowrap;
         text-align: center;
+        line-height: 1.2;
+      }
+
+      @media (min-width: 600px) {
+        .tab-btn {
+          min-width: 100px;
+          padding: 12px;
+          font-size: 0.9rem;
+        }
+      }
+
+      /* Oculta emoji em telas muito pequenas */
+      @media (max-width: 400px) {
+        .tab-btn .tab-emoji { display: none; }
       }
 
       .tab-btn.active {
@@ -787,7 +801,8 @@
     <!-- TELA 0: SEM ACESSO -->
     <div id="no-access-screen" class="hidden">
       <div class="logo-projeto-large">
-        <img src="./index_files/logo.png" alt="Projeto Ascensão" style="height:120px; width:auto; display:block; margin:0 auto 20px;">
+        <img src="./index_files/logo.png" alt="Projeto Ascensão" style="height: 120px; width: auto; display: none; margin: 0px auto 20px;" onerror="this.style.display=&#39;none&#39;;this.nextElementSibling.style.display=&#39;block&#39;">
+        <div style="display: block; font-family: Cinzel, serif; font-weight: 900; font-size: 2.5rem; color: rgb(220, 38, 38); letter-spacing: 6px; margin-bottom: 20px;">PROJETO<br>ASCENSÃO</div>
       </div>
       <p class="text-muted" style="max-width: 400px; margin: 0 auto 30px">
         Acesse através do link enviado após seu cadastro no Projeto Ascensão.
@@ -799,7 +814,7 @@
     <div id="app-screen" class="">
       <div class="top-bar">
         <div class="logo-projeto">
-          <img src="./index_files/logo.png" alt="Projeto Ascensão" style="height:48px; width:auto; display:block;">
+          <img src="./index_files/logo.png" alt="Projeto Ascensão" style="height: 48px; width: auto; display: none;" onerror="this.style.display=&#39;none&#39;;this.insertAdjacentHTML(&#39;afterend&#39;,&#39;&lt;span style=&quot;font-family:Cinzel,serif;font-size:1.1rem;font-weight:900;color:#dc2626;letter-spacing:3px&quot;&gt;ASCENSÃO&lt;/span&gt;&#39;)"><span style="font-family:Cinzel,serif;font-size:1.1rem;font-weight:900;color:#dc2626;letter-spacing:3px">ASCENSÃO</span>
         </div>
         <div style="display: flex; gap: 10px; align-items: center">
           <span id="header-name" style="font-size: 0.8rem; color: rgb(102, 102, 102); display: inline;">JOÃO</span>
@@ -817,12 +832,12 @@
 
       <div class="tabs-container">
         <nav class="tabs-nav">
-          <button class="tab-btn active" onclick="switchTab(&#39;dashboard&#39;,this)">🏠 DASHBOARD</button>
-          <button class="tab-btn" onclick="switchTab(&#39;treino&#39;,this)">🏋️ TREINO</button>
-          <button class="tab-btn" onclick="switchTab(&#39;dieta&#39;,this)">🥗 DIETA</button>
-          <button class="tab-btn" onclick="switchTab(&#39;agenda&#39;,this)">📅 AGENDA</button>
-          <button class="tab-btn" onclick="switchTab(&#39;avaliacoes&#39;,this)">📊 AVALIAÇÕES</button>
-          <button class="tab-btn" onclick="switchTab(&#39;suporte&#39;,this)">📞 SUPORTE</button>
+          <button class="tab-btn active" onclick="switchTab(&#39;dashboard&#39;,this)"><span class="tab-emoji">🏠</span><br>DASH</button>
+          <button class="tab-btn" onclick="switchTab(&#39;treino&#39;,this)"><span class="tab-emoji">🏋️</span><br>TREINO</button>
+          <button class="tab-btn" onclick="switchTab(&#39;dieta&#39;,this)"><span class="tab-emoji">🥗</span><br>DIETA</button>
+          <button class="tab-btn" onclick="switchTab(&#39;agenda&#39;,this)"><span class="tab-emoji">📅</span><br>AGENDA</button>
+          <button class="tab-btn" onclick="switchTab(&#39;avaliacoes&#39;,this)"><span class="tab-emoji">📊</span><br>AVAL.</button>
+          <button class="tab-btn" onclick="switchTab(&#39;suporte&#39;,this)"><span class="tab-emoji">📞</span><br>SUPORTE</button>
         </nav>
 
         <!-- ABA: DASHBOARD -->
@@ -918,7 +933,7 @@
         <div id="tab-treino" class="tab-content hidden">
           <div style="display: flex; gap: 10px; margin-bottom: 20px; justify-content: center">
             <button class="btn-outline active" id="btn-main" onclick="togglePlan(&#39;main&#39;)">PRINCIPAL</button>
-            <button class="btn-outline" id="btn-alt" onclick="togglePlan(&#39;alt&#39;)">ALTERNATIVA</button>
+            <button class="btn-outline" id="btn-comp" onclick="togglePlan(&#39;comp&#39;)">⚡ COMPLEMENTARES</button>
           </div>
 
           <div id="workout-wrapper">
@@ -1697,7 +1712,8 @@
 
       <footer class="app-footer">
         <div class="footer-logo">
-          <img src="./index_files/logo.png" alt="Projeto Ascensão" style="height:90px; width:auto; display:block; margin:0 auto;">
+          <img src="./index_files/logo.png" alt="Projeto Ascensão" style="height: 90px; width: auto; display: none; margin: 0px auto;" onerror="this.style.display=&#39;none&#39;;this.nextElementSibling.style.display=&#39;block&#39;">
+          <div style="display: block; font-family: Cinzel, serif; font-weight: 900; font-size: 1.8rem; color: rgb(220, 38, 38); letter-spacing: 5px; margin: 10px 0px;">PROJETO ASCENSÃO</div>
         </div>
         <div style="width: 50px; height: 2px; background: var(--highlight); margin: 0 auto 20px"></div>
         <div style="color: white; font-family: &#39;Cinzel&#39;, serif; font-size: 1.2rem; margin-bottom: 5px">
@@ -1934,6 +1950,84 @@
         },
       };
 
+      // --- DB COMPLEMENTARES ---
+      const DB_COMP = [
+        {
+          id: 'c1',
+          name: 'AQUECIMENTO UNIVERSAL',
+          muscles: 'Pré-treino obrigatório — 8–10 min',
+          exs: [
+            { name: 'Rotação de Pescoço + Ombros', s: 1, r: '10 círculos cada' },
+            { name: 'Círculos de Quadril', s: 1, r: '10 cada lado' },
+            { name: 'Agachamento Corporal (controlado)', s: 2, r: '10 reps' },
+            { name: 'Cardio Leve (bike/esteira/corda)', s: 1, r: '5–8 min' },
+            { name: 'Aumento Progressivo de Carga', s: 1, r: '2–3 séries leves no 1º exercício' },
+          ],
+        },
+        {
+          id: 'c2',
+          name: 'CORE & ESTABILIDADE',
+          muscles: 'Ao final dos treinos PUSH e PULL — 10–15 min',
+          exs: [
+            { name: 'Prancha Frontal', s: 3, r: '30–60 seg' },
+            { name: 'Dead Bug', s: 3, r: '8 cada lado' },
+            { name: 'Bird Dog', s: 3, r: '10 cada lado' },
+            { name: 'Abdominal Roda (Rollout)', s: 3, r: '8–12 reps' },
+            { name: 'Prancha Lateral', s: 2, r: '20–40 seg cada' },
+            { name: 'Hip Thrust Isométrico no Chão', s: 2, r: '30 seg' },
+          ],
+        },
+        {
+          id: 'c3',
+          name: 'MOBILIDADE — PUSH DAY',
+          muscles: 'Antes do treino de Peito/Ombro/Tríceps — 6–8 min',
+          exs: [
+            { name: 'Abertura de Peito no Cabo / Faixa', s: 2, r: '30 seg' },
+            { name: 'Círculos de Ombro com Bastão', s: 2, r: '10 cada direção' },
+            { name: 'Wall Slide (deslizamento na parede)', s: 2, r: '10 reps' },
+            { name: 'Thread-the-Needle (rotação torácica)', s: 2, r: '8 cada lado' },
+            { name: 'Supino Leve para ativação (50% da carga)', s: 2, r: '12 reps' },
+          ],
+        },
+        {
+          id: 'c4',
+          name: 'MOBILIDADE — PULL DAY',
+          muscles: 'Antes do treino de Costas/Bíceps — 6–8 min',
+          exs: [
+            { name: 'Cat-Cow (coluna)', s: 2, r: '10 reps' },
+            { name: 'Alongamento de Latíssimo (travado na barra)', s: 2, r: '30 seg' },
+            { name: 'Rotação Interna/Externa de Ombro com Faixa', s: 2, r: '15 cada' },
+            { name: 'Retração Escapular com Faixa', s: 2, r: '15 reps' },
+            { name: 'Puxada Leve para ativação (50% da carga)', s: 2, r: '12 reps' },
+          ],
+        },
+        {
+          id: 'c5',
+          name: 'MOBILIDADE — LEGS DAY',
+          muscles: 'Antes do treino de Pernas — 8–10 min',
+          exs: [
+            { name: 'Hip Flexor Stretch (ajoelhado)', s: 2, r: '30 seg cada' },
+            { name: 'Abertura de Quadril (Frog Stretch)', s: 2, r: '30 seg' },
+            { name: 'Squat to Stand', s: 2, r: '10 reps' },
+            { name: 'Mobilidade de Tornozelo na Parede', s: 2, r: '10 cada' },
+            { name: 'Leg Swing Frontal e Lateral', s: 1, r: '10 cada direção' },
+            { name: 'Agachamento Corporal Controlado', s: 2, r: '10 reps' },
+          ],
+        },
+        {
+          id: 'c6',
+          name: 'RECUPERAÇÃO ATIVA',
+          muscles: 'Dias de descanso ou pós-treino — 10–20 min',
+          exs: [
+            { name: 'Foam Roller — Costas/Glúteos/Panturrilha', s: 1, r: '60 seg cada região' },
+            { name: 'Caminhada Leve', s: 1, r: '15–20 min' },
+            { name: 'Alongamento de Isquiotibiais', s: 2, r: '30 seg cada' },
+            { name: 'Alongamento de Peito e Bíceps', s: 2, r: '30 seg' },
+            { name: 'Respiração Diafragmática', s: 1, r: '5 min, 5 seg inalação / 5 seg exalação' },
+          ],
+        },
+      ];
+
       // STATE
       let state = { profile: null, logs: {}, checkins: [] };
 
@@ -1984,8 +2078,10 @@
           const email        = params.get('email')        || '';
 
           const existing = state.profile; // preserva histórico se já existe
+          // Limpa o nome: remove pontuação final (ex: Tally envia "Caio?")
+          const rawName = (params.get('nome') || '').replace(/[?!.,;:]+$/, '').trim();
           state.profile = {
-            name:          params.get('nome'),
+            name:          rawName || 'Aluno',
             level:         nivel,
             goal:          objetivo,
             weight:        parseFloat(params.get('peso'))    || (existing && existing.weight)    || 70,
@@ -2045,8 +2141,8 @@
 
         if (pct >= 90) {
           document.getElementById('unlock-badge').classList.add('visible');
-          document.getElementById('workout-wrapper').classList.remove('locked-overlay');
         }
+        document.getElementById('workout-wrapper').classList.remove('locked-overlay');
 
         // Metrics
         document.getElementById('dash-weight').textContent = p.weight;
@@ -2129,19 +2225,14 @@
       let currentPlan = 'main';
       function togglePlan(type) {
         currentPlan = type;
-        const freq = calcFrequency();
-        const pct = (freq.done / freq.planned) * 100;
-
         document.getElementById('btn-main').className = type === 'main' ? 'btn-outline active' : 'btn-outline';
-        document.getElementById('btn-alt').className = type === 'alt' ? 'btn-outline active' : 'btn-outline';
-
-        const wrapper = document.getElementById('workout-wrapper');
-        if (type === 'alt' && pct < 90) {
-          wrapper.classList.add('locked-overlay');
+        document.getElementById('btn-comp').className = type === 'comp' ? 'btn-outline active' : 'btn-outline';
+        document.getElementById('workout-wrapper').classList.remove('locked-overlay');
+        if (type === 'comp') {
+          renderComplementares();
         } else {
-          wrapper.classList.remove('locked-overlay');
+          renderWorkout(type);
         }
-        renderWorkout(type);
       }
 
       function renderWorkout(type) {
@@ -2189,6 +2280,38 @@
             </div>`;
         }).join('');
         document.getElementById('workout-wrapper').innerHTML = html;
+      }
+
+      function renderComplementares() {
+        const html = DB_COMP.map((block) => {
+          const exsHtml = block.exs.map((ex) => `
+            <div class="exercise-row" style="grid-template-columns: 2fr 1fr; gap:10px">
+              <div class="ex-info" style="grid-column:1/-1">
+                <span class="ex-name">${ex.name}</span>
+                <span class="ex-presc">${ex.s} série(s) · ${ex.r}</span>
+              </div>
+            </div>`).join('');
+          return `
+            <div class="day-accordion" data-day-id="${block.id}">
+              <div class="accordion-header" onclick="this.nextElementSibling.classList.toggle('open'); this.querySelector('span.acc-icon').textContent = this.nextElementSibling.classList.contains('open') ? '−' : '+'">
+                <div>
+                  <div class="day-title brand-font" style="color:#f97316">${block.name}</div>
+                  <div class="day-muscles">${block.muscles}</div>
+                </div>
+                <span class="acc-icon text-red" style="font-size:1.4rem;font-weight:700">+</span>
+              </div>
+              <div class="accordion-content">
+                ${exsHtml}
+                <div style="padding:12px 15px;border-top:1px solid var(--border);text-align:center;color:#555;font-size:0.75rem;font-family:'Cinzel',serif;letter-spacing:1px">EXECUTE ANTES OU APÓS O TREINO PRINCIPAL</div>
+              </div>
+            </div>`;
+        }).join('');
+        document.getElementById('workout-wrapper').innerHTML = `
+          <div style="background:rgba(249,115,22,0.06);border:1px solid rgba(249,115,22,0.3);border-radius:4px;padding:15px;margin-bottom:20px">
+            <div style="color:#f97316;font-family:'Cinzel',serif;font-size:0.85rem;font-weight:700;margin-bottom:6px">⚡ TREINOS COMPLEMENTARES</div>
+            <div style="color:#888;font-size:0.8rem;line-height:1.6">Aquecimento, mobilidade e core para maximizar a performance e prevenir lesões. Execute conforme a indicação de cada bloco — não substituem o treino principal.</div>
+          </div>
+          ${html}`;
       }
 
       function saveDay(dayId) {
