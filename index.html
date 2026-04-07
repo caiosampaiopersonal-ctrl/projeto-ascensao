@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0044)https://www.genspark.ai/api/files/s/iA2YKdtO -->
+<!-- saved from url=(0044)https://www.genspark.ai/api/files/s/sZ2vEqsT -->
 <html lang="pt-BR" data-theme="light" style=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -1022,7 +1022,7 @@
   </head>
   <body style="">
     <!-- TELA 0: SEM ACESSO -->
-    <div id="no-access-screen">
+    <div id="no-access-screen" class="">
       <div class="logo-projeto-large">
         <img src="./index_files/logo.png" alt="Projeto Ascensão" style="height: 120px; width: auto; display: none; margin: 0px auto 20px;" onerror="this.style.display=&#39;none&#39;;this.nextElementSibling.style.display=&#39;block&#39;" data-height-listener-added="true">
         <div style="display: block; font-family: Cinzel, serif; font-weight: 900; font-size: 2.5rem; color: rgb(220, 38, 38); letter-spacing: 6px; margin-bottom: 20px;">PROJETO<br>ASCENSÃO</div>
@@ -1036,56 +1036,55 @@
     </div>
 
     <!-- TELA PRINCIPAL -->
-    <div id="app-screen" class="hidden">
+    <div id="app-screen" class="">
 
       <!-- DEMO CONTROL BAR -->
-      <div id="demo-bar" class="demo-bar hidden">
+      <div id="demo-bar" class="demo-bar">
         <div class="demo-bar-label">🧪 Modo Demonstração — Navegue pelas configurações</div>
         <div class="demo-bar-row">
           <span class="demo-bar-title">GÊNERO</span>
-          <button class="demo-btn active" id="dbg-masc" onclick="setDemoGenero(&#39;masculino&#39;)">♂ Masculino</button>
-          <button class="demo-btn" id="dbg-fem" onclick="setDemoGenero(&#39;feminino&#39;)">♀ Feminino</button>
+          <button class="demo-btn" id="dbg-masc" onclick="setDemoGenero(&#39;masculino&#39;)">♂ Masculino</button>
+          <button class="demo-btn active" id="dbg-fem" onclick="setDemoGenero(&#39;feminino&#39;)">♀ Feminino</button>
         </div>
         <div class="demo-bar-row">
           <span class="demo-bar-title">FREQUÊNCIA</span>
           <button class="demo-btn" id="dbf3" onclick="setDemoFreq(3)">3×/sem</button>
           <button class="demo-btn" id="dbf4" onclick="setDemoFreq(4)">4×/sem</button>
-          <button class="demo-btn" id="dbf5" onclick="setDemoFreq(5)">5×/sem</button>
+          <button class="demo-btn active" id="dbf5" onclick="setDemoFreq(5)">5×/sem</button>
           <button class="demo-btn" id="dbf6" onclick="setDemoFreq(6)">6×/sem</button>
         </div>
         <div class="demo-bar-row">
           <span class="demo-bar-title">MESOCICLO</span>
-          <button class="demo-btn" id="dbm1" onclick="setDemoMeso(1)">Meso 1 · O Despertar</button>
+          <button class="demo-btn active" id="dbm1" onclick="setDemoMeso(1)">Meso 1 · O Despertar</button>
           <button class="demo-btn" id="dbm2" onclick="setDemoMeso(2)">Meso 2 · A Forja</button>
           <button class="demo-btn" id="dbm3" onclick="setDemoMeso(3)">Meso 3 · A Chama</button>
         </div>
-        <div class="demo-meso-info" id="demo-meso-info"></div>
+        <div class="demo-meso-info" id="demo-meso-info">♀ Feminino · O Despertar · Aprendizado Motor · RIR 4-5 · 12-15 reps · 5 sessões rotacionais por semana</div>
       </div>
 
       <div class="top-bar">
         <div class="logo-projeto">
-          <img src="./index_files/logo.png" alt="Projeto Ascensão" style="height: 48px; width: auto; display: none;" onerror="this.style.display=&#39;none&#39;;this.insertAdjacentHTML(&#39;afterend&#39;,&#39;&lt;span style=&quot;font-family:Cinzel,serif;font-size:1.1rem;font-weight:900;color:#dc2626;letter-spacing:3px&quot;&gt;ASCENSÃO&lt;/span&gt;&#39;)" data-height-listener-added="true"><span style="font-family:Cinzel,serif;font-size:1.1rem;font-weight:900;color:#dc2626;letter-spacing:3px">ASCENSÃO</span><span style="font-family:Cinzel,serif;font-size:1.1rem;font-weight:900;color:#dc2626;letter-spacing:3px">ASCENSÃO</span>
+          <img src="./index_files/logo.png" alt="Projeto Ascensão" style="height: 48px; width: auto; display: none;" onerror="this.style.display=&#39;none&#39;;this.insertAdjacentHTML(&#39;afterend&#39;,&#39;&lt;span style=&quot;font-family:Cinzel,serif;font-size:1.1rem;font-weight:900;color:#dc2626;letter-spacing:3px&quot;&gt;ASCENSÃO&lt;/span&gt;&#39;)" data-height-listener-added="true"><span style="font-family:Cinzel,serif;font-size:1.1rem;font-weight:900;color:#dc2626;letter-spacing:3px">ASCENSÃO</span><span style="font-family:Cinzel,serif;font-size:1.1rem;font-weight:900;color:#dc2626;letter-spacing:3px">ASCENSÃO</span><span style="font-family:Cinzel,serif;font-size:1.1rem;font-weight:900;color:#dc2626;letter-spacing:3px">ASCENSÃO</span><span style="font-family:Cinzel,serif;font-size:1.1rem;font-weight:900;color:#dc2626;letter-spacing:3px">ASCENSÃO</span>
         </div>
         <div style="display: flex; gap: 10px; align-items: center">
-          <span id="header-name" style="font-size: 0.8rem; color: #666; display: none">ALUNO</span>
+          <span id="header-name" style="font-size: 0.8rem; color: rgb(102, 102, 102); display: block;">DEMO</span>
           <span id="header-level" class="level-badge">INICIANTE</span>
         </div>
       </div>
 
       <div class="hero">
-        <h1 class="welcome-title">
-          BEM-VINDO, <span id="hero-name" class="text-red">ALUNO</span>
+        <h1 class="welcome-title">BEM-VINDA, <span id="hero-name" class="text-red">DEMO</span>
         </h1>
         <div class="hero-tags">
-          <span class="hero-tag">Foco: <span id="hero-goal">Hipertrofia</span></span>
-          <span class="hero-tag">Início: <span id="hero-date">--/--</span></span>
+          <span class="hero-tag">Foco: <span id="hero-goal">+ Massa</span></span>
+          <span class="hero-tag">Início: <span id="hero-date">abr. de 2026</span></span>
         </div>
       </div>
 
       <div class="tabs-container">
         <nav class="tabs-nav">
-          <button class="tab-btn active" onclick="switchTab(&#39;dashboard&#39;,this)"><span class="tab-emoji">🏠</span><br>DASH</button>
-          <button class="tab-btn" onclick="switchTab(&#39;treino&#39;,this)"><span class="tab-emoji">🏋️</span><br>TREINO</button>
+          <button class="tab-btn" onclick="switchTab(&#39;dashboard&#39;,this)"><span class="tab-emoji">🏠</span><br>DASH</button>
+          <button class="tab-btn active" onclick="switchTab(&#39;treino&#39;,this)"><span class="tab-emoji">🏋️</span><br>TREINO</button>
           <button class="tab-btn" onclick="switchTab(&#39;dieta&#39;,this)"><span class="tab-emoji">🥗</span><br>DIETA</button>
           <button class="tab-btn" onclick="switchTab(&#39;agenda&#39;,this)"><span class="tab-emoji">📅</span><br>AGENDA</button>
           <button class="tab-btn" onclick="switchTab(&#39;avaliacoes&#39;,this)"><span class="tab-emoji">📊</span><br>AVAL.</button>
@@ -1093,22 +1092,22 @@
         </nav>
 
         <!-- ABA: DASHBOARD -->
-        <div id="tab-dashboard" class="tab-content">
+        <div id="tab-dashboard" class="tab-content hidden">
           <!-- GAUGE -->
           <div class="gauge-section">
             <div class="gauge-container">
               <svg class="gauge-svg" viewBox="0 0 200 110">
                 <path class="gauge-bg" d="M 20 100 A 80 80 0 0 1 180 100"></path>
-                <path id="gauge-path" class="gauge-arc" d="M 20 100 A 80 80 0 0 1 180 100"></path>
+                <path id="gauge-path" class="gauge-arc" d="M 20 100 A 80 80 0 0 1 28.72 63.68" style="stroke: rgb(220, 38, 38);"></path>
               </svg>
               <div class="gauge-value">
-                <span class="gauge-pct" id="gauge-text">0%</span>
+                <span class="gauge-pct" id="gauge-text">15%</span>
                 <span class="gauge-label">FREQUÊNCIA</span>
               </div>
             </div>
             <div class="gauge-subtext">
-              <span id="gauge-sessions">0</span> sessões realizadas · meta:
-              <span id="gauge-planned">--</span>/mês
+              <span id="gauge-sessions">3</span> sessões realizadas · meta:
+              <span id="gauge-planned">20 sessões</span>/mês
             </div>
             <div id="unlock-badge" class="unlock-badge">CICLO DOMINADO!</div>
             
@@ -1122,24 +1121,24 @@
           <!-- MESO INFO -->
           <div class="meso-info-card">
             <div style="color:var(--highlight); font-family:&#39;Cinzel&#39;, serif; font-size:0.75rem; font-weight:700; margin-bottom:5px">MESOCICLO ATUAL</div>
-            <div id="dash-meso-name" style="color:white; font-weight:600; font-size:1.1rem">--</div>
-            <div id="dash-meso-desc" style="color:#888; font-size:0.8rem; font-style:italic">--</div>
-            <div id="dash-obj-explain" style="margin-top:12px;padding-top:12px;border-top:1px solid #222;text-align:left"></div>
+            <div id="dash-meso-name" style="color:white; font-weight:600; font-size:1.1rem">Meso 1 · O Despertar</div>
+            <div id="dash-meso-desc" style="color:#888; font-size:0.8rem; font-style:italic">Aprendizado Motor · RIR 4-5 · 12-15 reps</div>
+            <div id="dash-obj-explain" style="margin-top:12px;padding-top:12px;border-top:1px solid #222;text-align:left"><div style="font-size:0.72rem;font-weight:700;color:#f97316;margin-bottom:4px;font-family:&#39;Cinzel&#39;,serif">🎯 Todas as metas — base técnica universal</div><div style="font-size:0.8rem;color:#999;line-height:1.5">Alta frequência com volume moderado. Glúteo estimulado 2x/semana (LEGS A + LEGS B). V-taper construído com puxadas. Superior existe para estética, não para força.</div></div>
           </div>
 
           <!-- METRICS -->
           <div class="metrics-grid">
             <div class="metric-card">
               <span class="metric-lbl">Peso Atual</span>
-              <span class="metric-val"><span id="dash-weight">--</span> kg</span>
+              <span class="metric-val"><span id="dash-weight">78</span> kg</span>
             </div>
             <div class="metric-card">
               <span class="metric-lbl">Meta</span>
-              <span class="metric-val" id="dash-goal">--</span>
+              <span class="metric-val" id="dash-goal">+ Massa</span>
             </div>
             <div class="metric-card">
               <span class="metric-lbl">Treinos</span>
-              <span class="metric-val" id="dash-workouts">0</span>
+              <span class="metric-val" id="dash-workouts">10</span>
             </div>
             <div class="metric-card">
               <span class="metric-lbl">Adesão Dieta</span>
@@ -1152,10 +1151,10 @@
             <div>
               <h3 class="nutri-title">SEU PLANO ALIMENTAR</h3>
               <div class="nutri-macros">
-                <span><b><span id="dash-cal">2500</span></b> kcal</span>
-                <span>P: <span id="dash-prot">--</span></span>
-                <span>C: <span id="dash-carb">--</span></span>
-                <span>G: <span id="dash-fat">--</span></span>
+                <span><b><span id="dash-cal">3047</span></b> kcal</span>
+                <span>P: <span id="dash-prot">172g P</span></span>
+                <span>C: <span id="dash-carb">399g C</span></span>
+                <span>G: <span id="dash-fat">85g G</span></span>
               </div>
             </div>
             <button class="btn-outline" onclick="switchTab(&#39;dieta&#39;, document.querySelectorAll(&#39;.tab-btn&#39;)[2])">
@@ -1192,11 +1191,39 @@
           <h4 class="text-muted" style="font-size: 0.8rem; margin-bottom: 10px; text-transform: uppercase">
             Semana Atual
           </h4>
-          <div class="week-mini" id="mini-week-container"></div>
+          <div class="week-mini" id="mini-week-container"><div class="week-day done ">
+      <div style="font-size:0.65rem;color:#666">D</div>
+      <div style="font-size:0.8rem">5</div>
+      <div style="font-size:0.7rem;color:#16a34a">✓</div>
+    </div><div class="week-day  ">
+      <div style="font-size:0.65rem;color:#666">S</div>
+      <div style="font-size:0.8rem">6</div>
+      
+    </div><div class="week-day done today">
+      <div style="font-size:0.65rem;color:#666">T</div>
+      <div style="font-size:0.8rem">7</div>
+      <div style="font-size:0.7rem;color:#16a34a">✓</div>
+    </div><div class="week-day  ">
+      <div style="font-size:0.65rem;color:#666">Q</div>
+      <div style="font-size:0.8rem">8</div>
+      
+    </div><div class="week-day  ">
+      <div style="font-size:0.65rem;color:#666">Q</div>
+      <div style="font-size:0.8rem">9</div>
+      
+    </div><div class="week-day  ">
+      <div style="font-size:0.65rem;color:#666">S</div>
+      <div style="font-size:0.8rem">10</div>
+      
+    </div><div class="week-day  ">
+      <div style="font-size:0.65rem;color:#666">S</div>
+      <div style="font-size:0.8rem">11</div>
+      
+    </div></div>
         </div>
 
         <!-- ABA: TREINO -->
-        <div id="tab-treino" class="tab-content hidden">
+        <div id="tab-treino" class="tab-content">
           <div style="display: flex; gap: 10px; margin-bottom: 20px; justify-content: center">
             <button class="btn-outline active" id="btn-main" onclick="togglePlan(&#39;main&#39;)">
               PRINCIPAL
@@ -1206,9 +1233,318 @@
             </button>
           </div>
 
-          <div id="workout-wrapper">
-            <!-- Accordions populated by JS -->
+          <div id="workout-wrapper"><div style="margin-bottom:16px;padding:14px;background:rgba(220,38,38,0.06);border:1px solid rgba(220,38,38,0.3);border-radius:6px">
+    <div style="color:#dc2626;font-family:Cinzel,serif;font-size:0.75rem;font-weight:700;margin-bottom:4px">MESOCICLO 1 · O DESPERTAR</div>
+    <div style="color:#888;font-size:0.82rem;font-style:italic">Aprendizado Motor · RIR 4-5 · 12-15 reps</div>
+    <div style="color:#aaa;font-size:0.78rem;margin-top:6px">💡 PPL estético feminino: glúteo 3D, coxas, V-taper e deltóide leve</div>
+    <div style="color:#f97316;font-size:0.75rem;margin-top:6px;font-weight:600">🎯 Todas as metas — base técnica universal</div>
+  </div>
+  <div class="rir-info"><strong>O que é RIR?</strong> Repetições na Reserva — quantas reps você ainda conseguiria fazer antes de falhar. RIR 4-5 — foco em técnica e aprendizado motor. Pare quando ainda tem 4 ou 5 reps no tanque.</div><div class="day-accordion" data-day-id="ff5m1l">
+      <div class="day-header" onclick="this.parentElement.classList.toggle(&#39;open&#39;)">
+        <div style="flex:1;min-width:0">
+          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+            <div class="day-title" style="font-size:0.92rem">DIA 1 · LEGS A (Glúteo)</div>
+            
+            
           </div>
+          <div class="day-muscles">Glúteos, Quadríceps, Abdutor</div>
+        </div>
+        <span class="text-red" style="font-size:1.4rem;margin-left:8px">+</span>
+      </div>
+      <div class="day-content"><div class="mob-note">
+        <span class="mob-note-title">🧘 MOBILIDADE PRÉ-TREINO · Mobilidade LEGS Day</span>
+        <ul class="mob-note-list"><li>Hip Flexor Stretch (ajoelhado) — 2×40s/lado</li><li>Lunge com rotação — 2×10 reps/lado</li><li>Agachamento profundo com apoio — 2×30s</li><li>Mobilidade de tornozelo na parede — 2×10 reps/lado</li><li>Glute Bridge (ativação) — 2×15 reps</li></ul>
+      </div><div class="ex-cards"><div class="ex-card">
+        <span class="ex-card-badge">🔥 AQUECIMENTO ESPECÍFICO — 1ª série leve, foco em técnica</span>
+        <div class="ex-card-top">
+          <div class="ex-card-name">Hip Thrust Barra</div>
+          <div class="ex-card-meta">3×12-15</div>
+        </div>
+        <div class="ex-card-inputs">
+          <div><label class="ex-field-lbl">Carga (kg)</label><input type="number" class="ex-input" data-ex="Hip_Thrust_Barra_load" placeholder="0" min="0" step="0.5" inputmode="decimal"></div>
+          <div><label class="ex-field-lbl">Reps Realiz.</label><input type="number" class="ex-input" data-ex="Hip_Thrust_Barra_reps" placeholder="0" min="0" inputmode="numeric"></div>
+        </div>
+      </div><div class="ex-card">
+        
+        <div class="ex-card-top">
+          <div class="ex-card-name">Agachamento Sumô</div>
+          <div class="ex-card-meta">3×12-15</div>
+        </div>
+        <div class="ex-card-inputs">
+          <div><label class="ex-field-lbl">Carga (kg)</label><input type="number" class="ex-input" data-ex="Agachamento_Sumô_load" placeholder="0" min="0" step="0.5" inputmode="decimal"></div>
+          <div><label class="ex-field-lbl">Reps Realiz.</label><input type="number" class="ex-input" data-ex="Agachamento_Sumô_reps" placeholder="0" min="0" inputmode="numeric"></div>
+        </div>
+      </div><div class="ex-card">
+        
+        <div class="ex-card-top">
+          <div class="ex-card-name">Abdutor Máquina</div>
+          <div class="ex-card-meta">3×15</div>
+        </div>
+        <div class="ex-card-inputs">
+          <div><label class="ex-field-lbl">Carga (kg)</label><input type="number" class="ex-input" data-ex="Abdutor_Máquina_load" placeholder="0" min="0" step="0.5" inputmode="decimal"></div>
+          <div><label class="ex-field-lbl">Reps Realiz.</label><input type="number" class="ex-input" data-ex="Abdutor_Máquina_reps" placeholder="0" min="0" inputmode="numeric"></div>
+        </div>
+      </div><div class="ex-card">
+        
+        <div class="ex-card-top">
+          <div class="ex-card-name">Abdução no Cabo (pé)</div>
+          <div class="ex-card-meta">3×15 reps/lado</div>
+        </div>
+        <div class="ex-card-inputs">
+          <div><label class="ex-field-lbl">Carga (kg)</label><input type="number" class="ex-input" data-ex="Abdução_no_Cabo_(pé)_load" placeholder="0" min="0" step="0.5" inputmode="decimal"></div>
+          <div><label class="ex-field-lbl">Reps Realiz.</label><input type="number" class="ex-input" data-ex="Abdução_no_Cabo_(pé)_reps" placeholder="0" min="0" inputmode="numeric"></div>
+        </div>
+      </div><div class="ex-card">
+        
+        <div class="ex-card-top">
+          <div class="ex-card-name">Extensora</div>
+          <div class="ex-card-meta">2×15</div>
+        </div>
+        <div class="ex-card-inputs">
+          <div><label class="ex-field-lbl">Carga (kg)</label><input type="number" class="ex-input" data-ex="Extensora_load" placeholder="0" min="0" step="0.5" inputmode="decimal"></div>
+          <div><label class="ex-field-lbl">Reps Realiz.</label><input type="number" class="ex-input" data-ex="Extensora_reps" placeholder="0" min="0" inputmode="numeric"></div>
+        </div>
+      </div></div><button class="btn-primary" onclick="saveDay(&#39;ff5m1l&#39;)">✓ REGISTRAR TREINO</button></div></div><div class="day-accordion open today-session" data-day-id="ff5m1p">
+      <div class="day-header" onclick="this.parentElement.classList.toggle(&#39;open&#39;)">
+        <div style="flex:1;min-width:0">
+          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+            <div class="day-title" style="font-size:0.92rem">DIA 2 · PUSH (Estético)</div>
+            <span class="today-badge">HOJE</span>
+            
+          </div>
+          <div class="day-muscles">Deltóide, V-Taper, Tríceps</div>
+        </div>
+        <span class="text-red" style="font-size:1.4rem;margin-left:8px">+</span>
+      </div>
+      <div class="day-content"><div class="mob-note">
+        <span class="mob-note-title">🧘 MOBILIDADE PRÉ-TREINO · Mobilidade PUSH Day</span>
+        <ul class="mob-note-list"><li>Band Pull-Apart — 2×15 reps</li><li>Rotação externa de ombro — 2×15 reps/lado</li><li>Abertura de peito no rolo — 1×60s</li><li>Alongamento de peitoral na parede — 2×30s/lado</li></ul>
+      </div><div class="ex-cards"><div class="ex-card">
+        <span class="ex-card-badge">🔥 AQUECIMENTO ESPECÍFICO — 1ª série leve, foco em técnica</span>
+        <div class="ex-card-top">
+          <div class="ex-card-name">Elevação Lateral</div>
+          <div class="ex-card-meta">3×15</div>
+        </div>
+        <div class="ex-card-inputs">
+          <div><label class="ex-field-lbl">Carga (kg)</label><input type="number" class="ex-input" data-ex="Elevação_Lateral_load" placeholder="0" min="0" step="0.5" inputmode="decimal"></div>
+          <div><label class="ex-field-lbl">Reps Realiz.</label><input type="number" class="ex-input" data-ex="Elevação_Lateral_reps" placeholder="0" min="0" inputmode="numeric"></div>
+        </div>
+      </div><div class="ex-card">
+        
+        <div class="ex-card-top">
+          <div class="ex-card-name">Crucifixo Inverso</div>
+          <div class="ex-card-meta">3×15</div>
+        </div>
+        <div class="ex-card-inputs">
+          <div><label class="ex-field-lbl">Carga (kg)</label><input type="number" class="ex-input" data-ex="Crucifixo_Inverso_load" placeholder="0" min="0" step="0.5" inputmode="decimal"></div>
+          <div><label class="ex-field-lbl">Reps Realiz.</label><input type="number" class="ex-input" data-ex="Crucifixo_Inverso_reps" placeholder="0" min="0" inputmode="numeric"></div>
+        </div>
+      </div><div class="ex-card">
+        
+        <div class="ex-card-top">
+          <div class="ex-card-name">Desenvolvimento Halteres</div>
+          <div class="ex-card-meta">2×12-15</div>
+        </div>
+        <div class="ex-card-inputs">
+          <div><label class="ex-field-lbl">Carga (kg)</label><input type="number" class="ex-input" data-ex="Desenvolvimento_Halteres_load" placeholder="0" min="0" step="0.5" inputmode="decimal"></div>
+          <div><label class="ex-field-lbl">Reps Realiz.</label><input type="number" class="ex-input" data-ex="Desenvolvimento_Halteres_reps" placeholder="0" min="0" inputmode="numeric"></div>
+        </div>
+      </div><div class="ex-card">
+        
+        <div class="ex-card-top">
+          <div class="ex-card-name">Tríceps Corda</div>
+          <div class="ex-card-meta">2×12-15</div>
+        </div>
+        <div class="ex-card-inputs">
+          <div><label class="ex-field-lbl">Carga (kg)</label><input type="number" class="ex-input" data-ex="Tríceps_Corda_load" placeholder="0" min="0" step="0.5" inputmode="decimal"></div>
+          <div><label class="ex-field-lbl">Reps Realiz.</label><input type="number" class="ex-input" data-ex="Tríceps_Corda_reps" placeholder="0" min="0" inputmode="numeric"></div>
+        </div>
+      </div></div><button class="btn-primary" onclick="saveDay(&#39;ff5m1p&#39;)">✓ REGISTRAR TREINO</button></div></div><div class="day-accordion" data-day-id="ff5m1pu">
+      <div class="day-header" onclick="this.parentElement.classList.toggle(&#39;open&#39;)">
+        <div style="flex:1;min-width:0">
+          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+            <div class="day-title" style="font-size:0.92rem">DIA 3 · PULL (V-Taper)</div>
+            
+            
+          </div>
+          <div class="day-muscles">Costas, Deltóide Post.</div>
+        </div>
+        <span class="text-red" style="font-size:1.4rem;margin-left:8px">+</span>
+      </div>
+      <div class="day-content"><div class="mob-note">
+        <span class="mob-note-title">🧘 MOBILIDADE PRÉ-TREINO · Mobilidade PULL Day</span>
+        <ul class="mob-note-list"><li>Dead Hang (suspensão passiva) — 3×15-30s</li><li>Gato-Vaca (Cat-Cow) — 2×10 reps</li><li>Rotação torácica no solo — 2×10 reps/lado</li><li>Alongamento de bíceps na parede — 2×30s/lado</li></ul>
+      </div><div class="ex-cards"><div class="ex-card">
+        <span class="ex-card-badge">🔥 AQUECIMENTO ESPECÍFICO — 1ª série leve, foco em técnica</span>
+        <div class="ex-card-top">
+          <div class="ex-card-name">Puxada Alta</div>
+          <div class="ex-card-meta">3×12-15</div>
+        </div>
+        <div class="ex-card-inputs">
+          <div><label class="ex-field-lbl">Carga (kg)</label><input type="number" class="ex-input" data-ex="Puxada_Alta_load" placeholder="0" min="0" step="0.5" inputmode="decimal"></div>
+          <div><label class="ex-field-lbl">Reps Realiz.</label><input type="number" class="ex-input" data-ex="Puxada_Alta_reps" placeholder="0" min="0" inputmode="numeric"></div>
+        </div>
+      </div><div class="ex-card">
+        
+        <div class="ex-card-top">
+          <div class="ex-card-name">Remada Baixa</div>
+          <div class="ex-card-meta">3×12-15</div>
+        </div>
+        <div class="ex-card-inputs">
+          <div><label class="ex-field-lbl">Carga (kg)</label><input type="number" class="ex-input" data-ex="Remada_Baixa_load" placeholder="0" min="0" step="0.5" inputmode="decimal"></div>
+          <div><label class="ex-field-lbl">Reps Realiz.</label><input type="number" class="ex-input" data-ex="Remada_Baixa_reps" placeholder="0" min="0" inputmode="numeric"></div>
+        </div>
+      </div><div class="ex-card">
+        
+        <div class="ex-card-top">
+          <div class="ex-card-name">Remada Unilateral</div>
+          <div class="ex-card-meta">2×12-15 reps/lado</div>
+        </div>
+        <div class="ex-card-inputs">
+          <div><label class="ex-field-lbl">Carga (kg)</label><input type="number" class="ex-input" data-ex="Remada_Unilateral_load" placeholder="0" min="0" step="0.5" inputmode="decimal"></div>
+          <div><label class="ex-field-lbl">Reps Realiz.</label><input type="number" class="ex-input" data-ex="Remada_Unilateral_reps" placeholder="0" min="0" inputmode="numeric"></div>
+        </div>
+      </div><div class="ex-card">
+        
+        <div class="ex-card-top">
+          <div class="ex-card-name">Crucifixo Inverso</div>
+          <div class="ex-card-meta">2×15</div>
+        </div>
+        <div class="ex-card-inputs">
+          <div><label class="ex-field-lbl">Carga (kg)</label><input type="number" class="ex-input" data-ex="Crucifixo_Inverso_load" placeholder="0" min="0" step="0.5" inputmode="decimal"></div>
+          <div><label class="ex-field-lbl">Reps Realiz.</label><input type="number" class="ex-input" data-ex="Crucifixo_Inverso_reps" placeholder="0" min="0" inputmode="numeric"></div>
+        </div>
+      </div></div><button class="btn-primary" onclick="saveDay(&#39;ff5m1pu&#39;)">✓ REGISTRAR TREINO</button></div></div><div class="day-accordion" data-day-id="ff5m1up">
+      <div class="day-header" onclick="this.parentElement.classList.toggle(&#39;open&#39;)">
+        <div style="flex:1;min-width:0">
+          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+            <div class="day-title" style="font-size:0.92rem">DIA 4 · UPPER (V-Taper)</div>
+            
+            
+          </div>
+          <div class="day-muscles">Costas, Deltóide, V-Taper</div>
+        </div>
+        <span class="text-red" style="font-size:1.4rem;margin-left:8px">+</span>
+      </div>
+      <div class="day-content"><div class="mob-note">
+        <span class="mob-note-title">🧘 MOBILIDADE PRÉ-TREINO · Mobilidade PUSH Day</span>
+        <ul class="mob-note-list"><li>Band Pull-Apart — 2×15 reps</li><li>Rotação externa de ombro — 2×15 reps/lado</li><li>Abertura de peito no rolo — 1×60s</li><li>Alongamento de peitoral na parede — 2×30s/lado</li></ul>
+      </div><div class="ex-cards"><div class="ex-card">
+        <span class="ex-card-badge">🔥 AQUECIMENTO ESPECÍFICO — 1ª série leve, foco em técnica</span>
+        <div class="ex-card-top">
+          <div class="ex-card-name">Puxada Neutra</div>
+          <div class="ex-card-meta">3×12-15</div>
+        </div>
+        <div class="ex-card-inputs">
+          <div><label class="ex-field-lbl">Carga (kg)</label><input type="number" class="ex-input" data-ex="Puxada_Neutra_load" placeholder="0" min="0" step="0.5" inputmode="decimal"></div>
+          <div><label class="ex-field-lbl">Reps Realiz.</label><input type="number" class="ex-input" data-ex="Puxada_Neutra_reps" placeholder="0" min="0" inputmode="numeric"></div>
+        </div>
+      </div><div class="ex-card">
+        
+        <div class="ex-card-top">
+          <div class="ex-card-name">Remada Máquina</div>
+          <div class="ex-card-meta">3×12-15</div>
+        </div>
+        <div class="ex-card-inputs">
+          <div><label class="ex-field-lbl">Carga (kg)</label><input type="number" class="ex-input" data-ex="Remada_Máquina_load" placeholder="0" min="0" step="0.5" inputmode="decimal"></div>
+          <div><label class="ex-field-lbl">Reps Realiz.</label><input type="number" class="ex-input" data-ex="Remada_Máquina_reps" placeholder="0" min="0" inputmode="numeric"></div>
+        </div>
+      </div><div class="ex-card">
+        
+        <div class="ex-card-top">
+          <div class="ex-card-name">Elevação Lateral</div>
+          <div class="ex-card-meta">3×15</div>
+        </div>
+        <div class="ex-card-inputs">
+          <div><label class="ex-field-lbl">Carga (kg)</label><input type="number" class="ex-input" data-ex="Elevação_Lateral_load" placeholder="0" min="0" step="0.5" inputmode="decimal"></div>
+          <div><label class="ex-field-lbl">Reps Realiz.</label><input type="number" class="ex-input" data-ex="Elevação_Lateral_reps" placeholder="0" min="0" inputmode="numeric"></div>
+        </div>
+      </div><div class="ex-card">
+        
+        <div class="ex-card-top">
+          <div class="ex-card-name">Crucifixo Inverso</div>
+          <div class="ex-card-meta">2×15</div>
+        </div>
+        <div class="ex-card-inputs">
+          <div><label class="ex-field-lbl">Carga (kg)</label><input type="number" class="ex-input" data-ex="Crucifixo_Inverso_load" placeholder="0" min="0" step="0.5" inputmode="decimal"></div>
+          <div><label class="ex-field-lbl">Reps Realiz.</label><input type="number" class="ex-input" data-ex="Crucifixo_Inverso_reps" placeholder="0" min="0" inputmode="numeric"></div>
+        </div>
+      </div><div class="ex-card">
+        
+        <div class="ex-card-top">
+          <div class="ex-card-name">Tríceps Testa</div>
+          <div class="ex-card-meta">2×12-15</div>
+        </div>
+        <div class="ex-card-inputs">
+          <div><label class="ex-field-lbl">Carga (kg)</label><input type="number" class="ex-input" data-ex="Tríceps_Testa_load" placeholder="0" min="0" step="0.5" inputmode="decimal"></div>
+          <div><label class="ex-field-lbl">Reps Realiz.</label><input type="number" class="ex-input" data-ex="Tríceps_Testa_reps" placeholder="0" min="0" inputmode="numeric"></div>
+        </div>
+      </div></div><button class="btn-primary" onclick="saveDay(&#39;ff5m1up&#39;)">✓ REGISTRAR TREINO</button></div></div><div class="day-accordion" data-day-id="ff5m1lo">
+      <div class="day-header" onclick="this.parentElement.classList.toggle(&#39;open&#39;)">
+        <div style="flex:1;min-width:0">
+          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+            <div class="day-title" style="font-size:0.92rem">DIA 5 · LEGS B (Posterior)</div>
+            
+            
+          </div>
+          <div class="day-muscles">Posteriores, Glúteos, Coxas</div>
+        </div>
+        <span class="text-red" style="font-size:1.4rem;margin-left:8px">+</span>
+      </div>
+      <div class="day-content"><div class="mob-note">
+        <span class="mob-note-title">🧘 MOBILIDADE PRÉ-TREINO · Mobilidade LEGS Day</span>
+        <ul class="mob-note-list"><li>Hip Flexor Stretch (ajoelhado) — 2×40s/lado</li><li>Lunge com rotação — 2×10 reps/lado</li><li>Agachamento profundo com apoio — 2×30s</li><li>Mobilidade de tornozelo na parede — 2×10 reps/lado</li><li>Glute Bridge (ativação) — 2×15 reps</li></ul>
+      </div><div class="ex-cards"><div class="ex-card">
+        <span class="ex-card-badge">🔥 AQUECIMENTO ESPECÍFICO — 1ª série leve, foco em técnica</span>
+        <div class="ex-card-top">
+          <div class="ex-card-name">Stiff Halteres</div>
+          <div class="ex-card-meta">3×12-15</div>
+        </div>
+        <div class="ex-card-inputs">
+          <div><label class="ex-field-lbl">Carga (kg)</label><input type="number" class="ex-input" data-ex="Stiff_Halteres_load" placeholder="0" min="0" step="0.5" inputmode="decimal"></div>
+          <div><label class="ex-field-lbl">Reps Realiz.</label><input type="number" class="ex-input" data-ex="Stiff_Halteres_reps" placeholder="0" min="0" inputmode="numeric"></div>
+        </div>
+      </div><div class="ex-card">
+        
+        <div class="ex-card-top">
+          <div class="ex-card-name">Agachamento Sumô Haltere</div>
+          <div class="ex-card-meta">3×12-15</div>
+        </div>
+        <div class="ex-card-inputs">
+          <div><label class="ex-field-lbl">Carga (kg)</label><input type="number" class="ex-input" data-ex="Agachamento_Sumô_Haltere_load" placeholder="0" min="0" step="0.5" inputmode="decimal"></div>
+          <div><label class="ex-field-lbl">Reps Realiz.</label><input type="number" class="ex-input" data-ex="Agachamento_Sumô_Haltere_reps" placeholder="0" min="0" inputmode="numeric"></div>
+        </div>
+      </div><div class="ex-card">
+        
+        <div class="ex-card-top">
+          <div class="ex-card-name">Cadeira Flexora</div>
+          <div class="ex-card-meta">3×15</div>
+        </div>
+        <div class="ex-card-inputs">
+          <div><label class="ex-field-lbl">Carga (kg)</label><input type="number" class="ex-input" data-ex="Cadeira_Flexora_load" placeholder="0" min="0" step="0.5" inputmode="decimal"></div>
+          <div><label class="ex-field-lbl">Reps Realiz.</label><input type="number" class="ex-input" data-ex="Cadeira_Flexora_reps" placeholder="0" min="0" inputmode="numeric"></div>
+        </div>
+      </div><div class="ex-card">
+        
+        <div class="ex-card-top">
+          <div class="ex-card-name">Glute Kickback Cabo</div>
+          <div class="ex-card-meta">3×12 reps/lado</div>
+        </div>
+        <div class="ex-card-inputs">
+          <div><label class="ex-field-lbl">Carga (kg)</label><input type="number" class="ex-input" data-ex="Glute_Kickback_Cabo_load" placeholder="0" min="0" step="0.5" inputmode="decimal"></div>
+          <div><label class="ex-field-lbl">Reps Realiz.</label><input type="number" class="ex-input" data-ex="Glute_Kickback_Cabo_reps" placeholder="0" min="0" inputmode="numeric"></div>
+        </div>
+      </div><div class="ex-card">
+        
+        <div class="ex-card-top">
+          <div class="ex-card-name">Abdução no Cabo (pé)</div>
+          <div class="ex-card-meta">2×15 reps/lado</div>
+        </div>
+        <div class="ex-card-inputs">
+          <div><label class="ex-field-lbl">Carga (kg)</label><input type="number" class="ex-input" data-ex="Abdução_no_Cabo_(pé)_load" placeholder="0" min="0" step="0.5" inputmode="decimal"></div>
+          <div><label class="ex-field-lbl">Reps Realiz.</label><input type="number" class="ex-input" data-ex="Abdução_no_Cabo_(pé)_reps" placeholder="0" min="0" inputmode="numeric"></div>
+        </div>
+      </div></div><button class="btn-primary" onclick="saveDay(&#39;ff5m1lo&#39;)">✓ REGISTRAR TREINO</button></div></div></div>
         </div>
 
         <!-- ABA: DIETA -->
@@ -1216,25 +1552,50 @@
           <div class="metrics-grid">
             <div class="metric-card" style="border-color: var(--highlight)">
               <span class="metric-lbl">Calorias</span>
-              <span class="metric-val" id="diet-cal">--</span>
+              <span class="metric-val" id="diet-cal">3047 kcal</span>
             </div>
             <div class="metric-card">
               <span class="metric-lbl">Proteína</span>
-              <span class="metric-val"><span id="diet-prot">--</span>g</span>
+              <span class="metric-val"><span id="diet-prot">172</span>g</span>
             </div>
             <div class="metric-card">
               <span class="metric-lbl">Carbo</span>
-              <span class="metric-val"><span id="diet-carb">--</span>g</span>
+              <span class="metric-val"><span id="diet-carb">399</span>g</span>
             </div>
             <div class="metric-card">
               <span class="metric-lbl">Gordura</span>
-              <span class="metric-val"><span id="diet-fat">--</span>g</span>
+              <span class="metric-val"><span id="diet-fat">85</span>g</span>
             </div>
           </div>
 
-          <div id="diet-obs"></div>
+          <div id="diet-obs"><p style="color:#888;font-style:italic;margin-bottom:20px">Distribuição para ganho de massa · 3047 kcal</p></div>
           <h3 class="text-red" style="margin: 30px 0 15px">REFEIÇÕES SUGERIDAS</h3>
-          <div id="diet-container"></div>
+          <div id="diet-container"><div class="meal-accordion">
+    <div class="meal-header" onclick="this.nextElementSibling.classList.toggle(&#39;open&#39;)">
+      <span class="meal-title">☀️ Café da Manhã</span><span class="text-red">+</span>
+    </div>
+    <div class="meal-content"><p style="color:#ccc;font-size:0.85rem;margin:4px 0">• 43g prot · 120g carbo</p><p style="color:#ccc;font-size:0.85rem;margin:4px 0">• Ex: ovos, tapioca, fruta</p></div>
+  </div><div class="meal-accordion">
+    <div class="meal-header" onclick="this.nextElementSibling.classList.toggle(&#39;open&#39;)">
+      <span class="meal-title">🏋️ Pré-Treino (1h antes)</span><span class="text-red">+</span>
+    </div>
+    <div class="meal-content"><p style="color:#ccc;font-size:0.85rem;margin:4px 0">• 100g carbo · 26g prot</p><p style="color:#ccc;font-size:0.85rem;margin:4px 0">• Ex: banana, batata-doce, whey</p></div>
+  </div><div class="meal-accordion">
+    <div class="meal-header" onclick="this.nextElementSibling.classList.toggle(&#39;open&#39;)">
+      <span class="meal-title">🥗 Almoço</span><span class="text-red">+</span>
+    </div>
+    <div class="meal-content"><p style="color:#ccc;font-size:0.85rem;margin:4px 0">• 52g prot · 120g carbo</p><p style="color:#ccc;font-size:0.85rem;margin:4px 0">• Ex: frango, arroz integral, legumes</p></div>
+  </div><div class="meal-accordion">
+    <div class="meal-header" onclick="this.nextElementSibling.classList.toggle(&#39;open&#39;)">
+      <span class="meal-title">⚡ Pós-Treino</span><span class="text-red">+</span>
+    </div>
+    <div class="meal-content"><p style="color:#ccc;font-size:0.85rem;margin:4px 0">• 34g prot · 60g carbo</p><p style="color:#ccc;font-size:0.85rem;margin:4px 0">• Ex: whey, fruta, arroz</p></div>
+  </div><div class="meal-accordion">
+    <div class="meal-header" onclick="this.nextElementSibling.classList.toggle(&#39;open&#39;)">
+      <span class="meal-title">🌙 Jantar</span><span class="text-red">+</span>
+    </div>
+    <div class="meal-content"><p style="color:#ccc;font-size:0.85rem;margin:4px 0">• 17g prot · Gorduras boas</p><p style="color:#ccc;font-size:0.85rem;margin:4px 0">• Ex: atum, ovos, azeite, salada</p></div>
+  </div></div>
 
           <div style="
               margin-top: 30px;
@@ -1251,7 +1612,199 @@
         <!-- ABA: AGENDA -->
         <div id="tab-agenda" class="tab-content hidden">
           <h3 class="text-red" style="margin-bottom: 20px">GRADE SEMANAL</h3>
-          <div id="agenda-container" style="display: grid; gap: 10px"></div>
+          <div id="agenda-container" style="display: grid; gap: 10px"><div style="margin-bottom:16px;padding:12px 14px;background:rgba(220,38,38,0.06);border:1px solid rgba(220,38,38,0.2);border-radius:6px">
+    <div style="color:var(--highlight);font-family:Cinzel,serif;font-size:0.7rem;font-weight:700;margin-bottom:4px">MESOCICLO 1 · O Despertar</div>
+    <div style="color:#888;font-size:0.78rem">5x por semana · 5 sessões rotacionais</div>
+  </div><div class="agenda-accordion">
+      <div class="agenda-header" onclick="this.parentElement.classList.toggle(&#39;open&#39;)">
+        <div style="flex:1">
+          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+            <div style="font-weight:600;font-size:0.9rem;color:white">DIA 1 · LEGS A (Glúteo)</div>
+            
+            
+          </div>
+          <div style="color:#888;font-size:0.75rem;margin-top:3px">Glúteos, Quadríceps, Abdutor · Dia preferencial: Seg</div>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px">
+          <div style="color:var(--highlight);font-family:Cinzel,serif;font-size:0.72rem">5 ex.</div>
+          <span class="text-red" style="font-size:1.3rem">+</span>
+        </div>
+      </div>
+      <div class="agenda-content">
+        <div style="margin-bottom:12px;padding:10px;background:rgba(220,38,38,0.05);border-radius:4px">
+          <div style="color:var(--highlight);font-size:0.68rem;font-family:Cinzel,serif;font-weight:700;margin-bottom:6px">🧘 MOBILIDADE PRÉ: Mobilidade LEGS Day</div>
+          <div style="font-size:0.78rem;color:#888;padding:2px 0">• Hip Flexor Stretch (ajoelhado) — 40s/lado</div><div style="font-size:0.78rem;color:#888;padding:2px 0">• Lunge com rotação — 10 reps/lado</div><div style="font-size:0.78rem;color:#888;padding:2px 0">• Agachamento profundo com apoio — 30s</div><div style="font-size:0.78rem;color:#888;padding:2px 0">• Mobilidade de tornozelo na parede — 10 reps/lado</div><div style="font-size:0.78rem;color:#888;padding:2px 0">• Glute Bridge (ativação) — 15 reps</div>
+        </div>
+        <ul class="agenda-ex-list">
+          <li>
+            <span><span style="color:#f97316;margin-right:4px">🔥</span><span style="color:#f97316">Hip Thrust Barra</span></span>
+            <span style="color:#666;font-size:0.78rem">3x 12-15</span>
+          </li><li>
+            <span><span style="color:#ccc">Agachamento Sumô</span></span>
+            <span style="color:#666;font-size:0.78rem">3x 12-15</span>
+          </li><li>
+            <span><span style="color:#ccc">Abdutor Máquina</span></span>
+            <span style="color:#666;font-size:0.78rem">3x 15</span>
+          </li><li>
+            <span><span style="color:#ccc">Abdução no Cabo (pé)</span></span>
+            <span style="color:#666;font-size:0.78rem">3x 15 reps/lado</span>
+          </li><li>
+            <span><span style="color:#ccc">Extensora</span></span>
+            <span style="color:#666;font-size:0.78rem">2x 15</span>
+          </li>
+        </ul>
+      </div>
+    </div><div class="agenda-accordion open today-agenda">
+      <div class="agenda-header" onclick="this.parentElement.classList.toggle(&#39;open&#39;)">
+        <div style="flex:1">
+          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+            <div style="font-weight:600;font-size:0.9rem;color:white">DIA 2 · PUSH (Estético)</div>
+            <span class="today-badge">HOJE</span>
+            
+          </div>
+          <div style="color:#888;font-size:0.75rem;margin-top:3px">Deltóide, V-Taper, Tríceps · Dia preferencial: Ter</div>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px">
+          <div style="color:var(--highlight);font-family:Cinzel,serif;font-size:0.72rem">4 ex.</div>
+          <span class="text-red" style="font-size:1.3rem">+</span>
+        </div>
+      </div>
+      <div class="agenda-content">
+        <div style="margin-bottom:12px;padding:10px;background:rgba(220,38,38,0.05);border-radius:4px">
+          <div style="color:var(--highlight);font-size:0.68rem;font-family:Cinzel,serif;font-weight:700;margin-bottom:6px">🧘 MOBILIDADE PRÉ: Mobilidade PUSH Day</div>
+          <div style="font-size:0.78rem;color:#888;padding:2px 0">• Band Pull-Apart — 15 reps</div><div style="font-size:0.78rem;color:#888;padding:2px 0">• Rotação externa de ombro — 15 reps/lado</div><div style="font-size:0.78rem;color:#888;padding:2px 0">• Abertura de peito no rolo — 60s</div><div style="font-size:0.78rem;color:#888;padding:2px 0">• Alongamento de peitoral na parede — 30s/lado</div>
+        </div>
+        <ul class="agenda-ex-list">
+          <li>
+            <span><span style="color:#f97316;margin-right:4px">🔥</span><span style="color:#f97316">Elevação Lateral</span></span>
+            <span style="color:#666;font-size:0.78rem">3x 15</span>
+          </li><li>
+            <span><span style="color:#ccc">Crucifixo Inverso</span></span>
+            <span style="color:#666;font-size:0.78rem">3x 15</span>
+          </li><li>
+            <span><span style="color:#ccc">Desenvolvimento Halteres</span></span>
+            <span style="color:#666;font-size:0.78rem">2x 12-15</span>
+          </li><li>
+            <span><span style="color:#ccc">Tríceps Corda</span></span>
+            <span style="color:#666;font-size:0.78rem">2x 12-15</span>
+          </li>
+        </ul>
+      </div>
+    </div><div class="agenda-accordion">
+      <div class="agenda-header" onclick="this.parentElement.classList.toggle(&#39;open&#39;)">
+        <div style="flex:1">
+          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+            <div style="font-weight:600;font-size:0.9rem;color:white">DIA 3 · PULL (V-Taper)</div>
+            
+            
+          </div>
+          <div style="color:#888;font-size:0.75rem;margin-top:3px">Costas, Deltóide Post. · Dia preferencial: Qua</div>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px">
+          <div style="color:var(--highlight);font-family:Cinzel,serif;font-size:0.72rem">4 ex.</div>
+          <span class="text-red" style="font-size:1.3rem">+</span>
+        </div>
+      </div>
+      <div class="agenda-content">
+        <div style="margin-bottom:12px;padding:10px;background:rgba(220,38,38,0.05);border-radius:4px">
+          <div style="color:var(--highlight);font-size:0.68rem;font-family:Cinzel,serif;font-weight:700;margin-bottom:6px">🧘 MOBILIDADE PRÉ: Mobilidade PULL Day</div>
+          <div style="font-size:0.78rem;color:#888;padding:2px 0">• Dead Hang (suspensão passiva) — 15-30s</div><div style="font-size:0.78rem;color:#888;padding:2px 0">• Gato-Vaca (Cat-Cow) — 10 reps</div><div style="font-size:0.78rem;color:#888;padding:2px 0">• Rotação torácica no solo — 10 reps/lado</div><div style="font-size:0.78rem;color:#888;padding:2px 0">• Alongamento de bíceps na parede — 30s/lado</div>
+        </div>
+        <ul class="agenda-ex-list">
+          <li>
+            <span><span style="color:#f97316;margin-right:4px">🔥</span><span style="color:#f97316">Puxada Alta</span></span>
+            <span style="color:#666;font-size:0.78rem">3x 12-15</span>
+          </li><li>
+            <span><span style="color:#ccc">Remada Baixa</span></span>
+            <span style="color:#666;font-size:0.78rem">3x 12-15</span>
+          </li><li>
+            <span><span style="color:#ccc">Remada Unilateral</span></span>
+            <span style="color:#666;font-size:0.78rem">2x 12-15 reps/lado</span>
+          </li><li>
+            <span><span style="color:#ccc">Crucifixo Inverso</span></span>
+            <span style="color:#666;font-size:0.78rem">2x 15</span>
+          </li>
+        </ul>
+      </div>
+    </div><div class="agenda-accordion">
+      <div class="agenda-header" onclick="this.parentElement.classList.toggle(&#39;open&#39;)">
+        <div style="flex:1">
+          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+            <div style="font-weight:600;font-size:0.9rem;color:white">DIA 4 · UPPER (V-Taper)</div>
+            
+            
+          </div>
+          <div style="color:#888;font-size:0.75rem;margin-top:3px">Costas, Deltóide, V-Taper · Dia preferencial: Sex</div>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px">
+          <div style="color:var(--highlight);font-family:Cinzel,serif;font-size:0.72rem">5 ex.</div>
+          <span class="text-red" style="font-size:1.3rem">+</span>
+        </div>
+      </div>
+      <div class="agenda-content">
+        <div style="margin-bottom:12px;padding:10px;background:rgba(220,38,38,0.05);border-radius:4px">
+          <div style="color:var(--highlight);font-size:0.68rem;font-family:Cinzel,serif;font-weight:700;margin-bottom:6px">🧘 MOBILIDADE PRÉ: Mobilidade PUSH Day</div>
+          <div style="font-size:0.78rem;color:#888;padding:2px 0">• Band Pull-Apart — 15 reps</div><div style="font-size:0.78rem;color:#888;padding:2px 0">• Rotação externa de ombro — 15 reps/lado</div><div style="font-size:0.78rem;color:#888;padding:2px 0">• Abertura de peito no rolo — 60s</div><div style="font-size:0.78rem;color:#888;padding:2px 0">• Alongamento de peitoral na parede — 30s/lado</div>
+        </div>
+        <ul class="agenda-ex-list">
+          <li>
+            <span><span style="color:#f97316;margin-right:4px">🔥</span><span style="color:#f97316">Puxada Neutra</span></span>
+            <span style="color:#666;font-size:0.78rem">3x 12-15</span>
+          </li><li>
+            <span><span style="color:#ccc">Remada Máquina</span></span>
+            <span style="color:#666;font-size:0.78rem">3x 12-15</span>
+          </li><li>
+            <span><span style="color:#ccc">Elevação Lateral</span></span>
+            <span style="color:#666;font-size:0.78rem">3x 15</span>
+          </li><li>
+            <span><span style="color:#ccc">Crucifixo Inverso</span></span>
+            <span style="color:#666;font-size:0.78rem">2x 15</span>
+          </li><li>
+            <span><span style="color:#ccc">Tríceps Testa</span></span>
+            <span style="color:#666;font-size:0.78rem">2x 12-15</span>
+          </li>
+        </ul>
+      </div>
+    </div><div class="agenda-accordion">
+      <div class="agenda-header" onclick="this.parentElement.classList.toggle(&#39;open&#39;)">
+        <div style="flex:1">
+          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+            <div style="font-weight:600;font-size:0.9rem;color:white">DIA 5 · LEGS B (Posterior)</div>
+            
+            
+          </div>
+          <div style="color:#888;font-size:0.75rem;margin-top:3px">Posteriores, Glúteos, Coxas · Dia preferencial: Sáb</div>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px">
+          <div style="color:var(--highlight);font-family:Cinzel,serif;font-size:0.72rem">5 ex.</div>
+          <span class="text-red" style="font-size:1.3rem">+</span>
+        </div>
+      </div>
+      <div class="agenda-content">
+        <div style="margin-bottom:12px;padding:10px;background:rgba(220,38,38,0.05);border-radius:4px">
+          <div style="color:var(--highlight);font-size:0.68rem;font-family:Cinzel,serif;font-weight:700;margin-bottom:6px">🧘 MOBILIDADE PRÉ: Mobilidade LEGS Day</div>
+          <div style="font-size:0.78rem;color:#888;padding:2px 0">• Hip Flexor Stretch (ajoelhado) — 40s/lado</div><div style="font-size:0.78rem;color:#888;padding:2px 0">• Lunge com rotação — 10 reps/lado</div><div style="font-size:0.78rem;color:#888;padding:2px 0">• Agachamento profundo com apoio — 30s</div><div style="font-size:0.78rem;color:#888;padding:2px 0">• Mobilidade de tornozelo na parede — 10 reps/lado</div><div style="font-size:0.78rem;color:#888;padding:2px 0">• Glute Bridge (ativação) — 15 reps</div>
+        </div>
+        <ul class="agenda-ex-list">
+          <li>
+            <span><span style="color:#f97316;margin-right:4px">🔥</span><span style="color:#f97316">Stiff Halteres</span></span>
+            <span style="color:#666;font-size:0.78rem">3x 12-15</span>
+          </li><li>
+            <span><span style="color:#ccc">Agachamento Sumô Haltere</span></span>
+            <span style="color:#666;font-size:0.78rem">3x 12-15</span>
+          </li><li>
+            <span><span style="color:#ccc">Cadeira Flexora</span></span>
+            <span style="color:#666;font-size:0.78rem">3x 15</span>
+          </li><li>
+            <span><span style="color:#ccc">Glute Kickback Cabo</span></span>
+            <span style="color:#666;font-size:0.78rem">3x 12 reps/lado</span>
+          </li><li>
+            <span><span style="color:#ccc">Abdução no Cabo (pé)</span></span>
+            <span style="color:#666;font-size:0.78rem">2x 15 reps/lado</span>
+          </li>
+        </ul>
+      </div>
+    </div></div>
         </div>
 
         <!-- ABA: AVALIAÇÕES -->
@@ -1283,7 +1836,7 @@
           <h4 class="text-muted" style="font-size: 0.8rem; margin: 30px 0 10px">
             Histórico de Check-ins
           </h4>
-          <div id="checkin-list" style="display: grid; gap: 10px"></div>
+          <div id="checkin-list" style="display: grid; gap: 10px"><p class="text-muted" style="text-align:center;padding:20px">Nenhum check-in registrado.</p></div>
         </div>
 
         <!-- ABA: SUPORTE -->
@@ -1356,7 +1909,7 @@
         <div class="footer-cref">CREF 200350-G/SP</div>
         <div class="footer-sign">Assinatura do Profissional</div>
         <div style="color: #444; font-size: 0.7rem; margin-top: 30px">
-          © 2025 Caio Sampaio · Todos os direitos reservados · Projeto Ascensão
+          © 2026 Caio Sampaio · Todos os direitos reservados · Projeto Ascensão
         </div>
       </footer>
     </div>
@@ -2643,16 +3196,21 @@ function normStr(s) { return s.toLowerCase().normalize('NFD').replace(/[\u0300-\
 // ===== INIT =====
 function initApp() {
   load();
-  const nome = getParam('nome');
+  const nome  = getParam('nome');
   const nivel = getParam('nivel');
-  const freq  = getParam('freq');
-  const obj   = getParam('obj');
+  const freq  = getParam('freq')  || getParam('frequencia');   // Tally envia 'frequencia'
+  const obj   = getParam('obj')   || getParam('objetivo');     // Tally envia 'objetivo'
   const meso  = getParam('meso');
   const peso  = getParam('peso');
   const alt   = getParam('altura');
   const idade = getParam('idade');
-  const lim   = getParam('limitacao');
+  const lim   = getParam('limitacao') || getParam('limitacoes'); // Tally envia 'limitacoes'
   const gen   = getParam('genero');
+  // Campos extras do Tally (salvos no perfil para uso futuro)
+  const email       = getParam('email');
+  const alimentacao = getParam('alimentacao');
+  const compulsao   = getParam('compulsao');
+  const medicamentos= getParam('medicamentos');
 
   // Sem parâmetro ?nome= → sempre mostrar a tela de acesso
   if (!nome) {
@@ -2676,7 +3234,12 @@ function initApp() {
     STATE.profile = {
       nome: nomeClean, nivel: nv, freq: fr, meso: ms, objetivo,
       weight: parseFloat(peso)||75, height: parseInt(alt)||175, age: parseInt(idade)||25,
-      limitacao: lim||'', startDate: new Date().toISOString().split('T')[0]
+      limitacao: lim||'',
+      email: email||'',
+      alimentacao: alimentacao||'',
+      compulsao: compulsao||'',
+      medicamentos: medicamentos||'',
+      startDate: new Date().toISOString().split('T')[0]
     };
     save();
   }
