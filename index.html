@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<!-- saved from url=(0044)https://www.genspark.ai/api/files/s/cSyJL6ws -->
-<html lang="pt-BR" data-theme="dark"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- saved from url=(0044)https://www.genspark.ai/api/files/s/iA2YKdtO -->
+<html lang="pt-BR" data-theme="light" style=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto Ascensão | Área do Aluno</title>
@@ -127,27 +127,6 @@
         align-items: center;
         margin-bottom: 40px;
       }
-      .logo-line1-large {
-        font-family: 'Cinzel', serif;
-        font-weight: 700;
-        font-size: 1.2rem;
-        letter-spacing: 6px;
-        color: #888;
-      }
-      .logo-line2-large {
-        font-family: 'Cinzel', serif;
-        font-weight: 900;
-        font-size: 3rem;
-        letter-spacing: 8px;
-        color: var(--highlight);
-        line-height: 1;
-      }
-
-      /* DASHBOARD LAYOUT */
-      #dashboard-screen {
-        min-height: 100vh;
-        padding-bottom: 80px;
-      }
 
       /* TOP BAR */
       .top-bar {
@@ -161,28 +140,6 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-      }
-
-      .logo-projeto {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .logo-line1 {
-        font-family: 'Cinzel', serif;
-        font-weight: 700;
-        font-size: 0.7rem;
-        letter-spacing: 3px;
-        color: #888;
-        line-height: 1;
-      }
-      .logo-line2 {
-        font-family: 'Cinzel', serif;
-        font-weight: 900;
-        font-size: 1.4rem;
-        letter-spacing: 4px;
-        color: var(--highlight);
-        line-height: 1;
       }
 
       .level-badge {
@@ -295,7 +252,8 @@
       .gauge-container {
         position: relative;
         width: 220px;
-        height: 120px; /* Semicírculo + padding */
+        height: 120px;
+        /* Semicírculo + padding */
       }
 
       .gauge-svg {
@@ -314,11 +272,10 @@
         fill: none;
         stroke-width: 18;
         stroke-linecap: round;
-        stroke-dasharray: 251.3; /* PI * 80 (raio real do SVG) */
+        stroke-dasharray: 251.3;
+        /* PI * 80 */
         stroke-dashoffset: 251.3;
-        transition:
-          stroke-dashoffset 1.5s ease-out,
-          stroke 0.5s;
+        transition: stroke-dashoffset 1.5s ease-out, stroke 0.5s;
       }
 
       .gauge-value {
@@ -371,15 +328,9 @@
       }
 
       @keyframes pulse {
-        0% {
-          opacity: 1;
-        }
-        50% {
-          opacity: 0.7;
-        }
-        100% {
-          opacity: 1;
-        }
+        0% { opacity: 1; }
+        50% { opacity: 0.7; }
+        100% { opacity: 1; }
       }
 
       .metrics-grid {
@@ -627,26 +578,6 @@
         background: #1a1a1a;
       }
 
-      .locked-overlay {
-        position: relative;
-      }
-      .locked-overlay::after {
-        content: '🔒 DESBLOQUEIE AO ATINGIR 90% DE FREQUÊNCIA';
-        position: absolute;
-        inset: 0;
-        background: rgba(0, 0, 0, 0.85);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #888;
-        font-family: 'Cinzel', serif;
-        font-size: 0.9rem;
-        text-align: center;
-        padding: 20px;
-        z-index: 10;
-        border-radius: 4px;
-      }
-
       /* DIET */
       .meal-accordion {
         background: var(--secondary-bg);
@@ -795,38 +726,359 @@
         display: none;
         margin-top: 5px;
       }
+      
+      /* NEW CTA CARD */
+      .cta-card {
+        background: rgba(22, 163, 74, 0.1);
+        border: 1px solid #f97316;
+        padding: 20px;
+        text-align: center;
+        border-radius: 4px;
+        margin-top: 20px;
+        animation: pulse 2s infinite;
+      }
+      .cta-title {
+        color: #f97316;
+        font-family: 'Cinzel', serif;
+        font-weight: 700;
+        font-size: 1rem;
+        margin-bottom: 10px;
+      }
+      .cta-text {
+        color: #ccc;
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+      }
+      .meso-info-card {
+        background: var(--card-bg);
+        border-top: 2px solid var(--highlight);
+        padding: 15px;
+        margin: 20px 0;
+        text-align: center;
+        border-radius: 4px;
+      }
+      .tooltip-btn {
+        background: none; border: none; color: #666; font-size: 0.8rem; cursor: pointer;
+        text-decoration: underline; margin-left: 5px;
+      }
+      .tooltip-content {
+        display: none; font-size: 0.75rem; color: #888; margin-top: 4px; font-style: italic;
+      }
+
+      /* ===== DEMO CONTROL BAR ===== */
+      .demo-bar {
+        position: sticky;
+        top: 79px;
+        z-index: 900;
+        background: rgba(10,10,10,0.97);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba(249,115,22,0.4);
+        padding: 10px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .demo-bar-label {
+        font-size: 0.6rem;
+        color: #f97316;
+        font-family: 'Cinzel', serif;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        text-align: center;
+      }
+      .demo-bar-row {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .demo-bar-title {
+        font-size: 0.65rem;
+        color: #666;
+        font-family: 'Cinzel', serif;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        min-width: 68px;
+        text-align: right;
+      }
+      .demo-btn {
+        background: #1a1a1a;
+        border: 1px solid #333;
+        color: #888;
+        padding: 5px 12px;
+        border-radius: 3px;
+        font-family: 'Cinzel', serif;
+        font-size: 0.72rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.2s;
+        letter-spacing: 0.5px;
+      }
+      .demo-btn:hover {
+        border-color: #f97316;
+        color: #f97316;
+      }
+      .demo-btn.active {
+        background: rgba(249,115,22,0.15);
+        border-color: #f97316;
+        color: #f97316;
+      }
+      .demo-meso-info {
+        text-align: center;
+        font-size: 0.72rem;
+        color: #555;
+        font-style: italic;
+        padding-bottom: 2px;
+      }
+
+      /* ===== TREINO: DAY ACCORDION ===== */
+      .day-header {
+        padding: 15px 20px;
+        background: linear-gradient(90deg, #1a1a1a, #222);
+        border-left: 4px solid var(--highlight);
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        user-select: none;
+      }
+      .day-accordion.today-session .day-header {
+        border-left-color: #16a34a;
+        background: linear-gradient(90deg, #0d1f14, #1a2e1a);
+      }
+      .day-content {
+        display: none;
+        padding: 15px;
+        background: var(--primary-bg);
+        border-top: 1px solid var(--border);
+      }
+      .day-accordion.open .day-content { display: block; }
+
+      /* ===== EXERCISE CARDS (mobile-first) ===== */
+      .ex-cards { display: flex; flex-direction: column; gap: 8px; margin-bottom: 12px; }
+      .ex-card {
+        background: #1a1a1a;
+        border: 1px solid #2a2a2a;
+        border-radius: 6px;
+        padding: 12px;
+        transition: border-color 0.2s;
+      }
+      .ex-card:hover { border-color: rgba(220,38,38,0.4); }
+      .ex-card-badge {
+        font-size: 0.62rem;
+        font-weight: 700;
+        font-family: 'Cinzel', serif;
+        color: #f97316;
+        letter-spacing: 1px;
+        margin-bottom: 6px;
+        display: block;
+      }
+      .ex-card-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 10px;
+        gap: 8px;
+      }
+      .ex-card-name {
+        color: white;
+        font-weight: 600;
+        font-size: 0.93rem;
+        flex: 1;
+        line-height: 1.3;
+      }
+      .ex-card-meta {
+        color: var(--highlight);
+        font-size: 0.78rem;
+        font-weight: 700;
+        white-space: nowrap;
+        background: rgba(220,38,38,0.12);
+        padding: 2px 7px;
+        border-radius: 3px;
+      }
+      .ex-card-inputs {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+      }
+      .ex-field-lbl {
+        display: block;
+        font-size: 0.62rem;
+        color: #555;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 4px;
+      }
+      .ex-input {
+        background: #0f0f0f;
+        border: 1px solid #333;
+        color: white;
+        padding: 9px 6px;
+        border-radius: 4px;
+        width: 100%;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        text-align: center;
+        font-size: 1rem;
+        -webkit-appearance: none;
+      }
+      .ex-input:focus { border-color: var(--highlight); outline: none; }
+
+      /* ===== MOBILITY NOTE ===== */
+      .mob-note {
+        background: rgba(220,38,38,0.05);
+        border: 1px solid rgba(220,38,38,0.18);
+        border-radius: 6px;
+        padding: 12px 14px;
+        margin-bottom: 14px;
+      }
+      .mob-note-title {
+        color: var(--highlight);
+        font-family: 'Cinzel', serif;
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        margin-bottom: 7px;
+        display: block;
+      }
+      .mob-note-list {
+        list-style: none;
+        padding: 0; margin: 0;
+        display: flex; flex-direction: column; gap: 3px;
+      }
+      .mob-note-list li { color: #aaa; font-size: 0.8rem; }
+      .mob-note-list li::before { content: '• '; color: var(--highlight); }
+
+      /* ===== RIR INFO BOX ===== */
+      .rir-info {
+        background: rgba(249,115,22,0.07);
+        border-left: 3px solid #f97316;
+        padding: 10px 12px;
+        border-radius: 0 4px 4px 0;
+        margin-bottom: 14px;
+        font-size: 0.78rem;
+        color: #aaa;
+        line-height: 1.5;
+      }
+      .rir-info strong { color: #f97316; }
+
+      /* ===== TODAY BADGE ===== */
+      .today-badge {
+        background: rgba(22,163,74,0.2);
+        border: 1px solid #16a34a;
+        color: #16a34a;
+        font-size: 0.62rem;
+        font-family: 'Cinzel', serif;
+        font-weight: 700;
+        padding: 2px 8px;
+        border-radius: 2px;
+        letter-spacing: 1px;
+      }
+
+      /* ===== EX TABLE (complementares) ===== */
+      .ex-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+      .ex-table th {
+        color: var(--highlight); font-family: 'Cinzel', serif; font-size: 0.65rem;
+        text-align: left; padding: 8px 6px; border-bottom: 1px solid var(--border);
+        text-transform: uppercase; letter-spacing: 1px;
+      }
+      .ex-table td { padding: 9px 6px; border-bottom: 1px solid #1a1a1a; color: #ccc; vertical-align: middle; }
+
+      /* ===== AGENDA ACCORDION ===== */
+      .agenda-accordion {
+        background: var(--card-bg);
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        margin-bottom: 10px;
+        overflow: hidden;
+      }
+      .agenda-accordion.today-agenda { border-color: rgba(22,163,74,0.5); }
+      .agenda-header {
+        padding: 14px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        user-select: none;
+      }
+      .agenda-content {
+        display: none;
+        padding: 14px;
+        border-top: 1px solid var(--border);
+        background: var(--primary-bg);
+      }
+      .agenda-accordion.open .agenda-content { display: block; }
+      .agenda-ex-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 4px; }
+      .agenda-ex-list li {
+        display: flex; justify-content: space-between;
+        font-size: 0.82rem; color: #ccc; padding: 5px 0;
+        border-bottom: 1px solid #1a1a1a;
+      }
+      .agenda-ex-list li:last-child { border: none; }
     </style>
   </head>
-  <body>
+  <body style="">
     <!-- TELA 0: SEM ACESSO -->
-    <div id="no-access-screen" class="hidden">
+    <div id="no-access-screen">
       <div class="logo-projeto-large">
-        <img src="./index_files/logo.png" alt="Projeto Ascensão" style="height: 120px; width: auto; display: none; margin: 0px auto 20px;" onerror="this.style.display=&#39;none&#39;;this.nextElementSibling.style.display=&#39;block&#39;">
+        <img src="./index_files/logo.png" alt="Projeto Ascensão" style="height: 120px; width: auto; display: none; margin: 0px auto 20px;" onerror="this.style.display=&#39;none&#39;;this.nextElementSibling.style.display=&#39;block&#39;" data-height-listener-added="true">
         <div style="display: block; font-family: Cinzel, serif; font-weight: 900; font-size: 2.5rem; color: rgb(220, 38, 38); letter-spacing: 6px; margin-bottom: 20px;">PROJETO<br>ASCENSÃO</div>
       </div>
       <p class="text-muted" style="max-width: 400px; margin: 0 auto 30px">
         Acesse através do link enviado após seu cadastro no Projeto Ascensão.
       </p>
-      <button class="btn-primary" style="max-width:260px" onclick="loadDemo()">🧪 MODO DEMONSTRAÇÃO</button>
+      <button class="btn-primary" style="max-width: 260px" onclick="loadDemo()">
+        🧪 MODO DEMONSTRAÇÃO
+      </button>
     </div>
 
     <!-- TELA PRINCIPAL -->
-    <div id="app-screen" class="">
+    <div id="app-screen" class="hidden">
+
+      <!-- DEMO CONTROL BAR -->
+      <div id="demo-bar" class="demo-bar hidden">
+        <div class="demo-bar-label">🧪 Modo Demonstração — Navegue pelas configurações</div>
+        <div class="demo-bar-row">
+          <span class="demo-bar-title">GÊNERO</span>
+          <button class="demo-btn active" id="dbg-masc" onclick="setDemoGenero(&#39;masculino&#39;)">♂ Masculino</button>
+          <button class="demo-btn" id="dbg-fem" onclick="setDemoGenero(&#39;feminino&#39;)">♀ Feminino</button>
+        </div>
+        <div class="demo-bar-row">
+          <span class="demo-bar-title">FREQUÊNCIA</span>
+          <button class="demo-btn" id="dbf3" onclick="setDemoFreq(3)">3×/sem</button>
+          <button class="demo-btn" id="dbf4" onclick="setDemoFreq(4)">4×/sem</button>
+          <button class="demo-btn" id="dbf5" onclick="setDemoFreq(5)">5×/sem</button>
+          <button class="demo-btn" id="dbf6" onclick="setDemoFreq(6)">6×/sem</button>
+        </div>
+        <div class="demo-bar-row">
+          <span class="demo-bar-title">MESOCICLO</span>
+          <button class="demo-btn" id="dbm1" onclick="setDemoMeso(1)">Meso 1 · O Despertar</button>
+          <button class="demo-btn" id="dbm2" onclick="setDemoMeso(2)">Meso 2 · A Forja</button>
+          <button class="demo-btn" id="dbm3" onclick="setDemoMeso(3)">Meso 3 · A Chama</button>
+        </div>
+        <div class="demo-meso-info" id="demo-meso-info"></div>
+      </div>
+
       <div class="top-bar">
         <div class="logo-projeto">
-          <img src="./index_files/logo.png" alt="Projeto Ascensão" style="height: 48px; width: auto; display: none;" onerror="this.style.display=&#39;none&#39;;this.insertAdjacentHTML(&#39;afterend&#39;,&#39;&lt;span style=&quot;font-family:Cinzel,serif;font-size:1.1rem;font-weight:900;color:#dc2626;letter-spacing:3px&quot;&gt;ASCENSÃO&lt;/span&gt;&#39;)"><span style="font-family:Cinzel,serif;font-size:1.1rem;font-weight:900;color:#dc2626;letter-spacing:3px">ASCENSÃO</span>
+          <img src="./index_files/logo.png" alt="Projeto Ascensão" style="height: 48px; width: auto; display: none;" onerror="this.style.display=&#39;none&#39;;this.insertAdjacentHTML(&#39;afterend&#39;,&#39;&lt;span style=&quot;font-family:Cinzel,serif;font-size:1.1rem;font-weight:900;color:#dc2626;letter-spacing:3px&quot;&gt;ASCENSÃO&lt;/span&gt;&#39;)" data-height-listener-added="true"><span style="font-family:Cinzel,serif;font-size:1.1rem;font-weight:900;color:#dc2626;letter-spacing:3px">ASCENSÃO</span><span style="font-family:Cinzel,serif;font-size:1.1rem;font-weight:900;color:#dc2626;letter-spacing:3px">ASCENSÃO</span>
         </div>
         <div style="display: flex; gap: 10px; align-items: center">
-          <span id="header-name" style="font-size: 0.8rem; color: rgb(102, 102, 102); display: inline;">JOÃO</span>
+          <span id="header-name" style="font-size: 0.8rem; color: #666; display: none">ALUNO</span>
           <span id="header-level" class="level-badge">INICIANTE</span>
         </div>
       </div>
 
       <div class="hero">
-        <h1 class="welcome-title">BEM-VINDO, <span id="hero-name" class="text-red">JOÃO</span></h1>
+        <h1 class="welcome-title">
+          BEM-VINDO, <span id="hero-name" class="text-red">ALUNO</span>
+        </h1>
         <div class="hero-tags">
           <span class="hero-tag">Foco: <span id="hero-goal">Hipertrofia</span></span>
-          <span class="hero-tag">Início: <span id="hero-date">05/04</span></span>
+          <span class="hero-tag">Início: <span id="hero-date">--/--</span></span>
         </div>
       </div>
 
@@ -847,26 +1099,43 @@
             <div class="gauge-container">
               <svg class="gauge-svg" viewBox="0 0 200 110">
                 <path class="gauge-bg" d="M 20 100 A 80 80 0 0 1 180 100"></path>
-                <path id="gauge-path" class="gauge-arc" d="M 20 100 A 80 80 0 0 1 180 100" style="stroke-dashoffset: 251.3; stroke: rgb(220, 38, 38);"></path>
+                <path id="gauge-path" class="gauge-arc" d="M 20 100 A 80 80 0 0 1 180 100"></path>
               </svg>
               <div class="gauge-value">
                 <span class="gauge-pct" id="gauge-text">0%</span>
                 <span class="gauge-label">FREQUÊNCIA</span>
               </div>
             </div>
-            <div class="gauge-subtext"><span id="gauge-sessions">0</span> sessões realizadas · meta: <span id="gauge-planned">20 (5x/sem)</span>/mês</div>
-            <div id="unlock-badge" class="unlock-badge">🔓 NOVA PLANILHA DESBLOQUEADA!</div>
+            <div class="gauge-subtext">
+              <span id="gauge-sessions">0</span> sessões realizadas · meta:
+              <span id="gauge-planned">--</span>/mês
+            </div>
+            <div id="unlock-badge" class="unlock-badge">CICLO DOMINADO!</div>
+            
+            <div id="cta-renewal" class="cta-card hidden">
+              <div class="cta-title">⚡ CICLO DOMINADO</div>
+              <div class="cta-text">Você está pronto para o próximo nível.</div>
+              <button class="btn-primary" style="background:#f97316; font-size:0.9rem" onclick="window.open(&#39;#&#39;,&#39;_blank&#39;)">RENOVAR E CONTINUAR →</button>
+            </div>
+          </div>
+          
+          <!-- MESO INFO -->
+          <div class="meso-info-card">
+            <div style="color:var(--highlight); font-family:&#39;Cinzel&#39;, serif; font-size:0.75rem; font-weight:700; margin-bottom:5px">MESOCICLO ATUAL</div>
+            <div id="dash-meso-name" style="color:white; font-weight:600; font-size:1.1rem">--</div>
+            <div id="dash-meso-desc" style="color:#888; font-size:0.8rem; font-style:italic">--</div>
+            <div id="dash-obj-explain" style="margin-top:12px;padding-top:12px;border-top:1px solid #222;text-align:left"></div>
           </div>
 
           <!-- METRICS -->
           <div class="metrics-grid">
             <div class="metric-card">
               <span class="metric-lbl">Peso Atual</span>
-              <span class="metric-val"><span id="dash-weight">80</span> kg</span>
+              <span class="metric-val"><span id="dash-weight">--</span> kg</span>
             </div>
             <div class="metric-card">
               <span class="metric-lbl">Meta</span>
-              <span class="metric-val" id="dash-goal">+ Massa</span>
+              <span class="metric-val" id="dash-goal">--</span>
             </div>
             <div class="metric-card">
               <span class="metric-lbl">Treinos</span>
@@ -883,21 +1152,39 @@
             <div>
               <h3 class="nutri-title">SEU PLANO ALIMENTAR</h3>
               <div class="nutri-macros">
-                <span><b><span id="dash-cal">2800</span></b> kcal</span>
-                <span>P: <span id="dash-prot">176</span></span>
-                <span>C: <span id="dash-carb">320</span></span>
-                <span>G: <span id="dash-fat">72</span></span>
+                <span><b><span id="dash-cal">2500</span></b> kcal</span>
+                <span>P: <span id="dash-prot">--</span></span>
+                <span>C: <span id="dash-carb">--</span></span>
+                <span>G: <span id="dash-fat">--</span></span>
               </div>
             </div>
-            <button class="btn-outline" onclick="switchTab(&#39;dieta&#39;, document.querySelectorAll(&#39;.tab-btn&#39;)[2])">VER PLANO →</button>
+            <button class="btn-outline" onclick="switchTab(&#39;dieta&#39;, document.querySelectorAll(&#39;.tab-btn&#39;)[2])">
+              VER PLANO →
+            </button>
           </div>
 
           <!-- ALERTA LIMITAÇÕES -->
-          <div id="limitacao-alert" class="hidden" style="background:rgba(220,38,38,0.08);border:1px solid var(--highlight);border-radius:4px;padding:15px;margin-bottom:20px;display:flex;gap:12px;align-items:flex-start">
-            <span style="font-size:1.4rem">⚠️</span>
+          <div id="limitacao-alert" class="hidden" style="
+              background: rgba(220, 38, 38, 0.08);
+              border: 1px solid var(--highlight);
+              border-radius: 4px;
+              padding: 15px;
+              margin-bottom: 20px;
+              display: flex;
+              gap: 12px;
+              align-items: flex-start;
+            ">
+            <span style="font-size: 1.4rem">⚠️</span>
             <div>
-              <div style="color:var(--highlight);font-family:&#39;Cinzel&#39;,serif;font-size:0.8rem;margin-bottom:4px">ATENÇÃO — LIMITAÇÃO INFORMADA</div>
-              <div id="limitacao-text" style="color:#ccc;font-size:0.85rem"></div>
+              <div style="
+                  color: var(--highlight);
+                  font-family: &#39;Cinzel&#39;, serif;
+                  font-size: 0.8rem;
+                  margin-bottom: 4px;
+                ">
+                ATENÇÃO — LIMITAÇÃO INFORMADA
+              </div>
+              <div id="limitacao-text" style="color: #ccc; font-size: 0.85rem"></div>
             </div>
           </div>
 
@@ -905,625 +1192,23 @@
           <h4 class="text-muted" style="font-size: 0.8rem; margin-bottom: 10px; text-transform: uppercase">
             Semana Atual
           </h4>
-          <div class="week-mini" id="mini-week-container"><div class="day-mini today">
-            <span class="day-mini-name">DOM</span>
-            <span class="day-mini-type">REST</span>
-          </div><div class="day-mini">
-            <span class="day-mini-name">SEG</span>
-            <span class="day-mini-type">PUSH</span>
-          </div><div class="day-mini">
-            <span class="day-mini-name">TER</span>
-            <span class="day-mini-type">PULL</span>
-          </div><div class="day-mini">
-            <span class="day-mini-name">QUA</span>
-            <span class="day-mini-type">LEGS</span>
-          </div><div class="day-mini">
-            <span class="day-mini-name">QUI</span>
-            <span class="day-mini-type">REST</span>
-          </div><div class="day-mini">
-            <span class="day-mini-name">SEX</span>
-            <span class="day-mini-type">UPPER</span>
-          </div><div class="day-mini">
-            <span class="day-mini-name">SÁB</span>
-            <span class="day-mini-type">LOWER</span>
-          </div></div>
+          <div class="week-mini" id="mini-week-container"></div>
         </div>
 
         <!-- ABA: TREINO -->
         <div id="tab-treino" class="tab-content hidden">
           <div style="display: flex; gap: 10px; margin-bottom: 20px; justify-content: center">
-            <button class="btn-outline active" id="btn-main" onclick="togglePlan(&#39;main&#39;)">PRINCIPAL</button>
-            <button class="btn-outline" id="btn-comp" onclick="togglePlan(&#39;comp&#39;)">⚡ COMPLEMENTARES</button>
+            <button class="btn-outline active" id="btn-main" onclick="togglePlan(&#39;main&#39;)">
+              PRINCIPAL
+            </button>
+            <button class="btn-outline" id="btn-comp" onclick="togglePlan(&#39;comp&#39;)">
+              ⚡ COMPLEMENTARES
+            </button>
           </div>
 
           <div id="workout-wrapper">
-            <div class="day-accordion" data-day-id="d1">
-              <div class="accordion-header" onclick="this.nextElementSibling.classList.toggle(&#39;open&#39;); this.querySelector(&#39;span.acc-icon&#39;).textContent = this.nextElementSibling.classList.contains(&#39;open&#39;) ? &#39;−&#39; : &#39;+&#39;">
-                <div>
-                  <div class="day-title brand-font">DIA 1 · PUSH</div>
-                  <div class="day-muscles">Peito, Ombro, Tríceps</div>
-                </div>
-                <span class="acc-icon text-red" style="font-size:1.4rem;font-weight:700">+</span>
-              </div>
-              <div class="accordion-content">
-                
-              <div class="exercise-row">
-                <div class="ex-info">
-                  <span class="ex-name">Supino Inclinado Halteres</span>
-                  <span class="ex-presc">3 × 6-10 reps</span>
-                </div>
-                <div class="load-input-group">
-                  <label class="load-label">Carga</label>
-                  <input type="number" step="0.5" class="load-input" placeholder="--" data-ex="Supino Inclinado Halteres_load">
-                </div>
-                <div class="load-input-group">
-                  <label class="load-label">Reps</label>
-                  <input type="number" class="load-input" placeholder="--" data-ex="Supino Inclinado Halteres_reps">
-                </div>
-                <div style="position:relative;display:flex;align-items:center">
-                  <button class="history-btn" onclick="this.nextElementSibling.classList.toggle(&#39;visible&#39;)" title="Histórico">📈</button>
-                  <div class="history-tooltip"><span style="color:#555">Sem histórico</span></div>
-                </div>
-              </div>
-              <div class="exercise-row">
-                <div class="ex-info">
-                  <span class="ex-name">Supino Máquina</span>
-                  <span class="ex-presc">3 × 8-10 reps</span>
-                </div>
-                <div class="load-input-group">
-                  <label class="load-label">Carga</label>
-                  <input type="number" step="0.5" class="load-input" placeholder="--" data-ex="Supino Máquina_load">
-                </div>
-                <div class="load-input-group">
-                  <label class="load-label">Reps</label>
-                  <input type="number" class="load-input" placeholder="--" data-ex="Supino Máquina_reps">
-                </div>
-                <div style="position:relative;display:flex;align-items:center">
-                  <button class="history-btn" onclick="this.nextElementSibling.classList.toggle(&#39;visible&#39;)" title="Histórico">📈</button>
-                  <div class="history-tooltip"><span style="color:#555">Sem histórico</span></div>
-                </div>
-              </div>
-              <div class="exercise-row">
-                <div class="ex-info">
-                  <span class="ex-name">Desenvolvimento Halteres</span>
-                  <span class="ex-presc">3 × 6-10 reps</span>
-                </div>
-                <div class="load-input-group">
-                  <label class="load-label">Carga</label>
-                  <input type="number" step="0.5" class="load-input" placeholder="--" data-ex="Desenvolvimento Halteres_load">
-                </div>
-                <div class="load-input-group">
-                  <label class="load-label">Reps</label>
-                  <input type="number" class="load-input" placeholder="--" data-ex="Desenvolvimento Halteres_reps">
-                </div>
-                <div style="position:relative;display:flex;align-items:center">
-                  <button class="history-btn" onclick="this.nextElementSibling.classList.toggle(&#39;visible&#39;)" title="Histórico">📈</button>
-                  <div class="history-tooltip"><span style="color:#555">Sem histórico</span></div>
-                </div>
-              </div>
-              <div class="exercise-row">
-                <div class="ex-info">
-                  <span class="ex-name">Elevação Lateral</span>
-                  <span class="ex-presc">3 × 12-20 reps</span>
-                </div>
-                <div class="load-input-group">
-                  <label class="load-label">Carga</label>
-                  <input type="number" step="0.5" class="load-input" placeholder="--" data-ex="Elevação Lateral_load">
-                </div>
-                <div class="load-input-group">
-                  <label class="load-label">Reps</label>
-                  <input type="number" class="load-input" placeholder="--" data-ex="Elevação Lateral_reps">
-                </div>
-                <div style="position:relative;display:flex;align-items:center">
-                  <button class="history-btn" onclick="this.nextElementSibling.classList.toggle(&#39;visible&#39;)" title="Histórico">📈</button>
-                  <div class="history-tooltip"><span style="color:#555">Sem histórico</span></div>
-                </div>
-              </div>
-              <div class="exercise-row">
-                <div class="ex-info">
-                  <span class="ex-name">Tríceps Corda</span>
-                  <span class="ex-presc">3 × 10-15 reps</span>
-                </div>
-                <div class="load-input-group">
-                  <label class="load-label">Carga</label>
-                  <input type="number" step="0.5" class="load-input" placeholder="--" data-ex="Tríceps Corda_load">
-                </div>
-                <div class="load-input-group">
-                  <label class="load-label">Reps</label>
-                  <input type="number" class="load-input" placeholder="--" data-ex="Tríceps Corda_reps">
-                </div>
-                <div style="position:relative;display:flex;align-items:center">
-                  <button class="history-btn" onclick="this.nextElementSibling.classList.toggle(&#39;visible&#39;)" title="Histórico">📈</button>
-                  <div class="history-tooltip"><span style="color:#555">Sem histórico</span></div>
-                </div>
-              </div>
-              <div class="exercise-row">
-                <div class="ex-info">
-                  <span class="ex-name">Tríceps Francês</span>
-                  <span class="ex-presc">2 × 10-15 reps</span>
-                </div>
-                <div class="load-input-group">
-                  <label class="load-label">Carga</label>
-                  <input type="number" step="0.5" class="load-input" placeholder="--" data-ex="Tríceps Francês_load">
-                </div>
-                <div class="load-input-group">
-                  <label class="load-label">Reps</label>
-                  <input type="number" class="load-input" placeholder="--" data-ex="Tríceps Francês_reps">
-                </div>
-                <div style="position:relative;display:flex;align-items:center">
-                  <button class="history-btn" onclick="this.nextElementSibling.classList.toggle(&#39;visible&#39;)" title="Histórico">📈</button>
-                  <div class="history-tooltip"><span style="color:#555">Sem histórico</span></div>
-                </div>
-              </div>
-                <button class="save-day-btn" onclick="saveDay(&#39;d1&#39;)">SALVAR TREINO DO DIA</button>
-              </div>
-            </div>
-            <div class="day-accordion" data-day-id="d2">
-              <div class="accordion-header" onclick="this.nextElementSibling.classList.toggle(&#39;open&#39;); this.querySelector(&#39;span.acc-icon&#39;).textContent = this.nextElementSibling.classList.contains(&#39;open&#39;) ? &#39;−&#39; : &#39;+&#39;">
-                <div>
-                  <div class="day-title brand-font">DIA 2 · PULL</div>
-                  <div class="day-muscles">Costas, Bíceps, Deltoide Post.</div>
-                </div>
-                <span class="acc-icon text-red" style="font-size:1.4rem;font-weight:700">+</span>
-              </div>
-              <div class="accordion-content">
-                
-              <div class="exercise-row">
-                <div class="ex-info">
-                  <span class="ex-name">Puxada Alta</span>
-                  <span class="ex-presc">3 × 8-12 reps</span>
-                </div>
-                <div class="load-input-group">
-                  <label class="load-label">Carga</label>
-                  <input type="number" step="0.5" class="load-input" placeholder="--" data-ex="Puxada Alta_load">
-                </div>
-                <div class="load-input-group">
-                  <label class="load-label">Reps</label>
-                  <input type="number" class="load-input" placeholder="--" data-ex="Puxada Alta_reps">
-                </div>
-                <div style="position:relative;display:flex;align-items:center">
-                  <button class="history-btn" onclick="this.nextElementSibling.classList.toggle(&#39;visible&#39;)" title="Histórico">📈</button>
-                  <div class="history-tooltip"><span style="color:#555">Sem histórico</span></div>
-                </div>
-              </div>
-              <div class="exercise-row">
-                <div class="ex-info">
-                  <span class="ex-name">Remada Baixa</span>
-                  <span class="ex-presc">3 × 8-12 reps</span>
-                </div>
-                <div class="load-input-group">
-                  <label class="load-label">Carga</label>
-                  <input type="number" step="0.5" class="load-input" placeholder="--" data-ex="Remada Baixa_load">
-                </div>
-                <div class="load-input-group">
-                  <label class="load-label">Reps</label>
-                  <input type="number" class="load-input" placeholder="--" data-ex="Remada Baixa_reps">
-                </div>
-                <div style="position:relative;display:flex;align-items:center">
-                  <button class="history-btn" onclick="this.nextElementSibling.classList.toggle(&#39;visible&#39;)" title="Histórico">📈</button>
-                  <div class="history-tooltip"><span style="color:#555">Sem histórico</span></div>
-                </div>
-              </div>
-              <div class="exercise-row">
-                <div class="ex-info">
-                  <span class="ex-name">Remada Unilateral</span>
-                  <span class="ex-presc">2 × 10-12 reps</span>
-                </div>
-                <div class="load-input-group">
-                  <label class="load-label">Carga</label>
-                  <input type="number" step="0.5" class="load-input" placeholder="--" data-ex="Remada Unilateral_load">
-                </div>
-                <div class="load-input-group">
-                  <label class="load-label">Reps</label>
-                  <input type="number" class="load-input" placeholder="--" data-ex="Remada Unilateral_reps">
-                </div>
-                <div style="position:relative;display:flex;align-items:center">
-                  <button class="history-btn" onclick="this.nextElementSibling.classList.toggle(&#39;visible&#39;)" title="Histórico">📈</button>
-                  <div class="history-tooltip"><span style="color:#555">Sem histórico</span></div>
-                </div>
-              </div>
-              <div class="exercise-row">
-                <div class="ex-info">
-                  <span class="ex-name">Crucifixo Inverso</span>
-                  <span class="ex-presc">3 × 12-20 reps</span>
-                </div>
-                <div class="load-input-group">
-                  <label class="load-label">Carga</label>
-                  <input type="number" step="0.5" class="load-input" placeholder="--" data-ex="Crucifixo Inverso_load">
-                </div>
-                <div class="load-input-group">
-                  <label class="load-label">Reps</label>
-                  <input type="number" class="load-input" placeholder="--" data-ex="Crucifixo Inverso_reps">
-                </div>
-                <div style="position:relative;display:flex;align-items:center">
-                  <button class="history-btn" onclick="this.nextElementSibling.classList.toggle(&#39;visible&#39;)" title="Histórico">📈</button>
-                  <div class="history-tooltip"><span style="color:#555">Sem histórico</span></div>
-                </div>
-              </div>
-              <div class="exercise-row">
-                <div class="ex-info">
-                  <span class="ex-name">Rosca Direta</span>
-                  <span class="ex-presc">3 × 8-12 reps</span>
-                </div>
-                <div class="load-input-group">
-                  <label class="load-label">Carga</label>
-                  <input type="number" step="0.5" class="load-input" placeholder="--" data-ex="Rosca Direta_load">
-                </div>
-                <div class="load-input-group">
-                  <label class="load-label">Reps</label>
-                  <input type="number" class="load-input" placeholder="--" data-ex="Rosca Direta_reps">
-                </div>
-                <div style="position:relative;display:flex;align-items:center">
-                  <button class="history-btn" onclick="this.nextElementSibling.classList.toggle(&#39;visible&#39;)" title="Histórico">📈</button>
-                  <div class="history-tooltip"><span style="color:#555">Sem histórico</span></div>
-                </div>
-              </div>
-              <div class="exercise-row">
-                <div class="ex-info">
-                  <span class="ex-name">Rosca Martelo</span>
-                  <span class="ex-presc">2 × 10-12 reps</span>
-                </div>
-                <div class="load-input-group">
-                  <label class="load-label">Carga</label>
-                  <input type="number" step="0.5" class="load-input" placeholder="--" data-ex="Rosca Martelo_load">
-                </div>
-                <div class="load-input-group">
-                  <label class="load-label">Reps</label>
-                  <input type="number" class="load-input" placeholder="--" data-ex="Rosca Martelo_reps">
-                </div>
-                <div style="position:relative;display:flex;align-items:center">
-                  <button class="history-btn" onclick="this.nextElementSibling.classList.toggle(&#39;visible&#39;)" title="Histórico">📈</button>
-                  <div class="history-tooltip"><span style="color:#555">Sem histórico</span></div>
-                </div>
-              </div>
-                <button class="save-day-btn" onclick="saveDay(&#39;d2&#39;)">SALVAR TREINO DO DIA</button>
-              </div>
-            </div>
-            <div class="day-accordion" data-day-id="d3">
-              <div class="accordion-header" onclick="this.nextElementSibling.classList.toggle(&#39;open&#39;); this.querySelector(&#39;span.acc-icon&#39;).textContent = this.nextElementSibling.classList.contains(&#39;open&#39;) ? &#39;−&#39; : &#39;+&#39;">
-                <div>
-                  <div class="day-title brand-font">DIA 3 · LEGS</div>
-                  <div class="day-muscles">Quadríceps, Posterior, Panturrilha</div>
-                </div>
-                <span class="acc-icon text-red" style="font-size:1.4rem;font-weight:700">+</span>
-              </div>
-              <div class="accordion-content">
-                
-              <div class="exercise-row">
-                <div class="ex-info">
-                  <span class="ex-name">Agachamento Livre</span>
-                  <span class="ex-presc">3 × 6-10 reps</span>
-                </div>
-                <div class="load-input-group">
-                  <label class="load-label">Carga</label>
-                  <input type="number" step="0.5" class="load-input" placeholder="--" data-ex="Agachamento Livre_load">
-                </div>
-                <div class="load-input-group">
-                  <label class="load-label">Reps</label>
-                  <input type="number" class="load-input" placeholder="--" data-ex="Agachamento Livre_reps">
-                </div>
-                <div style="position:relative;display:flex;align-items:center">
-                  <button class="history-btn" onclick="this.nextElementSibling.classList.toggle(&#39;visible&#39;)" title="Histórico">📈</button>
-                  <div class="history-tooltip"><span style="color:#555">Sem histórico</span></div>
-                </div>
-              </div>
-              <div class="exercise-row">
-                <div class="ex-info">
-                  <span class="ex-name">Leg Press 45</span>
-                  <span class="ex-presc">3 × 10-15 reps</span>
-                </div>
-                <div class="load-input-group">
-                  <label class="load-label">Carga</label>
-                  <input type="number" step="0.5" class="load-input" placeholder="--" data-ex="Leg Press 45_load">
-                </div>
-                <div class="load-input-group">
-                  <label class="load-label">Reps</label>
-                  <input type="number" class="load-input" placeholder="--" data-ex="Leg Press 45_reps">
-                </div>
-                <div style="position:relative;display:flex;align-items:center">
-                  <button class="history-btn" onclick="this.nextElementSibling.classList.toggle(&#39;visible&#39;)" title="Histórico">📈</button>
-                  <div class="history-tooltip"><span style="color:#555">Sem histórico</span></div>
-                </div>
-              </div>
-              <div class="exercise-row">
-                <div class="ex-info">
-                  <span class="ex-name">Mesa Flexora</span>
-                  <span class="ex-presc">3 × 10-15 reps</span>
-                </div>
-                <div class="load-input-group">
-                  <label class="load-label">Carga</label>
-                  <input type="number" step="0.5" class="load-input" placeholder="--" data-ex="Mesa Flexora_load">
-                </div>
-                <div class="load-input-group">
-                  <label class="load-label">Reps</label>
-                  <input type="number" class="load-input" placeholder="--" data-ex="Mesa Flexora_reps">
-                </div>
-                <div style="position:relative;display:flex;align-items:center">
-                  <button class="history-btn" onclick="this.nextElementSibling.classList.toggle(&#39;visible&#39;)" title="Histórico">📈</button>
-                  <div class="history-tooltip"><span style="color:#555">Sem histórico</span></div>
-                </div>
-              </div>
-              <div class="exercise-row">
-                <div class="ex-info">
-                  <span class="ex-name">Stiff</span>
-                  <span class="ex-presc">3 × 8-12 reps</span>
-                </div>
-                <div class="load-input-group">
-                  <label class="load-label">Carga</label>
-                  <input type="number" step="0.5" class="load-input" placeholder="--" data-ex="Stiff_load">
-                </div>
-                <div class="load-input-group">
-                  <label class="load-label">Reps</label>
-                  <input type="number" class="load-input" placeholder="--" data-ex="Stiff_reps">
-                </div>
-                <div style="position:relative;display:flex;align-items:center">
-                  <button class="history-btn" onclick="this.nextElementSibling.classList.toggle(&#39;visible&#39;)" title="Histórico">📈</button>
-                  <div class="history-tooltip"><span style="color:#555">Sem histórico</span></div>
-                </div>
-              </div>
-              <div class="exercise-row">
-                <div class="ex-info">
-                  <span class="ex-name">Extensora</span>
-                  <span class="ex-presc">2 × 12-15 reps</span>
-                </div>
-                <div class="load-input-group">
-                  <label class="load-label">Carga</label>
-                  <input type="number" step="0.5" class="load-input" placeholder="--" data-ex="Extensora_load">
-                </div>
-                <div class="load-input-group">
-                  <label class="load-label">Reps</label>
-                  <input type="number" class="load-input" placeholder="--" data-ex="Extensora_reps">
-                </div>
-                <div style="position:relative;display:flex;align-items:center">
-                  <button class="history-btn" onclick="this.nextElementSibling.classList.toggle(&#39;visible&#39;)" title="Histórico">📈</button>
-                  <div class="history-tooltip"><span style="color:#555">Sem histórico</span></div>
-                </div>
-              </div>
-              <div class="exercise-row">
-                <div class="ex-info">
-                  <span class="ex-name">Panturrilha em Pé</span>
-                  <span class="ex-presc">4 × 10-15 reps</span>
-                </div>
-                <div class="load-input-group">
-                  <label class="load-label">Carga</label>
-                  <input type="number" step="0.5" class="load-input" placeholder="--" data-ex="Panturrilha em Pé_load">
-                </div>
-                <div class="load-input-group">
-                  <label class="load-label">Reps</label>
-                  <input type="number" class="load-input" placeholder="--" data-ex="Panturrilha em Pé_reps">
-                </div>
-                <div style="position:relative;display:flex;align-items:center">
-                  <button class="history-btn" onclick="this.nextElementSibling.classList.toggle(&#39;visible&#39;)" title="Histórico">📈</button>
-                  <div class="history-tooltip"><span style="color:#555">Sem histórico</span></div>
-                </div>
-              </div>
-                <button class="save-day-btn" onclick="saveDay(&#39;d3&#39;)">SALVAR TREINO DO DIA</button>
-              </div>
-            </div>
-            <div class="day-accordion" data-day-id="d4">
-              <div class="accordion-header" onclick="this.nextElementSibling.classList.toggle(&#39;open&#39;); this.querySelector(&#39;span.acc-icon&#39;).textContent = this.nextElementSibling.classList.contains(&#39;open&#39;) ? &#39;−&#39; : &#39;+&#39;">
-                <div>
-                  <div class="day-title brand-font">DIA 4 · UPPER</div>
-                  <div class="day-muscles">Superior Completo</div>
-                </div>
-                <span class="acc-icon text-red" style="font-size:1.4rem;font-weight:700">+</span>
-              </div>
-              <div class="accordion-content">
-                
-              <div class="exercise-row">
-                <div class="ex-info">
-                  <span class="ex-name">Supino Inclinado Máq</span>
-                  <span class="ex-presc">3 × 8-12 reps</span>
-                </div>
-                <div class="load-input-group">
-                  <label class="load-label">Carga</label>
-                  <input type="number" step="0.5" class="load-input" placeholder="--" data-ex="Supino Inclinado Máq_load">
-                </div>
-                <div class="load-input-group">
-                  <label class="load-label">Reps</label>
-                  <input type="number" class="load-input" placeholder="--" data-ex="Supino Inclinado Máq_reps">
-                </div>
-                <div style="position:relative;display:flex;align-items:center">
-                  <button class="history-btn" onclick="this.nextElementSibling.classList.toggle(&#39;visible&#39;)" title="Histórico">📈</button>
-                  <div class="history-tooltip"><span style="color:#555">Sem histórico</span></div>
-                </div>
-              </div>
-              <div class="exercise-row">
-                <div class="ex-info">
-                  <span class="ex-name">Puxada Neutra</span>
-                  <span class="ex-presc">3 × 8-12 reps</span>
-                </div>
-                <div class="load-input-group">
-                  <label class="load-label">Carga</label>
-                  <input type="number" step="0.5" class="load-input" placeholder="--" data-ex="Puxada Neutra_load">
-                </div>
-                <div class="load-input-group">
-                  <label class="load-label">Reps</label>
-                  <input type="number" class="load-input" placeholder="--" data-ex="Puxada Neutra_reps">
-                </div>
-                <div style="position:relative;display:flex;align-items:center">
-                  <button class="history-btn" onclick="this.nextElementSibling.classList.toggle(&#39;visible&#39;)" title="Histórico">📈</button>
-                  <div class="history-tooltip"><span style="color:#555">Sem histórico</span></div>
-                </div>
-              </div>
-              <div class="exercise-row">
-                <div class="ex-info">
-                  <span class="ex-name">Elevação Lateral</span>
-                  <span class="ex-presc">3 × 12-20 reps</span>
-                </div>
-                <div class="load-input-group">
-                  <label class="load-label">Carga</label>
-                  <input type="number" step="0.5" class="load-input" placeholder="--" data-ex="Elevação Lateral_load">
-                </div>
-                <div class="load-input-group">
-                  <label class="load-label">Reps</label>
-                  <input type="number" class="load-input" placeholder="--" data-ex="Elevação Lateral_reps">
-                </div>
-                <div style="position:relative;display:flex;align-items:center">
-                  <button class="history-btn" onclick="this.nextElementSibling.classList.toggle(&#39;visible&#39;)" title="Histórico">📈</button>
-                  <div class="history-tooltip"><span style="color:#555">Sem histórico</span></div>
-                </div>
-              </div>
-              <div class="exercise-row">
-                <div class="ex-info">
-                  <span class="ex-name">Crucifixo Cabo</span>
-                  <span class="ex-presc">2 × 12-15 reps</span>
-                </div>
-                <div class="load-input-group">
-                  <label class="load-label">Carga</label>
-                  <input type="number" step="0.5" class="load-input" placeholder="--" data-ex="Crucifixo Cabo_load">
-                </div>
-                <div class="load-input-group">
-                  <label class="load-label">Reps</label>
-                  <input type="number" class="load-input" placeholder="--" data-ex="Crucifixo Cabo_reps">
-                </div>
-                <div style="position:relative;display:flex;align-items:center">
-                  <button class="history-btn" onclick="this.nextElementSibling.classList.toggle(&#39;visible&#39;)" title="Histórico">📈</button>
-                  <div class="history-tooltip"><span style="color:#555">Sem histórico</span></div>
-                </div>
-              </div>
-              <div class="exercise-row">
-                <div class="ex-info">
-                  <span class="ex-name">Rosca Alternada</span>
-                  <span class="ex-presc">2 × 10-12 reps</span>
-                </div>
-                <div class="load-input-group">
-                  <label class="load-label">Carga</label>
-                  <input type="number" step="0.5" class="load-input" placeholder="--" data-ex="Rosca Alternada_load">
-                </div>
-                <div class="load-input-group">
-                  <label class="load-label">Reps</label>
-                  <input type="number" class="load-input" placeholder="--" data-ex="Rosca Alternada_reps">
-                </div>
-                <div style="position:relative;display:flex;align-items:center">
-                  <button class="history-btn" onclick="this.nextElementSibling.classList.toggle(&#39;visible&#39;)" title="Histórico">📈</button>
-                  <div class="history-tooltip"><span style="color:#555">Sem histórico</span></div>
-                </div>
-              </div>
-              <div class="exercise-row">
-                <div class="ex-info">
-                  <span class="ex-name">Tríceps Testa</span>
-                  <span class="ex-presc">2 × 10-12 reps</span>
-                </div>
-                <div class="load-input-group">
-                  <label class="load-label">Carga</label>
-                  <input type="number" step="0.5" class="load-input" placeholder="--" data-ex="Tríceps Testa_load">
-                </div>
-                <div class="load-input-group">
-                  <label class="load-label">Reps</label>
-                  <input type="number" class="load-input" placeholder="--" data-ex="Tríceps Testa_reps">
-                </div>
-                <div style="position:relative;display:flex;align-items:center">
-                  <button class="history-btn" onclick="this.nextElementSibling.classList.toggle(&#39;visible&#39;)" title="Histórico">📈</button>
-                  <div class="history-tooltip"><span style="color:#555">Sem histórico</span></div>
-                </div>
-              </div>
-                <button class="save-day-btn" onclick="saveDay(&#39;d4&#39;)">SALVAR TREINO DO DIA</button>
-              </div>
-            </div>
-            <div class="day-accordion" data-day-id="d5">
-              <div class="accordion-header" onclick="this.nextElementSibling.classList.toggle(&#39;open&#39;); this.querySelector(&#39;span.acc-icon&#39;).textContent = this.nextElementSibling.classList.contains(&#39;open&#39;) ? &#39;−&#39; : &#39;+&#39;">
-                <div>
-                  <div class="day-title brand-font">DIA 5 · LOWER</div>
-                  <div class="day-muscles">Inferior + Glúteos</div>
-                </div>
-                <span class="acc-icon text-red" style="font-size:1.4rem;font-weight:700">+</span>
-              </div>
-              <div class="accordion-content">
-                
-              <div class="exercise-row">
-                <div class="ex-info">
-                  <span class="ex-name">Terra Romeno</span>
-                  <span class="ex-presc">3 × 6-10 reps</span>
-                </div>
-                <div class="load-input-group">
-                  <label class="load-label">Carga</label>
-                  <input type="number" step="0.5" class="load-input" placeholder="--" data-ex="Terra Romeno_load">
-                </div>
-                <div class="load-input-group">
-                  <label class="load-label">Reps</label>
-                  <input type="number" class="load-input" placeholder="--" data-ex="Terra Romeno_reps">
-                </div>
-                <div style="position:relative;display:flex;align-items:center">
-                  <button class="history-btn" onclick="this.nextElementSibling.classList.toggle(&#39;visible&#39;)" title="Histórico">📈</button>
-                  <div class="history-tooltip"><span style="color:#555">Sem histórico</span></div>
-                </div>
-              </div>
-              <div class="exercise-row">
-                <div class="ex-info">
-                  <span class="ex-name">Bulgarian Split</span>
-                  <span class="ex-presc">3 × 8-10 reps</span>
-                </div>
-                <div class="load-input-group">
-                  <label class="load-label">Carga</label>
-                  <input type="number" step="0.5" class="load-input" placeholder="--" data-ex="Bulgarian Split_load">
-                </div>
-                <div class="load-input-group">
-                  <label class="load-label">Reps</label>
-                  <input type="number" class="load-input" placeholder="--" data-ex="Bulgarian Split_reps">
-                </div>
-                <div style="position:relative;display:flex;align-items:center">
-                  <button class="history-btn" onclick="this.nextElementSibling.classList.toggle(&#39;visible&#39;)" title="Histórico">📈</button>
-                  <div class="history-tooltip"><span style="color:#555">Sem histórico</span></div>
-                </div>
-              </div>
-              <div class="exercise-row">
-                <div class="ex-info">
-                  <span class="ex-name">Cadeira Flexora</span>
-                  <span class="ex-presc">3 × 10-15 reps</span>
-                </div>
-                <div class="load-input-group">
-                  <label class="load-label">Carga</label>
-                  <input type="number" step="0.5" class="load-input" placeholder="--" data-ex="Cadeira Flexora_load">
-                </div>
-                <div class="load-input-group">
-                  <label class="load-label">Reps</label>
-                  <input type="number" class="load-input" placeholder="--" data-ex="Cadeira Flexora_reps">
-                </div>
-                <div style="position:relative;display:flex;align-items:center">
-                  <button class="history-btn" onclick="this.nextElementSibling.classList.toggle(&#39;visible&#39;)" title="Histórico">📈</button>
-                  <div class="history-tooltip"><span style="color:#555">Sem histórico</span></div>
-                </div>
-              </div>
-              <div class="exercise-row">
-                <div class="ex-info">
-                  <span class="ex-name">Leg Press</span>
-                  <span class="ex-presc">3 × 10-15 reps</span>
-                </div>
-                <div class="load-input-group">
-                  <label class="load-label">Carga</label>
-                  <input type="number" step="0.5" class="load-input" placeholder="--" data-ex="Leg Press_load">
-                </div>
-                <div class="load-input-group">
-                  <label class="load-label">Reps</label>
-                  <input type="number" class="load-input" placeholder="--" data-ex="Leg Press_reps">
-                </div>
-                <div style="position:relative;display:flex;align-items:center">
-                  <button class="history-btn" onclick="this.nextElementSibling.classList.toggle(&#39;visible&#39;)" title="Histórico">📈</button>
-                  <div class="history-tooltip"><span style="color:#555">Sem histórico</span></div>
-                </div>
-              </div>
-              <div class="exercise-row">
-                <div class="ex-info">
-                  <span class="ex-name">Panturrilha Sentada</span>
-                  <span class="ex-presc">4 × 12-20 reps</span>
-                </div>
-                <div class="load-input-group">
-                  <label class="load-label">Carga</label>
-                  <input type="number" step="0.5" class="load-input" placeholder="--" data-ex="Panturrilha Sentada_load">
-                </div>
-                <div class="load-input-group">
-                  <label class="load-label">Reps</label>
-                  <input type="number" class="load-input" placeholder="--" data-ex="Panturrilha Sentada_reps">
-                </div>
-                <div style="position:relative;display:flex;align-items:center">
-                  <button class="history-btn" onclick="this.nextElementSibling.classList.toggle(&#39;visible&#39;)" title="Histórico">📈</button>
-                  <div class="history-tooltip"><span style="color:#555">Sem histórico</span></div>
-                </div>
-              </div>
-                <button class="save-day-btn" onclick="saveDay(&#39;d5&#39;)">SALVAR TREINO DO DIA</button>
-              </div>
-            </div></div>
+            <!-- Accordions populated by JS -->
+          </div>
         </div>
 
         <!-- ABA: DIETA -->
@@ -1531,57 +1216,25 @@
           <div class="metrics-grid">
             <div class="metric-card" style="border-color: var(--highlight)">
               <span class="metric-lbl">Calorias</span>
-              <span class="metric-val" id="diet-cal">2800</span>
+              <span class="metric-val" id="diet-cal">--</span>
             </div>
             <div class="metric-card">
               <span class="metric-lbl">Proteína</span>
-              <span class="metric-val"><span id="diet-prot">176</span>g</span>
+              <span class="metric-val"><span id="diet-prot">--</span>g</span>
             </div>
             <div class="metric-card">
               <span class="metric-lbl">Carbo</span>
-              <span class="metric-val"><span id="diet-carb">320</span>g</span>
+              <span class="metric-val"><span id="diet-carb">--</span>g</span>
             </div>
             <div class="metric-card">
               <span class="metric-lbl">Gordura</span>
-              <span class="metric-val"><span id="diet-fat">72</span>g</span>
+              <span class="metric-val"><span id="diet-fat">--</span>g</span>
             </div>
           </div>
 
           <div id="diet-obs"></div>
           <h3 class="text-red" style="margin: 30px 0 15px">REFEIÇÕES SUGERIDAS</h3>
-          <div id="diet-container">
-          <div class="meal-accordion">
-            <div class="meal-header" onclick="this.nextElementSibling.classList.toggle(&#39;open&#39;)">
-              <span class="meal-title">Café da Manhã</span>
-              <span class="text-red">+</span>
-            </div>
-            <div class="meal-content">Ovos mexidos (3 un) + Aveia com fruta + Café sem açúcar <br><small class="text-muted">Quantidades ajustadas para 2800kcal</small></div>
-          </div>
-        
-          <div class="meal-accordion">
-            <div class="meal-header" onclick="this.nextElementSibling.classList.toggle(&#39;open&#39;)">
-              <span class="meal-title">Almoço</span>
-              <span class="text-red">+</span>
-            </div>
-            <div class="meal-content">Frango grelhado ou carne magra + Arroz + Feijão + Salada verde <br><small class="text-muted">Quantidades ajustadas para 2800kcal</small></div>
-          </div>
-        
-          <div class="meal-accordion">
-            <div class="meal-header" onclick="this.nextElementSibling.classList.toggle(&#39;open&#39;)">
-              <span class="meal-title">Pré-treino</span>
-              <span class="text-red">+</span>
-            </div>
-            <div class="meal-content">Banana + Pasta de amendoim + Whey protein (opcional) <br><small class="text-muted">Quantidades ajustadas para 2800kcal</small></div>
-          </div>
-        
-          <div class="meal-accordion">
-            <div class="meal-header" onclick="this.nextElementSibling.classList.toggle(&#39;open&#39;)">
-              <span class="meal-title">Pós-treino / Jantar</span>
-              <span class="text-red">+</span>
-            </div>
-            <div class="meal-content">Tilápia ou frango + Batata doce + Brócolis + Azeite <br><small class="text-muted">Quantidades ajustadas para 2800kcal</small></div>
-          </div>
-        </div>
+          <div id="diet-container"></div>
 
           <div style="
               margin-top: 30px;
@@ -1598,62 +1251,38 @@
         <!-- ABA: AGENDA -->
         <div id="tab-agenda" class="tab-content hidden">
           <h3 class="text-red" style="margin-bottom: 20px">GRADE SEMANAL</h3>
-          <div id="agenda-container" style="display: grid; gap: 10px">
-          <div style="background:#141414; padding:15px; border-left:4px solid #333; display:flex; justify-content:space-between">
-            <span style="color:white; font-weight:700">DOM</span>
-            <span style="color:#888">REST</span>
-          </div>
-        
-          <div style="background:#141414; padding:15px; border-left:4px solid var(--highlight); display:flex; justify-content:space-between">
-            <span style="color:white; font-weight:700">SEG</span>
-            <span style="color:#888">PUSH</span>
-          </div>
-        
-          <div style="background:#141414; padding:15px; border-left:4px solid var(--highlight); display:flex; justify-content:space-between">
-            <span style="color:white; font-weight:700">TER</span>
-            <span style="color:#888">PULL</span>
-          </div>
-        
-          <div style="background:#141414; padding:15px; border-left:4px solid var(--highlight); display:flex; justify-content:space-between">
-            <span style="color:white; font-weight:700">QUA</span>
-            <span style="color:#888">LEGS</span>
-          </div>
-        
-          <div style="background:#141414; padding:15px; border-left:4px solid #333; display:flex; justify-content:space-between">
-            <span style="color:white; font-weight:700">QUI</span>
-            <span style="color:#888">REST</span>
-          </div>
-        
-          <div style="background:#141414; padding:15px; border-left:4px solid var(--highlight); display:flex; justify-content:space-between">
-            <span style="color:white; font-weight:700">SEX</span>
-            <span style="color:#888">UPPER</span>
-          </div>
-        
-          <div style="background:#141414; padding:15px; border-left:4px solid var(--highlight); display:flex; justify-content:space-between">
-            <span style="color:white; font-weight:700">SÁB</span>
-            <span style="color:#888">LOWER</span>
-          </div>
-        </div>
+          <div id="agenda-container" style="display: grid; gap: 10px"></div>
         </div>
 
         <!-- ABA: AVALIAÇÕES -->
         <div id="tab-avaliacoes" class="tab-content hidden">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px">
+          <div style="
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              margin-bottom: 20px;
+            ">
             <h3 class="text-red" style="margin: 0">PROGRESSO</h3>
             <button class="btn-primary" style="width: auto; padding: 8px 16px" onclick="openCheckinModal()">
               CHECK-IN
             </button>
           </div>
 
-          <h4 class="text-muted" style="font-size: 0.8rem; margin-bottom: 10px">Evolução de Peso</h4>
+          <h4 class="text-muted" style="font-size: 0.8rem; margin-bottom: 10px">
+            Evolução de Peso
+          </h4>
           <div class="chart-container">
             <canvas id="weightChart"></canvas>
           </div>
 
-          <h4 class="text-muted" style="font-size: 0.8rem; margin: 30px 0 10px">Variação de Cargas (%)</h4>
-          <div id="load-progress-container" style="display: grid; gap: 8px"><div class="text-muted text-center">Registre mais treinos para ver evolução.</div></div>
+          <h4 class="text-muted" style="font-size: 0.8rem; margin: 30px 0 10px">
+            Variação de Cargas (%)
+          </h4>
+          <div id="load-progress-container" style="display: grid; gap: 8px"></div>
 
-          <h4 class="text-muted" style="font-size: 0.8rem; margin: 30px 0 10px">Histórico de Check-ins</h4>
+          <h4 class="text-muted" style="font-size: 0.8rem; margin: 30px 0 10px">
+            Histórico de Check-ins
+          </h4>
           <div id="checkin-list" style="display: grid; gap: 10px"></div>
         </div>
 
@@ -1682,7 +1311,9 @@
               CS
             </div>
             <h3 style="color: white; margin-bottom: 10px">Fale com o Caio</h3>
-            <p class="text-muted" style="margin-bottom: 20px">Dúvidas sobre treino, dieta ou execução.</p>
+            <p class="text-muted" style="margin-bottom: 20px">
+              Dúvidas sobre treino, dieta ou execução.
+            </p>
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px">
               <button class="btn-primary" style="background: #25d366">WHATSAPP</button>
               <button class="btn-primary">GRUPO VIP</button>
@@ -1712,18 +1343,20 @@
 
       <footer class="app-footer">
         <div class="footer-logo">
-          <img src="./index_files/logo.png" alt="Projeto Ascensão" style="height: 90px; width: auto; display: none; margin: 0px auto;" onerror="this.style.display=&#39;none&#39;;this.nextElementSibling.style.display=&#39;block&#39;">
+          <img src="./index_files/logo.png" alt="Projeto Ascensão" style="height: 90px; width: auto; display: none; margin: 0px auto;" onerror="this.style.display=&#39;none&#39;;this.nextElementSibling.style.display=&#39;block&#39;" data-height-listener-added="true">
           <div style="display: block; font-family: Cinzel, serif; font-weight: 900; font-size: 1.8rem; color: rgb(220, 38, 38); letter-spacing: 5px; margin: 10px 0px;">PROJETO ASCENSÃO</div>
         </div>
         <div style="width: 50px; height: 2px; background: var(--highlight); margin: 0 auto 20px"></div>
         <div style="color: white; font-family: &#39;Cinzel&#39;, serif; font-size: 1.2rem; margin-bottom: 5px">
           CAIO SAMPAIO
         </div>
-        <div style="color: #888; font-size: 0.8rem">Personal Trainer · Estética &amp; Performance</div>
+        <div style="color: #888; font-size: 0.8rem">
+          Personal Trainer · Estética &amp; Performance
+        </div>
         <div class="footer-cref">CREF 200350-G/SP</div>
         <div class="footer-sign">Assinatura do Profissional</div>
         <div style="color: #444; font-size: 0.7rem; margin-top: 30px">
-          © 2025 Caio Sampaio · Todos os direitos reservados
+          © 2025 Caio Sampaio · Todos os direitos reservados · Projeto Ascensão
         </div>
       </footer>
     </div>
@@ -1747,22 +1380,22 @@
             <input type="number" min="0" max="10" class="form-input" id="checkin-diet" required="">
           </div>
           <div class="form-group">
-            <label class="form-label">Fotos (Opcional)</label>
+            <label class="form-label">Fotos (Obrigatórias)</label>
             <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px">
               <label class="photo-upload-label">
                 <span>Frontal</span>
                 <input type="file" hidden="" accept="image/*" onchange="previewImg(this, &#39;prev1&#39;)">
-                <img id="prev1" class="photo-preview">
+                <img id="prev1" class="photo-preview" data-height-listener-added="true">
               </label>
               <label class="photo-upload-label">
                 <span>Lateral</span>
                 <input type="file" hidden="" accept="image/*" onchange="previewImg(this, &#39;prev2&#39;)">
-                <img id="prev2" class="photo-preview">
+                <img id="prev2" class="photo-preview" data-height-listener-added="true">
               </label>
               <label class="photo-upload-label">
                 <span>Costas</span>
                 <input type="file" hidden="" accept="image/*" onchange="previewImg(this, &#39;prev3&#39;)">
-                <img id="prev3" class="photo-preview">
+                <img id="prev3" class="photo-preview" data-height-listener-added="true">
               </label>
             </div>
           </div>
@@ -1776,778 +1409,1800 @@
     </div>
 
     <script>
-      // --- DB EXERCÍCIOS ---
-      const DB = {
-        iniciante: {
-          main: [
-            {
-              id: 'd1',
-              name: 'DIA 1 · PUSH',
-              muscles: 'Peito, Ombro, Tríceps',
-              exs: [
-                { name: 'Supino Inclinado Halteres', s: 3, r: '6-10' },
-                { name: 'Supino Máquina', s: 3, r: '8-10' },
-                { name: 'Desenvolvimento Halteres', s: 3, r: '6-10' },
-                { name: 'Elevação Lateral', s: 3, r: '12-20' },
-                { name: 'Tríceps Corda', s: 3, r: '10-15' },
-                { name: 'Tríceps Francês', s: 2, r: '10-15' },
-              ],
-            },
-            {
-              id: 'd2',
-              name: 'DIA 2 · PULL',
-              muscles: 'Costas, Bíceps, Deltoide Post.',
-              exs: [
-                { name: 'Puxada Alta', s: 3, r: '8-12' },
-                { name: 'Remada Baixa', s: 3, r: '8-12' },
-                { name: 'Remada Unilateral', s: 2, r: '10-12' },
-                { name: 'Crucifixo Inverso', s: 3, r: '12-20' },
-                { name: 'Rosca Direta', s: 3, r: '8-12' },
-                { name: 'Rosca Martelo', s: 2, r: '10-12' },
-              ],
-            },
-            {
-              id: 'd3',
-              name: 'DIA 3 · LEGS',
-              muscles: 'Quadríceps, Posterior, Panturrilha',
-              exs: [
-                { name: 'Agachamento Livre', s: 3, r: '6-10' },
-                { name: 'Leg Press 45', s: 3, r: '10-15' },
-                { name: 'Mesa Flexora', s: 3, r: '10-15' },
-                { name: 'Stiff', s: 3, r: '8-12' },
-                { name: 'Extensora', s: 2, r: '12-15' },
-                { name: 'Panturrilha em Pé', s: 4, r: '10-15' },
-              ],
-            },
-            {
-              id: 'd4',
-              name: 'DIA 4 · UPPER',
-              muscles: 'Superior Completo',
-              exs: [
-                { name: 'Supino Inclinado Máq', s: 3, r: '8-12' },
-                { name: 'Puxada Neutra', s: 3, r: '8-12' },
-                { name: 'Elevação Lateral', s: 3, r: '12-20' },
-                { name: 'Crucifixo Cabo', s: 2, r: '12-15' },
-                { name: 'Rosca Alternada', s: 2, r: '10-12' },
-                { name: 'Tríceps Testa', s: 2, r: '10-12' },
-              ],
-            },
-            {
-              id: 'd5',
-              name: 'DIA 5 · LOWER',
-              muscles: 'Inferior + Glúteos',
-              exs: [
-                { name: 'Terra Romeno', s: 3, r: '6-10' },
-                { name: 'Bulgarian Split', s: 3, r: '8-10' },
-                { name: 'Cadeira Flexora', s: 3, r: '10-15' },
-                { name: 'Leg Press', s: 3, r: '10-15' },
-                { name: 'Panturrilha Sentada', s: 4, r: '12-20' },
-              ],
-            },
-          ],
-          alt: [
-            {
-              id: 'da',
-              name: 'A · PUSH ALT',
-              muscles: 'Peito, Ombros, Tríceps',
-              exs: [
-                { name: 'Supino Reto Barra', s: 4, r: '6-10' },
-                { name: 'Desenvolvimento Barra', s: 3, r: '8-12' },
-                { name: 'Elevação Lateral Cabo', s: 3, r: '12-20' },
-                { name: 'Crossover Cabo', s: 3, r: '12-15' },
-                { name: 'Tríceps Corda Polia Alta', s: 3, r: '10-15' },
-                { name: 'Tríceps Mergulho Banco', s: 2, r: '10-12' },
-              ],
-            },
-            {
-              id: 'db',
-              name: 'B · PULL ALT',
-              muscles: 'Costas, Bíceps',
-              exs: [
-                { name: 'Barra Fixa', s: 4, r: 'Falha' },
-                { name: 'Remada Curvada', s: 3, r: '8-12' },
-                { name: 'Remada Serrote', s: 3, r: '10-12' },
-                { name: 'Pulldown Frente', s: 3, r: '10-12' },
-                { name: 'Rosca Direta Barra', s: 3, r: '8-12' },
-                { name: 'Rosca Concentrada', s: 2, r: '10-12' },
-              ],
-            },
-            {
-              id: 'dc',
-              name: 'C · LEGS ALT',
-              muscles: 'Pernas Completo',
-              exs: [
-                { name: 'Agachamento Sumô', s: 3, r: '8-12' },
-                { name: 'Leg Press Fechado', s: 3, r: '10-15' },
-                { name: 'Stiff Halteres', s: 3, r: '8-12' },
-                { name: 'Mesa Flexora', s: 3, r: '10-15' },
-                { name: 'Cadeira Extensora', s: 2, r: '12-15' },
-                { name: 'Panturrilha Máquina', s: 4, r: '12-20' },
-              ],
-            },
-            {
-              id: 'dd',
-              name: 'D · FULL BODY',
-              muscles: 'Corpo Completo',
-              exs: [
-                { name: 'Supino Inclinado Halteres', s: 3, r: '8-10' },
-                { name: 'Puxada Alta', s: 3, r: '8-10' },
-                { name: 'Agachamento Goblet', s: 3, r: '10-12' },
-                { name: 'Desenvolvimento Halteres', s: 2, r: '10-12' },
-                { name: 'Rosca Direta', s: 2, r: '10-12' },
-                { name: 'Panturrilha em Pé', s: 3, r: '12-15' },
-              ],
-            },
-          ],
-        },
-        intermediario: {
-          main: [
-            { id:'i1', name:'DIA 1 · PUSH', muscles:'Peito, Ombro, Tríceps',
-              exs:[ {name:'Supino Inclinado Barra',s:4,r:'5-8'},{name:'Supino Reto Halteres',s:3,r:'8-10'},{name:'Desenvolvimento Halteres',s:3,r:'6-10'},{name:'Elevação Lateral',s:4,r:'12-20'},{name:'Crucifixo Cabo Baixo',s:2,r:'12-15'},{name:'Paralelas',s:3,r:'8-12'},{name:'Tríceps Corda',s:3,r:'10-15'} ]},
-            { id:'i2', name:'DIA 2 · PULL', muscles:'Costas, Bíceps, Delt. Post.',
-              exs:[ {name:'Barra Fixa',s:4,r:'6-10'},{name:'Remada Curvada T-Bar',s:4,r:'6-10'},{name:'Remada Unilateral Máquina',s:3,r:'8-12'},{name:'Pulldown Braços Retos',s:3,r:'12-15'},{name:'Crucifixo Inverso Máquina',s:3,r:'12-20'},{name:'Rosca Direta',s:3,r:'8-10'},{name:'Rosca Inclinada',s:3,r:'10-12'},{name:'Rosca Martelo Corda',s:2,r:'12-15'} ]},
-            { id:'i3', name:'DIA 3 · LEGS', muscles:'Pernas Completo',
-              exs:[ {name:'Agachamento Livre',s:4,r:'5-8'},{name:'Hack Squat',s:3,r:'8-10'},{name:'Stiff com Barra',s:4,r:'6-10'},{name:'Mesa Flexora',s:3,r:'10-15'},{name:'Cadeira Extensora',s:3,r:'12-15'},{name:'Panturrilha em Pé',s:4,r:'8-12'},{name:'Panturrilha Sentada',s:3,r:'12-20'} ]},
-            { id:'i4', name:'DIA 4 · UPPER', muscles:'Superior Completo',
-              exs:[ {name:'Supino Inclinado Halteres',s:3,r:'8-10'},{name:'Remada Apoiada no Peito',s:3,r:'8-10'},{name:'Puxada Neutra Fechada',s:3,r:'8-12'},{name:'Desenvolvimento Máquina',s:3,r:'8-10'},{name:'Elevação Lateral Unilateral',s:3,r:'12-20'},{name:'Rosca Scott',s:3,r:'8-12'},{name:'Tríceps Testa',s:3,r:'8-12'} ]},
-            { id:'i5', name:'DIA 5 · LOWER', muscles:'Inferior + Core',
-              exs:[ {name:'Terra Romeno',s:4,r:'6-8'},{name:'Leg Press',s:4,r:'10-15'},{name:'Passada Andando',s:3,r:'10-12'},{name:'Cadeira Flexora',s:3,r:'10-15'},{name:'Cadeira Extensora',s:2,r:'15-20'},{name:'Panturrilha Leg Press',s:4,r:'12-20'} ]},
-          ],
-          alt: [
-            { id:'ia', name:'TREINO A · PUSH+', muscles:'Peito, Ombros, Tríceps',
-              exs:[ {name:'Supino Inclinado Barra',s:4,r:'6-8'},{name:'Desenvolvimento Halteres',s:3,r:'8-10'},{name:'Elevação Lateral',s:4,r:'12-20'},{name:'Tríceps Corda',s:3,r:'10-15'},{name:'Tríceps Testa',s:2,r:'10-12'} ]},
-            { id:'ib', name:'TREINO B · PULL+', muscles:'Costas, Bíceps',
-              exs:[ {name:'Barra Fixa',s:4,r:'6-10'},{name:'Remada Curvada',s:4,r:'6-10'},{name:'Rosca Direta',s:3,r:'8-12'},{name:'Rosca Inclinada',s:3,r:'10-12'} ]},
-            { id:'ic', name:'TREINO C · LEGS+', muscles:'Pernas',
-              exs:[ {name:'Agachamento Livre',s:4,r:'5-8'},{name:'Stiff com Barra',s:4,r:'6-10'},{name:'Leg Press',s:3,r:'10-15'},{name:'Mesa Flexora',s:3,r:'10-15'},{name:'Panturrilha em Pé',s:4,r:'8-12'} ]},
-            { id:'id', name:'TREINO D · FULL BODY', muscles:'Corpo Inteiro',
-              exs:[ {name:'Supino Inclinado',s:3,r:'8-10'},{name:'Puxada Alta',s:3,r:'8-10'},{name:'Agachamento',s:3,r:'8-10'},{name:'Desenvolvimento',s:2,r:'10-12'},{name:'Rosca Direta',s:2,r:'10-12'},{name:'Panturrilha',s:3,r:'12-15'} ]},
-          ]
-        },
-        avancado: {
-          main: [
-            { id:'a1', name:'DIA 1 · PUSH', muscles:'Peito, Ombro, Tríceps — Alto Volume',
-              exs:[ {name:'Supino Inclinado Barra (Top)',s:1,r:'4-6'},{name:'Supino Inclinado Barra (Back-Off)',s:3,r:'6-8'},{name:'Supino Máquina Convergente',s:3,r:'8-10'},{name:'Desenvolvimento Halteres',s:3,r:'6-8'},{name:'Elevação Lateral Halteres',s:4,r:'12-20'},{name:'Elevação Lateral Cabo',s:3,r:'15-20'},{name:'Crucifixo no Cabo',s:3,r:'12-15'},{name:'Tríceps Francês EZ',s:3,r:'8-12'},{name:'Tríceps Corda Dropset',s:2,r:'12+drop'} ]},
-            { id:'a2', name:'DIA 2 · PULL', muscles:'Dorsais, Bíceps — Alto Volume',
-              exs:[ {name:'Barra Fixa com Carga',s:4,r:'5-8'},{name:'Remada Cavalinho',s:4,r:'6-8'},{name:'Remada Unilateral com Apoio',s:3,r:'8-10'},{name:'Pulldown Unilateral',s:3,r:'10-12'},{name:'Pullover no Cabo',s:2,r:'12-15'},{name:'Crucifixo Inverso',s:4,r:'12-20'},{name:'Rosca Direta Barra Reta',s:3,r:'6-8'},{name:'Rosca Inclinada',s:3,r:'8-12'},{name:'Rosca Martelo Cross-Body',s:2,r:'10-12'} ]},
-            { id:'a3', name:'DIA 3 · LEGS', muscles:'Pernas — Alto Volume',
-              exs:[ {name:'Agachamento Livre (Top)',s:1,r:'4-6'},{name:'Agachamento Livre (Back-Off)',s:3,r:'6-8'},{name:'Hack Squat',s:4,r:'8-10'},{name:'Stiff com Barra',s:4,r:'6-8'},{name:'Mesa Flexora',s:4,r:'10-15'},{name:'Cadeira Extensora (Pausa)',s:3,r:'12-15'},{name:'Panturrilha em Pé',s:5,r:'8-12'},{name:'Panturrilha Sentada',s:4,r:'12-20'} ]},
-            { id:'a4', name:'DIA 4 · UPPER', muscles:'Superior — Especialização',
-              exs:[ {name:'Supino Inclinado Halteres',s:4,r:'6-10'},{name:'Remada Chest-Supported',s:4,r:'8-10'},{name:'Puxada Neutra',s:3,r:'8-10'},{name:'Desenvolvimento Máquina',s:3,r:'8-10'},{name:'Elevação Lateral Mecânica',s:3,r:'10+10+10'},{name:'Peck-Deck',s:2,r:'12-15'},{name:'Rosca Scott Máquina',s:3,r:'8-12'},{name:'Tríceps Polia Barra Reta',s:3,r:'8-12'} ]},
-            { id:'a5', name:'DIA 5 · LOWER', muscles:'Inferior — Especialização',
-              exs:[ {name:'Terra Romeno',s:4,r:'6-8'},{name:'Leg Press Pés Médios',s:4,r:'10-15'},{name:'Bulgarian Split Squat',s:3,r:'8-10'},{name:'Cadeira Flexora Unilateral',s:3,r:'10-12'},{name:'Extensora Alta Rep',s:2,r:'18-25'},{name:'Panturrilha Leg Press',s:4,r:'12-20'},{name:'Elevação de Pernas Suspenso',s:4,r:'10-15'} ]},
-          ],
-          alt: [
-            { id:'aa', name:'TREINO A · PUSH MAX', muscles:'Peito, Ombros, Tríceps',
-              exs:[ {name:'Supino Inclinado Barra',s:5,r:'4-6'},{name:'Desenvolvimento Halteres',s:4,r:'6-8'},{name:'Elevação Lateral',s:5,r:'12-20'},{name:'Crucifixo Cabo',s:3,r:'12-15'},{name:'Tríceps Francês',s:4,r:'8-12'} ]},
-            { id:'ab', name:'TREINO B · PULL MAX', muscles:'Costas, Bíceps',
-              exs:[ {name:'Barra Fixa com Carga',s:5,r:'4-8'},{name:'Remada Cavalinho',s:4,r:'6-8'},{name:'Rosca Direta',s:4,r:'6-10'},{name:'Rosca Inclinada',s:3,r:'8-12'} ]},
-            { id:'ac', name:'TREINO C · LEGS MAX', muscles:'Pernas',
-              exs:[ {name:'Agachamento Livre',s:5,r:'4-6'},{name:'Stiff com Barra',s:4,r:'6-8'},{name:'Hack Squat',s:4,r:'8-10'},{name:'Mesa Flexora',s:4,r:'10-12'},{name:'Panturrilha em Pé',s:5,r:'8-12'} ]},
-            { id:'ad', name:'TREINO D · UPPER POWER', muscles:'Superior + Força',
-              exs:[ {name:'Supino Inclinado Barra',s:4,r:'5-8'},{name:'Barra Fixa',s:4,r:'5-8'},{name:'Desenvolvimento Halteres',s:3,r:'6-8'},{name:'Rosca Scott Máquina',s:3,r:'8-10'},{name:'Tríceps Polia',s:3,r:'8-10'} ]},
-          ]
-        },
-      };
+// ===== MOBILIDADE =====
+const MOB_DATA = {
+  mobPush: {
+    name: '🏃 Mobilidade – PUSH Day',
+    desc: 'Pré-treino de PUSH · 3-5 minutos',
+    muscles: 'Peito, ombros, tríceps',
+    exs: [
+      { name: 'Band Pull-Apart', s: 2, r: '15 reps' },
+      { name: 'Rotação externa de ombro', s: 2, r: '15 reps/lado' },
+      { name: 'Abertura de peito no rolo', s: 1, r: '60s' },
+      { name: 'Alongamento de peitoral na parede', s: 2, r: '30s/lado' }
+    ]
+  },
+  mobPull: {
+    name: '🏃 Mobilidade – PULL Day',
+    desc: 'Pré-treino de PULL · 3-5 minutos',
+    muscles: 'Costas, bíceps, posterior',
+    exs: [
+      { name: 'Dead Hang (suspensão passiva)', s: 3, r: '15-30s' },
+      { name: 'Gato-Vaca (Cat-Cow)', s: 2, r: '10 reps' },
+      { name: 'Rotação torácica no solo', s: 2, r: '10 reps/lado' },
+      { name: 'Alongamento de bíceps na parede', s: 2, r: '30s/lado' }
+    ]
+  },
+  mobLegs: {
+    name: '🏃 Mobilidade – LEGS Day',
+    desc: 'Pré-treino de PERNAS · 5 minutos',
+    muscles: 'Quadríceps, posteriores, glúteos',
+    exs: [
+      { name: 'Hip Flexor Stretch (ajoelhado)', s: 2, r: '40s/lado' },
+      { name: 'Lunge com rotação', s: 2, r: '10 reps/lado' },
+      { name: 'Agachamento profundo com apoio', s: 2, r: '30s' },
+      { name: 'Mobilidade de tornozelo na parede', s: 2, r: '10 reps/lado' },
+      { name: 'Glute Bridge (ativação)', s: 2, r: '15 reps' }
+    ]
+  }
+};
 
-      // --- DB COMPLEMENTARES ---
-      const DB_COMP = [
-        {
-          id: 'c1',
-          name: 'AQUECIMENTO UNIVERSAL',
-          muscles: 'Pré-treino obrigatório — 8–10 min',
-          exs: [
-            { name: 'Rotação de Pescoço + Ombros', s: 1, r: '10 círculos cada' },
-            { name: 'Círculos de Quadril', s: 1, r: '10 cada lado' },
-            { name: 'Agachamento Corporal (controlado)', s: 2, r: '10 reps' },
-            { name: 'Cardio Leve (bike/esteira/corda)', s: 1, r: '5–8 min' },
-            { name: 'Aumento Progressivo de Carga', s: 1, r: '2–3 séries leves no 1º exercício' },
-          ],
-        },
-        {
-          id: 'c2',
-          name: 'CORE & ESTABILIDADE',
-          muscles: 'Ao final dos treinos PUSH e PULL — 10–15 min',
-          exs: [
-            { name: 'Prancha Frontal', s: 3, r: '30–60 seg' },
-            { name: 'Dead Bug', s: 3, r: '8 cada lado' },
-            { name: 'Bird Dog', s: 3, r: '10 cada lado' },
-            { name: 'Abdominal Roda (Rollout)', s: 3, r: '8–12 reps' },
-            { name: 'Prancha Lateral', s: 2, r: '20–40 seg cada' },
-            { name: 'Hip Thrust Isométrico no Chão', s: 2, r: '30 seg' },
-          ],
-        },
-        {
-          id: 'c3',
-          name: 'MOBILIDADE — PUSH DAY',
-          muscles: 'Antes do treino de Peito/Ombro/Tríceps — 6–8 min',
-          exs: [
-            { name: 'Abertura de Peito no Cabo / Faixa', s: 2, r: '30 seg' },
-            { name: 'Círculos de Ombro com Bastão', s: 2, r: '10 cada direção' },
-            { name: 'Wall Slide (deslizamento na parede)', s: 2, r: '10 reps' },
-            { name: 'Thread-the-Needle (rotação torácica)', s: 2, r: '8 cada lado' },
-            { name: 'Supino Leve para ativação (50% da carga)', s: 2, r: '12 reps' },
-          ],
-        },
-        {
-          id: 'c4',
-          name: 'MOBILIDADE — PULL DAY',
-          muscles: 'Antes do treino de Costas/Bíceps — 6–8 min',
-          exs: [
-            { name: 'Cat-Cow (coluna)', s: 2, r: '10 reps' },
-            { name: 'Alongamento de Latíssimo (travado na barra)', s: 2, r: '30 seg' },
-            { name: 'Rotação Interna/Externa de Ombro com Faixa', s: 2, r: '15 cada' },
-            { name: 'Retração Escapular com Faixa', s: 2, r: '15 reps' },
-            { name: 'Puxada Leve para ativação (50% da carga)', s: 2, r: '12 reps' },
-          ],
-        },
-        {
-          id: 'c5',
-          name: 'MOBILIDADE — LEGS DAY',
-          muscles: 'Antes do treino de Pernas — 8–10 min',
-          exs: [
-            { name: 'Hip Flexor Stretch (ajoelhado)', s: 2, r: '30 seg cada' },
-            { name: 'Abertura de Quadril (Frog Stretch)', s: 2, r: '30 seg' },
-            { name: 'Squat to Stand', s: 2, r: '10 reps' },
-            { name: 'Mobilidade de Tornozelo na Parede', s: 2, r: '10 cada' },
-            { name: 'Leg Swing Frontal e Lateral', s: 1, r: '10 cada direção' },
-            { name: 'Agachamento Corporal Controlado', s: 2, r: '10 reps' },
-          ],
-        },
-        {
-          id: 'c6',
-          name: 'RECUPERAÇÃO ATIVA',
-          muscles: 'Dias de descanso ou pós-treino — 10–20 min',
-          exs: [
-            { name: 'Foam Roller — Costas/Glúteos/Panturrilha', s: 1, r: '60 seg cada região' },
-            { name: 'Caminhada Leve', s: 1, r: '15–20 min' },
-            { name: 'Alongamento de Isquiotibiais', s: 2, r: '30 seg cada' },
-            { name: 'Alongamento de Peito e Bíceps', s: 2, r: '30 seg' },
-            { name: 'Respiração Diafragmática', s: 1, r: '5 min, 5 seg inalação / 5 seg exalação' },
-          ],
-        },
-      ];
+// ===== COMPLEMENTARES =====
+const COMPLEMENTARES = {
+  panturrilha: {
+    name: '🦵 Panturrilha — Finisher',
+    badge: 'PÓS-TREINO · 5-8 MIN',
+    desc: 'Execute após qualquer sessão de treino. Panturrilha responde melhor com alta frequência e volume.',
+    muscles: 'Gastrocnêmio, Sóleo',
+    tip: 'Amplitude completa: desça até sentir o alongamento, suba até a ponta máxima. Pause 1 segundo no topo.',
+    exs: [
+      { name: 'Panturrilha em pé (unilateral)', s: 4, r: '12-15 reps/lado' },
+      { name: 'Panturrilha sentada (sóleo)', s: 3, r: '15-20 reps' },
+      { name: 'Panturrilha no leg press', s: 3, r: '15-20 reps' },
+      { name: 'Saltito em pé (calf raise explosivo)', s: 2, r: '20 reps' }
+    ]
+  },
+  core: {
+    name: '💪 Core — Finisher',
+    badge: 'PÓS-TREINO · 6-8 MIN',
+    desc: 'Execute após sessões PUSH, PULL ou UPPER. Foco em estabilidade, controle e força funcional.',
+    muscles: 'Core, abdômen, oblíquos, lombar',
+    tip: 'Não prenda a respiração. Contraia o abdômen durante todo o movimento. Qualidade sempre acima de quantidade.',
+    exs: [
+      { name: 'Prancha isométrica', s: 3, r: '30-45s' },
+      { name: 'Dead Bug', s: 3, r: '10 reps/lado' },
+      { name: 'Bird Dog', s: 3, r: '10 reps/lado' },
+      { name: 'Abdominal Hollow Hold', s: 3, r: '20-30s' },
+      { name: 'Prancha lateral', s: 2, r: '20-30s/lado' },
+      { name: 'Mountain Climber (lento e controlado)', s: 2, r: '10 reps/lado' }
+    ]
+  },
+  cardio: {
+    name: '🏃 Cardio — Finisher',
+    badge: 'PÓS-TREINO · 10-20 MIN',
+    desc: 'Execute ao final do treino. Escolha uma opção conforme seu objetivo: queima calórica, condicionamento ou recuperação.',
+    muscles: 'Sistema cardiovascular, metabolismo total',
+    tip: 'Para ganho de massa: prefira cardio leve (10-15 min, zona 2). Para emagrecimento: cardio moderado-intenso (15-20 min).',
+    exs: [
+      { name: 'Esteira — ritmo leve (zona 2)', s: 1, r: '15-20 min' },
+      { name: 'Bicicleta ergométrica — ritmo moderado', s: 1, r: '12-15 min' },
+      { name: 'Elíptico — intensidade moderada', s: 1, r: '12-15 min' },
+      { name: 'HIIT — 20s on / 40s off (bicicleta ou step)', s: 8, r: '1 ciclo' },
+      { name: 'Corda de pular — séries contínuas', s: 5, r: '1 min' },
+      { name: 'Caminhada inclinada (treadmill incline walk)', s: 1, r: '15-20 min' }
+    ]
+  }
+};
 
-      // STATE
-      let state = { profile: null, logs: {}, checkins: [] };
-
-      // INIT
-      function initApp() {
-        const params = new URLSearchParams(window.location.search);
-        const stored = localStorage.getItem('ascensao_data');
-
-        if (stored) {
-          state = JSON.parse(stored);
-        }
-
-        // URL Params Override / Create
-        if (params.has('nome')) {
-          // Normaliza nível (remove acentos, lowercase, sem espaços)
-          const normalizeStr = (s) => (s || '').toLowerCase()
-            .normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim();
-
-          const rawNivel = normalizeStr(params.get('nivel'));
-          const rawObj   = normalizeStr(params.get('objetivo'));
-
-          // Mapeia nível
-          let nivel = 'iniciante';
-          if (rawNivel.includes('inter')) nivel = 'intermediario';
-          else if (rawNivel.includes('avan')) nivel = 'avancado';
-
-          // Mapeia objetivo — 3 opções do Tally:
-          // A: "Forjar um físico mais forte"        → gain (padrão)
-          // B: "Reduzir peso a ganhar leveza"       → cut
-          // C: "Reestruturar composição do meu corpo" → recomp
-          let objetivo = 'gain';
-          if (rawObj.includes('reduz') || rawObj.includes('lev') || rawObj.includes('perd') ||
-              rawObj.includes('cut') || rawObj.includes('emagrec') || rawObj.includes('defin')) objetivo = 'cut';
-          else if (rawObj.includes('reestru') || rawObj.includes('composi') || rawObj.includes('recomp')) objetivo = 'recomp';
-
-          // Mapeia frequência semanal ("3 dias" → 3, mínimo 3x/sem)
-          const rawFreq = normalizeStr(params.get('frequencia') || params.get('dias') || '5');
-          const freqNum = Math.max(3, parseInt(rawFreq.replace(/\D/g, '')) || 5); // mín. 3
-          const plannedMonth = freqNum * 4; // sessões previstas no mês
-
-          // Mapeia limitações (aceita 'limitacoes' ou 'limitacao')
-          const limitacao = params.get('limitacoes') || params.get('limitacao') || params.get('lesao') || '';
-
-          // Dados extras do Tally (armazenados para uso futuro na dieta)
-          const alimentacao  = params.get('alimentacao')  || '';
-          const compulsao    = params.get('compulsao')    || '';
-          const medicamentos = params.get('medicamentos') || '';
-          const email        = params.get('email')        || '';
-
-          const existing = state.profile; // preserva histórico se já existe
-          // Limpa o nome: remove pontuação final (ex: Tally envia "Caio?")
-          const rawName = (params.get('nome') || '').replace(/[?!.,;:]+$/, '').trim();
-          state.profile = {
-            name:          rawName || 'Aluno',
-            level:         nivel,
-            goal:          objetivo,
-            weight:        parseFloat(params.get('peso'))    || (existing && existing.weight)    || 70,
-            height:        parseInt(params.get('altura'))    || (existing && existing.height)    || 170,
-            age:           parseInt(params.get('idade'))     || (existing && existing.age)       || 25,
-            gender:        params.get('genero')              || (existing && existing.gender)    || '',
-            email:         email                             || (existing && existing.email)     || '',
-            frequencia:    freqNum,
-            plannedMonth:  plannedMonth,
-            limitacao:     limitacao,
-            alimentacao:   alimentacao,
-            compulsao:     compulsao,
-            medicamentos:  medicamentos,
-            start:         (existing && existing.start)      || new Date().toISOString(),
-          };
-          save();
-        }
-
-        if (!state.profile) {
-          document.getElementById('no-access-screen').classList.remove('hidden');
-        } else {
-          document.getElementById('app-screen').classList.remove('hidden');
-          renderDashboard();
-        }
-      }
-
-      function save() {
-        localStorage.setItem('ascensao_data', JSON.stringify(state));
-      }
-
-      // RENDERERS
-      function renderDashboard() {
-        const p = state.profile;
-        document.getElementById('header-name').textContent = p.name.toUpperCase();
-        document.getElementById('header-name').style.display = 'inline';
-        document.getElementById('header-level').textContent = p.level.toUpperCase();
-        document.getElementById('hero-name').textContent = p.name.split(' ')[0].toUpperCase();
-        document.getElementById('hero-goal').textContent =
-          p.goal === 'gain' ? 'Hipertrofia' : p.goal === 'cut' ? 'Definição' : 'Recomposição';
-        document.getElementById('hero-date').textContent = new Date(p.start).toLocaleDateString().slice(0, 5);
-
-        // Gauge
-        const freq = calcFrequency();
-        const pct = Math.min(100, Math.round((freq.done / freq.planned) * 100));
-        updateGauge(pct);
-        document.getElementById('gauge-text').textContent = pct + '%';
-        document.getElementById('gauge-sessions').textContent = freq.done;
-        document.getElementById('gauge-planned').textContent = freq.planned + ' (' + (state.profile.frequencia || 5) + 'x/sem)';
-
-        // Alerta de limitações
-        if (p.limitacao && p.limitacao.trim().length > 2) {
-          const alertEl = document.getElementById('limitacao-alert');
-          alertEl.classList.remove('hidden');
-          alertEl.style.display = 'flex';
-          document.getElementById('limitacao-text').textContent = p.limitacao;
-        }
-
-        if (pct >= 90) {
-          document.getElementById('unlock-badge').classList.add('visible');
-        }
-        document.getElementById('workout-wrapper').classList.remove('locked-overlay');
-
-        // Metrics
-        document.getElementById('dash-weight').textContent = p.weight;
-        document.getElementById('dash-goal').textContent = p.goal === 'gain' ? '+ Massa' : p.goal === 'cut' ? '- Gordura' : 'Recomp.';
-        document.getElementById('dash-workouts').textContent = Object.keys(state.logs).length;
-        const avgDiet = state.checkins.length
-          ? Math.round((state.checkins.reduce((a, c) => a + (parseFloat(c.diet) || 0), 0) / state.checkins.length) * 10)
-          : '--';
-        document.getElementById('dash-diet').textContent = avgDiet;
-
-        // Nutri
-        const macros = calcMacros(p);
-        document.getElementById('dash-cal').textContent = macros.kcal;
-        document.getElementById('dash-prot').textContent = macros.p;
-        document.getElementById('dash-carb').textContent = macros.c;
-        document.getElementById('dash-fat').textContent = macros.f;
-
-        // Mini Week
-        renderMiniWeek();
-
-        // Sub-renders
-        renderWorkout('main');
-        renderDiet(macros);
-        renderEvaluations();
-        checkCheckin();
-      }
-
-      function calcFrequency() {
-        // Usa a frequência declarada pelo aluno no Tally (padrão 5 dias/sem)
-        const planned = (state.profile && state.profile.plannedMonth) || 20;
-        // Conta dias únicos com treino salvo nos últimos 30 dias
-        const cutoff = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000);
-        const doneDates = new Set();
-        Object.values(state.logs).forEach(exArr => {
-          if (!Array.isArray(exArr)) return;
-          exArr.forEach(entry => {
-            if (entry && entry.date && new Date(entry.date) >= cutoff) doneDates.add(entry.date);
-          });
-        });
-        const done = doneDates.size;
-        return { done, planned, pct: Math.min(100, Math.round((done / planned) * 100)) };
-      }
-
-      function updateGauge(pct) {
-        const total = 251.3;
-        const offset = total - (total * pct) / 100;
-        const path = document.getElementById('gauge-path');
-        path.style.strokeDashoffset = offset;
-        path.style.stroke = pct < 60 ? '#dc2626' : pct < 85 ? '#f97316' : '#16a34a';
-      }
-
-      function renderMiniWeek() {
-        const days = ['DOM', 'SEG', 'TER', 'QUA', 'QUI', 'SEX', 'SÁB'];
-        const types = ['REST', 'PUSH', 'PULL', 'LEGS', 'REST', 'UPPER', 'LOWER']; // Example pattern
-        const today = new Date().getDay();
-        const html = days
-          .map((d, i) => {
-            let cls = 'day-mini';
-            if (i === today) cls += ' today';
-            return `<div class="${cls}">
-            <span class="day-mini-name">${d}</span>
-            <span class="day-mini-type">${types[i]}</span>
-          </div>`;
-          })
-          .join('');
-        document.getElementById('mini-week-container').innerHTML = html;
-        document.getElementById('agenda-container').innerHTML = days
-          .map(
-            (d, i) => `
-          <div style="background:#141414; padding:15px; border-left:4px solid ${types[i] === 'REST' ? '#333' : 'var(--highlight)'}; display:flex; justify-content:space-between">
-            <span style="color:white; font-weight:700">${d}</span>
-            <span style="color:#888">${types[i]}</span>
-          </div>
-        `,
-          )
-          .join('');
-      }
-
-      // WORKOUT LOGIC
-      let currentPlan = 'main';
-      function togglePlan(type) {
-        currentPlan = type;
-        document.getElementById('btn-main').className = type === 'main' ? 'btn-outline active' : 'btn-outline';
-        document.getElementById('btn-comp').className = type === 'comp' ? 'btn-outline active' : 'btn-outline';
-        document.getElementById('workout-wrapper').classList.remove('locked-overlay');
-        if (type === 'comp') {
-          renderComplementares();
-        } else {
-          renderWorkout(type);
-        }
-      }
-
-      function renderWorkout(type) {
-        const plan = DB[state.profile.level][type];
-        const html = plan.map((day) => {
-          const exsHtml = day.exs.map((ex) => {
-            const hist = (state.logs[ex.name] || []).slice(0, 3);
-            const last = hist[0] || {};
-            const histHtml = hist.length
-              ? hist.map(h => `<span>${h.date.slice(5)}: <strong style="color:var(--highlight)">${h.load}kg</strong> × ${h.reps}</span>`).join('')
-              : '<span style="color:#555">Sem histórico</span>';
-            return `
-              <div class="exercise-row">
-                <div class="ex-info">
-                  <span class="ex-name">${ex.name}</span>
-                  <span class="ex-presc">${ex.s} × ${ex.r} reps</span>
-                </div>
-                <div class="load-input-group">
-                  <label class="load-label">Carga</label>
-                  <input type="number" step="0.5" class="load-input" placeholder="${last.load || '--'}" data-ex="${ex.name}_load">
-                </div>
-                <div class="load-input-group">
-                  <label class="load-label">Reps</label>
-                  <input type="number" class="load-input" placeholder="${last.reps || '--'}" data-ex="${ex.name}_reps">
-                </div>
-                <div style="position:relative;display:flex;align-items:center">
-                  <button class="history-btn" onclick="this.nextElementSibling.classList.toggle('visible')" title="Histórico">&#128200;</button>
-                  <div class="history-tooltip">${histHtml}</div>
-                </div>
-              </div>`;
-          }).join('');
-          return `
-            <div class="day-accordion" data-day-id="${day.id}">
-              <div class="accordion-header" onclick="this.nextElementSibling.classList.toggle('open'); this.querySelector('span.acc-icon').textContent = this.nextElementSibling.classList.contains('open') ? '−' : '+'">
-                <div>
-                  <div class="day-title brand-font">${day.name}</div>
-                  <div class="day-muscles">${day.muscles || ''}</div>
-                </div>
-                <span class="acc-icon text-red" style="font-size:1.4rem;font-weight:700">+</span>
-              </div>
-              <div class="accordion-content">
-                ${exsHtml}
-                <button class="save-day-btn" onclick="saveDay('${day.id}')">SALVAR TREINO DO DIA</button>
-              </div>
-            </div>`;
-        }).join('');
-        document.getElementById('workout-wrapper').innerHTML = html;
-      }
-
-      function renderComplementares() {
-        const html = DB_COMP.map((block) => {
-          const exsHtml = block.exs.map((ex) => `
-            <div class="exercise-row" style="grid-template-columns: 2fr 1fr; gap:10px">
-              <div class="ex-info" style="grid-column:1/-1">
-                <span class="ex-name">${ex.name}</span>
-                <span class="ex-presc">${ex.s} série(s) · ${ex.r}</span>
-              </div>
-            </div>`).join('');
-          return `
-            <div class="day-accordion" data-day-id="${block.id}">
-              <div class="accordion-header" onclick="this.nextElementSibling.classList.toggle('open'); this.querySelector('span.acc-icon').textContent = this.nextElementSibling.classList.contains('open') ? '−' : '+'">
-                <div>
-                  <div class="day-title brand-font" style="color:#f97316">${block.name}</div>
-                  <div class="day-muscles">${block.muscles}</div>
-                </div>
-                <span class="acc-icon text-red" style="font-size:1.4rem;font-weight:700">+</span>
-              </div>
-              <div class="accordion-content">
-                ${exsHtml}
-                <div style="padding:12px 15px;border-top:1px solid var(--border);text-align:center;color:#555;font-size:0.75rem;font-family:'Cinzel',serif;letter-spacing:1px">EXECUTE ANTES OU APÓS O TREINO PRINCIPAL</div>
-              </div>
-            </div>`;
-        }).join('');
-        document.getElementById('workout-wrapper').innerHTML = `
-          <div style="background:rgba(249,115,22,0.06);border:1px solid rgba(249,115,22,0.3);border-radius:4px;padding:15px;margin-bottom:20px">
-            <div style="color:#f97316;font-family:'Cinzel',serif;font-size:0.85rem;font-weight:700;margin-bottom:6px">⚡ TREINOS COMPLEMENTARES</div>
-            <div style="color:#888;font-size:0.8rem;line-height:1.6">Aquecimento, mobilidade e core para maximizar a performance e prevenir lesões. Execute conforme a indicação de cada bloco — não substituem o treino principal.</div>
-          </div>
-          ${html}`;
-      }
-
-      function saveDay(dayId) {
-        // Busca o acordeão do dia correto pelo atributo data-day-id
-        const dayEl = document.querySelector(`[data-day-id="${dayId}"]`);
-        if (!dayEl) { alert('Dia não encontrado.'); return; }
-        const today = new Date().toISOString().split('T')[0];
-        const loadInputs = dayEl.querySelectorAll('input[data-ex$="_load"]');
-        let count = 0;
-
-        loadInputs.forEach((inp) => {
-          if (inp.value) {
-            const exName = inp.dataset.ex.replace('_load', '');
-            const repsInp = dayEl.querySelector(`input[data-ex="${exName}_reps"]`);
-            const reps = repsInp ? repsInp.value || 0 : 0;
-            if (!state.logs[exName]) state.logs[exName] = [];
-            state.logs[exName].unshift({ date: today, load: parseFloat(inp.value), reps: parseInt(reps) });
-            count++;
+// ===== BANCO DE DADOS MASCULINO =====
+const DB = {
+  iniciante: {
+    freq3: {
+      meso1: {
+        name: 'O Despertar',
+        desc: 'Aprendizado Motor · RIR 4-5 · 12-15 reps',
+        focus: 'Dominar os padrões de movimento básicos e criar o hábito de treino',
+        days: [
+          { id:'f3m1a', name:'DIA A · FULL BODY', muscles:'Corpo Completo',
+            exs:[
+              {name:'Agachamento Livre',s:3,r:'12-15'},
+              {name:'Supino Inclinado Halteres',s:3,r:'12-15'},
+              {name:'Remada Máquina',s:3,r:'12-15'},
+              {name:'Desenvolvimento Halteres',s:2,r:'12-15'},
+              {name:'Extensora',s:2,r:'15'}
+            ]
+          },
+          { id:'f3m1b', name:'DIA B · FULL BODY', muscles:'Corpo Completo',
+            exs:[
+              {name:'Leg Press 45',s:3,r:'12-15'},
+              {name:'Puxada Alta',s:3,r:'12-15'},
+              {name:'Supino Máquina',s:3,r:'12-15'},
+              {name:'Rosca Direta Halteres',s:2,r:'12-15'},
+              {name:'Tríceps Corda',s:2,r:'12-15'},
+              {name:'Mesa Flexora',s:2,r:'15'}
+            ]
           }
-        });
-
-        if (count > 0) {
-          save();
-          // Feedback visual no botão
-          const btn = dayEl.querySelector('.save-day-btn');
-          const orig = btn.textContent;
-          btn.textContent = '✅ TREINO SALVO!';
-          btn.style.background = 'var(--success)';
-          setTimeout(() => { btn.textContent = orig; btn.style.background = ''; }, 2000);
-          renderDashboard();
-        } else {
-          alert('Preencha pelo menos uma carga antes de salvar.');
-        }
+        ]
+      },
+      meso2: {
+        name: 'A Forja',
+        desc: 'Acumulação de Volume · RIR 2-3 · 8-12 reps',
+        focus: 'Aumentar volume semanal e iniciar progressão de carga linear',
+        days: [
+          { id:'f3m2a', name:'DIA A · FULL BODY', muscles:'Corpo Completo',
+            exs:[
+              {name:'Agachamento Livre',s:3,r:'8-12'},
+              {name:'Supino Inclinado Barra',s:3,r:'8-12'},
+              {name:'Puxada Alta',s:3,r:'8-12'},
+              {name:'Desenvolvimento Halteres',s:3,r:'8-12'},
+              {name:'Tríceps Corda',s:2,r:'10-12'},
+              {name:'Rosca Direta',s:2,r:'10-12'}
+            ]
+          },
+          { id:'f3m2b', name:'DIA B · FULL BODY', muscles:'Corpo Completo',
+            exs:[
+              {name:'Stiff',s:3,r:'8-12'},
+              {name:'Leg Press 45',s:3,r:'10-12'},
+              {name:'Supino Máquina',s:3,r:'8-12'},
+              {name:'Remada Baixa',s:3,r:'8-12'},
+              {name:'Elevação Lateral',s:3,r:'12-15'}
+            ]
+          }
+        ]
+      },
+      meso3: {
+        name: 'A Chama',
+        desc: 'Hipertrofia Intensiva · RIR 1-2 · 6-12 reps',
+        focus: 'Maximizar tensão mecânica e introduzir técnicas de intensidade leves',
+        days: [
+          { id:'f3m3a', name:'DIA A · FULL BODY', muscles:'Corpo Completo',
+            exs:[
+              {name:'Agachamento Livre',s:4,r:'6-10'},
+              {name:'Supino Inclinado Barra',s:4,r:'8-12'},
+              {name:'Puxada Alta',s:4,r:'8-12'},
+              {name:'Desenvolvimento Halteres',s:3,r:'8-12'},
+              {name:'Tríceps Francês',s:3,r:'10-12'},
+              {name:'Rosca Martelo',s:3,r:'10-12'}
+            ]
+          },
+          { id:'f3m3b', name:'DIA B · FULL BODY', muscles:'Corpo Completo',
+            exs:[
+              {name:'Terra Romeno',s:4,r:'6-10'},
+              {name:'Leg Press 45',s:4,r:'8-12'},
+              {name:'Supino Reto Halteres',s:4,r:'8-12'},
+              {name:'Remada Baixa',s:4,r:'8-12'},
+              {name:'Elevação Lateral',s:3,r:'12-15'}
+            ]
+          }
+        ]
       }
-
-      function getHistory(exName) {
-        return state.logs[exName] || [];
+    },
+    freq4: {
+      meso1: {
+        name: 'O Despertar',
+        desc: 'Aprendizado Motor · RIR 4-5 · 12-15 reps',
+        focus: 'Dominar os padrões de movimento na divisão Upper/Lower',
+        days: [
+          { id:'f4m1ua', name:'DIA 1 · UPPER A', muscles:'Peito, Costas, Ombros',
+            exs:[
+              {name:'Supino Inclinado Halteres',s:3,r:'12-15'},
+              {name:'Puxada Alta',s:3,r:'12-15'},
+              {name:'Desenvolvimento Halteres',s:3,r:'12-15'},
+              {name:'Remada Máquina',s:2,r:'12-15'},
+              {name:'Tríceps Corda',s:2,r:'12-15'},
+              {name:'Rosca Direta',s:2,r:'12-15'}
+            ]
+          },
+          { id:'f4m1la', name:'DIA 2 · LOWER A', muscles:'Quadríceps, Glúteos',
+            exs:[
+              {name:'Agachamento Livre',s:3,r:'12-15'},
+              {name:'Leg Press 45',s:3,r:'12-15'},
+              {name:'Extensora',s:2,r:'15'},
+              {name:'Mesa Flexora',s:2,r:'15'}
+            ]
+          },
+          { id:'f4m1ub', name:'DIA 3 · UPPER B', muscles:'Peito, Costas, Ombros',
+            exs:[
+              {name:'Supino Máquina',s:3,r:'12-15'},
+              {name:'Remada Baixa',s:3,r:'12-15'},
+              {name:'Elevação Lateral',s:3,r:'12-15'},
+              {name:'Crucifixo Cabo',s:2,r:'12-15'},
+              {name:'Rosca Alternada',s:2,r:'12-15'},
+              {name:'Tríceps Testa',s:2,r:'12-15'}
+            ]
+          },
+          { id:'f4m1lb', name:'DIA 4 · LOWER B', muscles:'Posteriores, Glúteos',
+            exs:[
+              {name:'Stiff',s:3,r:'12-15'},
+              {name:'Bulgarian Split',s:3,r:'12 reps/lado'},
+              {name:'Cadeira Flexora',s:3,r:'12-15'},
+              {name:'Abdutor',s:2,r:'15'}
+            ]
+          }
+        ]
+      },
+      meso2: {
+        name: 'A Forja',
+        desc: 'Acumulação de Volume · RIR 2-3 · 8-12 reps',
+        focus: 'Aumentar volume e carga, consolidar os padrões Upper/Lower',
+        days: [
+          { id:'f4m2ua', name:'DIA 1 · UPPER A', muscles:'Peito, Costas, Ombros',
+            exs:[
+              {name:'Supino Inclinado Barra',s:4,r:'8-12'},
+              {name:'Puxada Alta',s:4,r:'8-12'},
+              {name:'Desenvolvimento Halteres',s:3,r:'8-12'},
+              {name:'Remada Baixa',s:3,r:'8-12'},
+              {name:'Tríceps Corda',s:3,r:'10-12'},
+              {name:'Rosca Direta Barra',s:3,r:'10-12'}
+            ]
+          },
+          { id:'f4m2la', name:'DIA 2 · LOWER A', muscles:'Quadríceps, Glúteos',
+            exs:[
+              {name:'Agachamento Livre',s:4,r:'8-12'},
+              {name:'Leg Press 45',s:3,r:'10-12'},
+              {name:'Extensora',s:3,r:'12-15'},
+              {name:'Mesa Flexora',s:3,r:'12-15'}
+            ]
+          },
+          { id:'f4m2ub', name:'DIA 3 · UPPER B', muscles:'Peito, Costas, Posterior',
+            exs:[
+              {name:'Supino Reto Halteres',s:4,r:'8-12'},
+              {name:'Remada Unilateral',s:4,r:'8-12 reps/lado'},
+              {name:'Elevação Lateral',s:4,r:'12-15'},
+              {name:'Crucifixo Inverso',s:3,r:'12-15'},
+              {name:'Rosca Alternada',s:3,r:'10-12'},
+              {name:'Tríceps Testa',s:3,r:'10-12'}
+            ]
+          },
+          { id:'f4m2lb', name:'DIA 4 · LOWER B', muscles:'Posteriores, Glúteos',
+            exs:[
+              {name:'Stiff',s:4,r:'8-12'},
+              {name:'Bulgarian Split',s:3,r:'10-12 reps/lado'},
+              {name:'Cadeira Flexora',s:3,r:'12-15'},
+              {name:'Abdutor Máquina',s:3,r:'15'}
+            ]
+          }
+        ]
+      },
+      meso3: {
+        name: 'A Chama',
+        desc: 'Hipertrofia Intensiva · RIR 1-2 · 6-12 reps',
+        focus: 'Alta intensidade e sobrecarga progressiva na divisão Upper/Lower',
+        days: [
+          { id:'f4m3ua', name:'DIA 1 · UPPER A', muscles:'Peito, Costas, Ombros',
+            exs:[
+              {name:'Supino Inclinado Barra',s:4,r:'6-10'},
+              {name:'Puxada Alta',s:4,r:'8-12'},
+              {name:'Desenvolvimento Halteres',s:4,r:'8-12'},
+              {name:'Remada Baixa',s:3,r:'6-10'},
+              {name:'Tríceps Francês',s:3,r:'10-12'},
+              {name:'Rosca Direta Barra',s:3,r:'8-12'}
+            ]
+          },
+          { id:'f4m3la', name:'DIA 2 · LOWER A', muscles:'Quadríceps, Glúteos',
+            exs:[
+              {name:'Agachamento Livre',s:4,r:'6-10'},
+              {name:'Leg Press 45',s:4,r:'10-12'},
+              {name:'Extensora',s:3,r:'12-15'},
+              {name:'Mesa Flexora',s:3,r:'12-15'}
+            ]
+          },
+          { id:'f4m3ub', name:'DIA 3 · UPPER B', muscles:'Peito, Costas, Posterior',
+            exs:[
+              {name:'Supino Reto Halteres',s:4,r:'8-12'},
+              {name:'Remada Unilateral',s:4,r:'8-12 reps/lado'},
+              {name:'Elevação Lateral',s:4,r:'12-15'},
+              {name:'Crucifixo Inverso',s:3,r:'12-15'},
+              {name:'Rosca Inclinada',s:3,r:'10-12'},
+              {name:'Tríceps Mergulho',s:3,r:'10-12'}
+            ]
+          },
+          { id:'f4m3lb', name:'DIA 4 · LOWER B', muscles:'Posteriores, Glúteos',
+            exs:[
+              {name:'Terra Romeno',s:4,r:'6-10'},
+              {name:'Bulgarian Split',s:4,r:'8-12 reps/lado'},
+              {name:'Cadeira Flexora',s:3,r:'12-15'},
+              {name:'Abdutor Máquina',s:3,r:'15'}
+            ]
+          }
+        ]
       }
-
-      // DIET LOGIC
-      function calcMacros(p) {
-        let k, pr, c, f;
-        if (p.goal === 'gain') {
-          k = p.weight * 35;
-          pr = 2.2;
-          c = 4;
-          f = 0.9;
-        } else if (p.goal === 'cut') {
-          k = p.weight * 25;
-          pr = 2.5;
-          c = 1.5;
-          f = 0.7;
-        } else {
-          k = p.weight * 30;
-          pr = 2.4;
-          c = 2.5;
-          f = 0.8;
-        }
-        return {
-          kcal: Math.round(k),
-          p: Math.round(p.weight * pr),
-          c: Math.round(p.weight * c),
-          f: Math.round(p.weight * f),
-        };
+    },
+    freq5: {
+      meso1: {
+        name: 'O Despertar',
+        desc: 'Aprendizado Motor · RIR 4-5 · 12-15 reps',
+        focus: 'Dominar o PPL com volumes moderados e frequência mais alta',
+        days: [
+          { id:'f5m1p', name:'DIA 1 · PUSH', muscles:'Peito, Ombro, Tríceps',
+            exs:[
+              {name:'Supino Inclinado Halteres',s:3,r:'12-15'},
+              {name:'Supino Máquina',s:3,r:'12-15'},
+              {name:'Desenvolvimento Halteres',s:3,r:'12-15'},
+              {name:'Elevação Lateral',s:3,r:'12-15'},
+              {name:'Tríceps Corda',s:2,r:'12-15'}
+            ]
+          },
+          { id:'f5m1pu', name:'DIA 2 · PULL', muscles:'Costas, Bíceps, Post. Deltóide',
+            exs:[
+              {name:'Puxada Alta',s:3,r:'12-15'},
+              {name:'Remada Baixa',s:3,r:'12-15'},
+              {name:'Remada Unilateral',s:2,r:'12-15 reps/lado'},
+              {name:'Crucifixo Inverso',s:2,r:'12-15'},
+              {name:'Rosca Direta',s:3,r:'12-15'}
+            ]
+          },
+          { id:'f5m1l', name:'DIA 3 · LEGS', muscles:'Pernas Completo',
+            exs:[
+              {name:'Agachamento Livre',s:3,r:'12-15'},
+              {name:'Leg Press 45',s:3,r:'12-15'},
+              {name:'Mesa Flexora',s:2,r:'15'},
+              {name:'Extensora',s:2,r:'15'}
+            ]
+          },
+          { id:'f5m1up', name:'DIA 4 · UPPER', muscles:'Superior Completo',
+            exs:[
+              {name:'Supino Reto Halteres',s:3,r:'12-15'},
+              {name:'Puxada Neutra',s:3,r:'12-15'},
+              {name:'Elevação Lateral',s:2,r:'12-15'},
+              {name:'Crucifixo Cabo',s:2,r:'12-15'},
+              {name:'Rosca Alternada',s:2,r:'12-15'},
+              {name:'Tríceps Testa',s:2,r:'12-15'}
+            ]
+          },
+          { id:'f5m1lo', name:'DIA 5 · LOWER', muscles:'Inferior + Glúteos',
+            exs:[
+              {name:'Stiff',s:3,r:'12-15'},
+              {name:'Bulgarian Split',s:3,r:'12 reps/lado'},
+              {name:'Cadeira Flexora',s:2,r:'15'},
+              {name:'Leg Press 45',s:3,r:'12-15'}
+            ]
+          }
+        ]
+      },
+      meso2: {
+        name: 'A Forja',
+        desc: 'Acumulação de Volume · RIR 2-3 · 8-12 reps',
+        focus: 'Maior volume total, progressão linear de cargas em 5 sessões',
+        days: [
+          { id:'f5m2p', name:'DIA 1 · PUSH', muscles:'Peito, Ombro, Tríceps',
+            exs:[
+              {name:'Supino Inclinado Barra',s:4,r:'8-12'},
+              {name:'Supino Máquina',s:3,r:'8-12'},
+              {name:'Desenvolvimento Halteres',s:3,r:'8-12'},
+              {name:'Elevação Lateral',s:4,r:'12-15'},
+              {name:'Tríceps Corda',s:3,r:'10-12'},
+              {name:'Tríceps Francês',s:2,r:'10-12'}
+            ]
+          },
+          { id:'f5m2pu', name:'DIA 2 · PULL', muscles:'Costas, Bíceps, Post. Deltóide',
+            exs:[
+              {name:'Puxada Alta',s:4,r:'8-12'},
+              {name:'Remada Baixa',s:4,r:'8-12'},
+              {name:'Remada Unilateral',s:3,r:'10-12 reps/lado'},
+              {name:'Crucifixo Inverso',s:3,r:'12-15'},
+              {name:'Rosca Direta Barra',s:3,r:'8-12'},
+              {name:'Rosca Martelo',s:2,r:'10-12'}
+            ]
+          },
+          { id:'f5m2l', name:'DIA 3 · LEGS', muscles:'Pernas Completo',
+            exs:[
+              {name:'Agachamento Livre',s:4,r:'8-12'},
+              {name:'Leg Press 45',s:4,r:'10-12'},
+              {name:'Mesa Flexora',s:3,r:'12-15'},
+              {name:'Stiff',s:3,r:'10-12'},
+              {name:'Extensora',s:2,r:'12-15'}
+            ]
+          },
+          { id:'f5m2up', name:'DIA 4 · UPPER', muscles:'Superior Completo',
+            exs:[
+              {name:'Supino Reto Halteres',s:3,r:'8-12'},
+              {name:'Puxada Neutra',s:3,r:'8-12'},
+              {name:'Elevação Lateral',s:3,r:'12-15'},
+              {name:'Crucifixo Cabo',s:2,r:'12-15'},
+              {name:'Rosca Alternada',s:3,r:'10-12'},
+              {name:'Tríceps Testa',s:3,r:'10-12'}
+            ]
+          },
+          { id:'f5m2lo', name:'DIA 5 · LOWER', muscles:'Inferior + Glúteos',
+            exs:[
+              {name:'Terra Romeno',s:4,r:'8-12'},
+              {name:'Bulgarian Split',s:3,r:'10-12 reps/lado'},
+              {name:'Cadeira Flexora',s:3,r:'12-15'},
+              {name:'Leg Press 45',s:3,r:'10-12'}
+            ]
+          }
+        ]
+      },
+      meso3: {
+        name: 'A Chama',
+        desc: 'Hipertrofia Intensiva · RIR 1-2 · 6-12 reps',
+        focus: 'Alta intensidade com técnicas de intensidade em 5 sessões semanais',
+        days: [
+          { id:'f5m3p', name:'DIA 1 · PUSH', muscles:'Peito, Ombro, Tríceps',
+            exs:[
+              {name:'Supino Inclinado Barra',s:4,r:'6-10'},
+              {name:'Supino Máquina',s:3,r:'8-12'},
+              {name:'Desenvolvimento Halteres',s:4,r:'8-12'},
+              {name:'Elevação Lateral',s:4,r:'12-15'},
+              {name:'Tríceps Corda',s:3,r:'10-12'},
+              {name:'Tríceps Francês',s:3,r:'10-12'}
+            ]
+          },
+          { id:'f5m3pu', name:'DIA 2 · PULL', muscles:'Costas, Bíceps, Post. Deltóide',
+            exs:[
+              {name:'Puxada Alta',s:4,r:'8-12'},
+              {name:'Remada Baixa',s:4,r:'6-10'},
+              {name:'Remada Unilateral',s:3,r:'8-12 reps/lado'},
+              {name:'Crucifixo Inverso',s:3,r:'12-15'},
+              {name:'Rosca Direta Barra',s:3,r:'8-12'},
+              {name:'Rosca Inclinada',s:3,r:'10-12'}
+            ]
+          },
+          { id:'f5m3l', name:'DIA 3 · LEGS', muscles:'Pernas Completo',
+            exs:[
+              {name:'Agachamento Livre',s:4,r:'6-10'},
+              {name:'Leg Press 45',s:4,r:'10-12'},
+              {name:'Mesa Flexora',s:3,r:'12-15'},
+              {name:'Stiff',s:4,r:'8-12'},
+              {name:'Extensora',s:3,r:'12-15'}
+            ]
+          },
+          { id:'f5m3up', name:'DIA 4 · UPPER', muscles:'Superior Completo',
+            exs:[
+              {name:'Supino Reto Halteres',s:4,r:'8-12'},
+              {name:'Puxada Neutra',s:4,r:'8-12'},
+              {name:'Elevação Lateral',s:4,r:'12-15'},
+              {name:'Crucifixo Inverso',s:3,r:'12-15'},
+              {name:'Rosca Inclinada',s:3,r:'10-12'},
+              {name:'Tríceps Mergulho',s:3,r:'10-12'}
+            ]
+          },
+          { id:'f5m3lo', name:'DIA 5 · LOWER', muscles:'Inferior + Glúteos',
+            exs:[
+              {name:'Terra Romeno',s:4,r:'6-10'},
+              {name:'Bulgarian Split',s:4,r:'8-12 reps/lado'},
+              {name:'Cadeira Flexora',s:3,r:'12-15'},
+              {name:'Leg Press 45',s:3,r:'10-12'}
+            ]
+          }
+        ]
       }
+    },
+    freq6: {
+      meso1: {
+        name: 'O Despertar',
+        desc: 'Aprendizado Motor · RIR 4-5 · 12-15 reps',
+        focus: 'PPL×2 com volume distribuído e foco total na técnica de execução',
+        days: [
+          { id:'f6m1p1', name:'DIA 1 · PUSH 1', muscles:'Peito, Ombro, Tríceps',
+            exs:[
+              {name:'Supino Inclinado Halteres',s:3,r:'12-15'},
+              {name:'Desenvolvimento Halteres',s:3,r:'12-15'},
+              {name:'Elevação Lateral',s:3,r:'12-15'},
+              {name:'Tríceps Corda',s:2,r:'12-15'}
+            ]
+          },
+          { id:'f6m1pu1', name:'DIA 2 · PULL 1', muscles:'Costas, Bíceps',
+            exs:[
+              {name:'Puxada Alta',s:3,r:'12-15'},
+              {name:'Remada Máquina',s:3,r:'12-15'},
+              {name:'Crucifixo Inverso',s:2,r:'12-15'},
+              {name:'Rosca Direta',s:2,r:'12-15'}
+            ]
+          },
+          { id:'f6m1l1', name:'DIA 3 · LEGS 1', muscles:'Quadríceps, Glúteos',
+            exs:[
+              {name:'Agachamento Livre',s:3,r:'12-15'},
+              {name:'Leg Press 45',s:3,r:'12-15'},
+              {name:'Extensora',s:2,r:'15'}
+            ]
+          },
+          { id:'f6m1p2', name:'DIA 4 · PUSH 2', muscles:'Peito, Ombro, Tríceps',
+            exs:[
+              {name:'Supino Máquina',s:3,r:'12-15'},
+              {name:'Crucifixo Cabo',s:3,r:'12-15'},
+              {name:'Elevação Frontal',s:2,r:'12-15'},
+              {name:'Tríceps Testa',s:2,r:'12-15'}
+            ]
+          },
+          { id:'f6m1pu2', name:'DIA 5 · PULL 2', muscles:'Costas, Bíceps',
+            exs:[
+              {name:'Remada Baixa',s:3,r:'12-15'},
+              {name:'Puxada Neutra',s:3,r:'12-15'},
+              {name:'Remada Unilateral',s:2,r:'12-15 reps/lado'},
+              {name:'Rosca Martelo',s:2,r:'12-15'}
+            ]
+          },
+          { id:'f6m1l2', name:'DIA 6 · LEGS 2', muscles:'Posteriores, Glúteos',
+            exs:[
+              {name:'Stiff',s:3,r:'12-15'},
+              {name:'Mesa Flexora',s:3,r:'12-15'},
+              {name:'Bulgarian Split',s:2,r:'12 reps/lado'}
+            ]
+          }
+        ]
+      },
+      meso2: {
+        name: 'A Forja',
+        desc: 'Acumulação de Volume · RIR 2-3 · 8-12 reps',
+        focus: 'Volume duplo por grupo muscular com cargas progressivas em 6 sessões',
+        days: [
+          { id:'f6m2p1', name:'DIA 1 · PUSH 1', muscles:'Peito, Ombro, Tríceps',
+            exs:[
+              {name:'Supino Inclinado Barra',s:4,r:'8-12'},
+              {name:'Desenvolvimento Halteres',s:3,r:'8-12'},
+              {name:'Elevação Lateral',s:4,r:'12-15'},
+              {name:'Tríceps Corda',s:3,r:'10-12'}
+            ]
+          },
+          { id:'f6m2pu1', name:'DIA 2 · PULL 1', muscles:'Costas, Bíceps',
+            exs:[
+              {name:'Puxada Alta',s:4,r:'8-12'},
+              {name:'Remada Baixa',s:4,r:'8-12'},
+              {name:'Crucifixo Inverso',s:3,r:'12-15'},
+              {name:'Rosca Direta Barra',s:3,r:'8-12'}
+            ]
+          },
+          { id:'f6m2l1', name:'DIA 3 · LEGS 1', muscles:'Quadríceps, Glúteos',
+            exs:[
+              {name:'Agachamento Livre',s:4,r:'8-12'},
+              {name:'Leg Press 45',s:4,r:'10-12'},
+              {name:'Extensora',s:3,r:'12-15'}
+            ]
+          },
+          { id:'f6m2p2', name:'DIA 4 · PUSH 2', muscles:'Peito, Ombro, Tríceps',
+            exs:[
+              {name:'Supino Reto Halteres',s:4,r:'8-12'},
+              {name:'Crucifixo Cabo Baixo',s:3,r:'10-12'},
+              {name:'Elevação Lateral Máquina',s:3,r:'12-15'},
+              {name:'Tríceps Francês',s:3,r:'10-12'}
+            ]
+          },
+          { id:'f6m2pu2', name:'DIA 5 · PULL 2', muscles:'Costas, Bíceps',
+            exs:[
+              {name:'Remada Unilateral',s:4,r:'8-12 reps/lado'},
+              {name:'Puxada Neutra',s:3,r:'8-12'},
+              {name:'Remada Máquina',s:3,r:'10-12'},
+              {name:'Rosca Martelo',s:3,r:'10-12'}
+            ]
+          },
+          { id:'f6m2l2', name:'DIA 6 · LEGS 2', muscles:'Posteriores, Glúteos',
+            exs:[
+              {name:'Stiff',s:4,r:'8-12'},
+              {name:'Cadeira Flexora',s:3,r:'12-15'},
+              {name:'Bulgarian Split',s:3,r:'10-12 reps/lado'}
+            ]
+          }
+        ]
+      },
+      meso3: {
+        name: 'A Chama',
+        desc: 'Hipertrofia Intensiva · RIR 1-2 · 6-12 reps',
+        focus: 'Intensidade máxima e volume controlado, todas as fibras musculares recrutadas',
+        days: [
+          { id:'f6m3p1', name:'DIA 1 · PUSH 1', muscles:'Peito, Ombro, Tríceps',
+            exs:[
+              {name:'Supino Inclinado Barra',s:4,r:'6-10'},
+              {name:'Desenvolvimento Halteres',s:4,r:'8-12'},
+              {name:'Elevação Lateral',s:4,r:'12-15'},
+              {name:'Tríceps Corda',s:3,r:'10-12'}
+            ]
+          },
+          { id:'f6m3pu1', name:'DIA 2 · PULL 1', muscles:'Costas, Bíceps',
+            exs:[
+              {name:'Puxada Alta',s:4,r:'6-10'},
+              {name:'Remada Baixa',s:4,r:'6-10'},
+              {name:'Crucifixo Inverso',s:3,r:'12-15'},
+              {name:'Rosca Direta Barra',s:3,r:'8-12'}
+            ]
+          },
+          { id:'f6m3l1', name:'DIA 3 · LEGS 1', muscles:'Quadríceps, Glúteos',
+            exs:[
+              {name:'Agachamento Livre',s:4,r:'6-10'},
+              {name:'Leg Press 45',s:4,r:'8-12'},
+              {name:'Extensora',s:3,r:'12-15'}
+            ]
+          },
+          { id:'f6m3p2', name:'DIA 4 · PUSH 2', muscles:'Peito, Ombro, Tríceps',
+            exs:[
+              {name:'Supino Reto Halteres',s:4,r:'8-12'},
+              {name:'Crucifixo Cabo Baixo',s:3,r:'10-12'},
+              {name:'Elevação Lateral Máquina',s:4,r:'12-15'},
+              {name:'Tríceps Francês',s:3,r:'10-12'}
+            ]
+          },
+          { id:'f6m3pu2', name:'DIA 5 · PULL 2', muscles:'Costas, Bíceps',
+            exs:[
+              {name:'Terra Romeno',s:4,r:'6-10'},
+              {name:'Remada Unilateral',s:4,r:'8-12 reps/lado'},
+              {name:'Puxada Neutra',s:3,r:'8-12'},
+              {name:'Rosca Inclinada',s:3,r:'10-12'}
+            ]
+          },
+          { id:'f6m3l2', name:'DIA 6 · LEGS 2', muscles:'Posteriores, Glúteos',
+            exs:[
+              {name:'Stiff',s:4,r:'6-10'},
+              {name:'Cadeira Flexora',s:3,r:'12-15'},
+              {name:'Bulgarian Split',s:4,r:'8-12 reps/lado'}
+            ]
+          }
+        ]
+      }
+    }
+  }
+};
 
-      function renderDiet(m) {
-        document.getElementById('diet-cal').textContent = m.kcal;
-        document.getElementById('diet-prot').textContent = m.p;
-        document.getElementById('diet-carb').textContent = m.c;
-        document.getElementById('diet-fat').textContent = m.f;
+// ===== BANCO DE DADOS FEMININO =====
+// Foco estético: Glúteo 3D · Posterior & Coxas · V-Taper · Deltóide leve · Braço leve
+// Exercícios-chave: Hip Thrust, Sumo, Abdutor, Abdução no Cabo, Glute Kickback, Bulgarian Split, Stiff
+const DB_FEM = {
+  iniciante: {
+    freq3: {
+      meso1: {
+        name: 'O Despertar',
+        desc: 'Aprendizado Motor · RIR 4-5 · 12-15 reps',
+        focus: 'Base técnica com glúteo 3D, coxas e posterior como prioridade absoluta',
+        objetivo: 'Todas as metas — base técnica universal',
+        objetivoDesc: 'Fundação do programa estético feminino. Aprender a sentir o glúteo, ativar a cadeia posterior e criar conexão neuromuscular antes de aumentar carga.',
+        days: [
+          { id:'ff3m1a', name:'DIA A · FULL BODY', muscles:'Glúteos, Quadríceps, Coxas',
+            exs:[
+              {name:'Hip Thrust Barra',s:3,r:'12-15'},
+              {name:'Agachamento Sumô',s:3,r:'12-15'},
+              {name:'Abdução no Cabo (pé)',s:3,r:'15 reps/lado'},
+              {name:'Abdutor Máquina',s:2,r:'15'},
+              {name:'Extensora',s:2,r:'15'},
+              {name:'Elevação Lateral',s:2,r:'15'}
+            ]
+          },
+          { id:'ff3m1b', name:'DIA B · FULL BODY', muscles:'Posterior, Costas, Deltóide',
+            exs:[
+              {name:'Stiff Halteres',s:3,r:'12-15'},
+              {name:'Leg Press 45 (pés altos)',s:3,r:'12-15'},
+              {name:'Cadeira Flexora',s:2,r:'15'},
+              {name:'Puxada Alta',s:3,r:'12-15'},
+              {name:'Remada Máquina',s:2,r:'12-15'},
+              {name:'Crucifixo Inverso',s:2,r:'15'}
+            ]
+          }
+        ]
+      },
+      meso2: {
+        name: 'A Forja',
+        desc: 'Acumulação de Volume · RIR 2-3 · 8-12 reps',
+        focus: 'Glúteo 3D com volume duplo; coxas e posterior como foco secundário; V-taper leve',
+        objetivo: 'Ganho estético / Recomposição corporal',
+        objetivoDesc: 'Volume acumulado nos glúteos e posteriores impulsiona crescimento visível. O V-taper é trabalhado com puxadas e remadas moderadas. Braço e triceps apenas como suporte.',
+        days: [
+          { id:'ff3m2a', name:'DIA A · FULL BODY', muscles:'Glúteos, Quadríceps, Coxas',
+            exs:[
+              {name:'Hip Thrust Barra',s:4,r:'10-12'},
+              {name:'Agachamento Sumô',s:3,r:'8-12'},
+              {name:'Abdução no Cabo (pé)',s:3,r:'12-15 reps/lado'},
+              {name:'Abdutor Máquina',s:3,r:'12-15'},
+              {name:'Extensora',s:2,r:'12-15'},
+              {name:'Elevação Lateral',s:2,r:'12-15'}
+            ]
+          },
+          { id:'ff3m2b', name:'DIA B · FULL BODY', muscles:'Posterior, Costas, Deltóide',
+            exs:[
+              {name:'Stiff Halteres',s:4,r:'8-12'},
+              {name:'Leg Press 45 (pés altos)',s:3,r:'10-12'},
+              {name:'Cadeira Flexora',s:3,r:'12-15'},
+              {name:'Puxada Alta',s:3,r:'8-12'},
+              {name:'Remada Baixa',s:3,r:'8-12'},
+              {name:'Crucifixo Inverso',s:2,r:'12-15'}
+            ]
+          }
+        ]
+      },
+      meso3: {
+        name: 'A Chama',
+        desc: 'Hipertrofia Intensiva · RIR 1-2 · 6-12 reps',
+        focus: 'Máxima tensão no glúteo 3D e posterior; definição de coxas; deltóide leve mantido',
+        objetivo: 'Hipertrofia estética máxima',
+        objetivoDesc: 'Fase de pico do estímulo. Glúteo trabalhado em múltiplos ângulos (horizontal, vertical e abdução). Posterior com carga máxima. Superior apenas para V-taper e estética.',
+        days: [
+          { id:'ff3m3a', name:'DIA A · FULL BODY', muscles:'Glúteos, Quadríceps, Coxas',
+            exs:[
+              {name:'Hip Thrust Barra',s:4,r:'8-12'},
+              {name:'Agachamento Sumô',s:4,r:'6-10'},
+              {name:'Abdução no Cabo (pé)',s:3,r:'12-15 reps/lado'},
+              {name:'Abdutor Máquina',s:3,r:'12-15'},
+              {name:'Glute Kickback Cabo',s:3,r:'12 reps/lado'},
+              {name:'Elevação Lateral',s:2,r:'12-15'}
+            ]
+          },
+          { id:'ff3m3b', name:'DIA B · FULL BODY', muscles:'Posterior, Costas, Deltóide',
+            exs:[
+              {name:'Terra Romeno',s:4,r:'6-10'},
+              {name:'Leg Press 45 (pés altos)',s:4,r:'8-12'},
+              {name:'Cadeira Flexora',s:3,r:'12-15'},
+              {name:'Puxada Alta',s:3,r:'8-12'},
+              {name:'Remada Baixa',s:3,r:'8-12'},
+              {name:'Crucifixo Inverso',s:2,r:'12-15'}
+            ]
+          }
+        ]
+      }
+    },
+    freq4: {
+      meso1: {
+        name: 'O Despertar',
+        desc: 'Aprendizado Motor · RIR 4-5 · 12-15 reps',
+        focus: 'Divisão Upper/Lower com base estética: glúteo, posterior, coxas e V-taper leve',
+        objetivo: 'Todas as metas — base técnica universal',
+        objetivoDesc: 'Aprender a sentir os glúteos em múltiplos ângulos. Lower com prioridade absoluta — volume maior que Upper. Upper existe para criar V-taper e estética do ombro.',
+        days: [
+          { id:'ff4m1la', name:'DIA 1 · LOWER A', muscles:'Glúteos, Quadríceps, Coxas',
+            exs:[
+              {name:'Hip Thrust Barra',s:3,r:'12-15'},
+              {name:'Agachamento Sumô',s:3,r:'12-15'},
+              {name:'Abdutor Máquina',s:3,r:'15'},
+              {name:'Abdução no Cabo (pé)',s:3,r:'15 reps/lado'},
+              {name:'Extensora',s:2,r:'15'}
+            ]
+          },
+          { id:'ff4m1ua', name:'DIA 2 · UPPER A', muscles:'Costas, Deltóide, V-Taper',
+            exs:[
+              {name:'Puxada Alta',s:3,r:'12-15'},
+              {name:'Remada Máquina',s:3,r:'12-15'},
+              {name:'Elevação Lateral',s:3,r:'15'},
+              {name:'Crucifixo Inverso',s:2,r:'15'},
+              {name:'Tríceps Corda',s:2,r:'12-15'}
+            ]
+          },
+          { id:'ff4m1ub', name:'DIA 3 · UPPER B', muscles:'Costas, Deltóide, V-Taper',
+            exs:[
+              {name:'Puxada Neutra',s:3,r:'12-15'},
+              {name:'Remada Baixa',s:3,r:'12-15'},
+              {name:'Elevação Lateral',s:3,r:'15'},
+              {name:'Crucifixo Inverso',s:2,r:'12-15'},
+              {name:'Tríceps Testa',s:2,r:'12-15'}
+            ]
+          },
+          { id:'ff4m1lb', name:'DIA 4 · LOWER B', muscles:'Posteriores, Glúteos, Coxas',
+            exs:[
+              {name:'Stiff Halteres',s:3,r:'12-15'},
+              {name:'Agachamento Sumô Haltere',s:3,r:'12-15'},
+              {name:'Cadeira Flexora',s:3,r:'12-15'},
+              {name:'Glute Kickback Cabo',s:3,r:'12 reps/lado'},
+              {name:'Abdução no Cabo (pé)',s:2,r:'15 reps/lado'}
+            ]
+          }
+        ]
+      },
+      meso2: {
+        name: 'A Forja',
+        desc: 'Acumulação de Volume · RIR 2-3 · 8-12 reps',
+        focus: 'Glúteo 3D com volume acumulado; coxas grossas; V-taper reforçado',
+        objetivo: 'Ganho estético / Recomposição corporal',
+        objetivoDesc: 'Dois estímulos semanais no glúteo (horizontal via Hip Thrust + vertical via Sumô). Abduções para glúteo médio. V-taper com puxadas e remadas mais volumosas.',
+        days: [
+          { id:'ff4m2la', name:'DIA 1 · LOWER A', muscles:'Glúteos, Quadríceps, Coxas',
+            exs:[
+              {name:'Hip Thrust Barra',s:4,r:'10-12'},
+              {name:'Agachamento Sumô',s:4,r:'8-12'},
+              {name:'Abdutor Máquina',s:3,r:'12-15'},
+              {name:'Abdução no Cabo (pé)',s:3,r:'12-15 reps/lado'},
+              {name:'Extensora',s:3,r:'12-15'}
+            ]
+          },
+          { id:'ff4m2ua', name:'DIA 2 · UPPER A', muscles:'Costas, Deltóide, V-Taper',
+            exs:[
+              {name:'Puxada Alta',s:4,r:'8-12'},
+              {name:'Remada Baixa',s:4,r:'8-12'},
+              {name:'Elevação Lateral',s:4,r:'12-15'},
+              {name:'Crucifixo Inverso',s:3,r:'12-15'},
+              {name:'Tríceps Corda',s:2,r:'10-12'}
+            ]
+          },
+          { id:'ff4m2ub', name:'DIA 3 · UPPER B', muscles:'Costas, Deltóide, V-Taper',
+            exs:[
+              {name:'Puxada Neutra',s:4,r:'8-12'},
+              {name:'Remada Unilateral',s:3,r:'8-12 reps/lado'},
+              {name:'Elevação Lateral',s:4,r:'12-15'},
+              {name:'Crucifixo Inverso',s:3,r:'12-15'},
+              {name:'Tríceps Testa',s:2,r:'10-12'}
+            ]
+          },
+          { id:'ff4m2lb', name:'DIA 4 · LOWER B', muscles:'Posteriores, Glúteos, Coxas',
+            exs:[
+              {name:'Stiff Halteres',s:4,r:'8-12'},
+              {name:'Agachamento Sumô Haltere',s:3,r:'10-12'},
+              {name:'Cadeira Flexora',s:3,r:'12-15'},
+              {name:'Glute Kickback Cabo',s:3,r:'12 reps/lado'},
+              {name:'Abdução no Cabo (pé)',s:3,r:'12-15 reps/lado'}
+            ]
+          }
+        ]
+      },
+      meso3: {
+        name: 'A Chama',
+        desc: 'Hipertrofia Intensiva · RIR 1-2 · 6-12 reps',
+        focus: 'Pico de intensidade no glúteo 3D, posterior e coxas; V-taper definido',
+        objetivo: 'Hipertrofia estética máxima',
+        objetivoDesc: 'Máximo estímulo para glúteo em três planos: Hip Thrust (horizontal), Sumô (vertical), Abdução (lateral). Posterior com carga máxima. Upper apenas para estética do V-taper.',
+        days: [
+          { id:'ff4m3la', name:'DIA 1 · LOWER A', muscles:'Glúteos, Quadríceps, Coxas',
+            exs:[
+              {name:'Hip Thrust Barra',s:5,r:'8-12'},
+              {name:'Agachamento Sumô',s:4,r:'6-10'},
+              {name:'Abdutor Máquina',s:4,r:'12-15'},
+              {name:'Abdução no Cabo (pé)',s:3,r:'12-15 reps/lado'},
+              {name:'Extensora',s:3,r:'12-15'}
+            ]
+          },
+          { id:'ff4m3ua', name:'DIA 2 · UPPER A', muscles:'Costas, Deltóide, V-Taper',
+            exs:[
+              {name:'Puxada Alta',s:4,r:'8-12'},
+              {name:'Remada Baixa',s:4,r:'6-10'},
+              {name:'Elevação Lateral',s:4,r:'12-15'},
+              {name:'Crucifixo Inverso',s:3,r:'12-15'},
+              {name:'Tríceps Corda',s:3,r:'10-12'}
+            ]
+          },
+          { id:'ff4m3ub', name:'DIA 3 · UPPER B', muscles:'Costas, Deltóide, V-Taper',
+            exs:[
+              {name:'Puxada Neutra',s:4,r:'8-12'},
+              {name:'Remada Unilateral',s:4,r:'8-12 reps/lado'},
+              {name:'Elevação Lateral',s:4,r:'12-15'},
+              {name:'Crucifixo Inverso',s:3,r:'12-15'},
+              {name:'Tríceps Testa',s:3,r:'10-12'}
+            ]
+          },
+          { id:'ff4m3lb', name:'DIA 4 · LOWER B', muscles:'Posteriores, Glúteos, Coxas',
+            exs:[
+              {name:'Terra Romeno',s:4,r:'6-10'},
+              {name:'Agachamento Sumô Haltere',s:4,r:'8-12'},
+              {name:'Cadeira Flexora',s:4,r:'12-15'},
+              {name:'Glute Kickback Cabo',s:4,r:'12 reps/lado'},
+              {name:'Abdução no Cabo (pé)',s:3,r:'12-15 reps/lado'}
+            ]
+          }
+        ]
+      }
+    },
+    freq5: {
+      meso1: {
+        name: 'O Despertar',
+        desc: 'Aprendizado Motor · RIR 4-5 · 12-15 reps',
+        focus: 'PPL estético feminino: glúteo 3D, coxas, V-taper e deltóide leve',
+        objetivo: 'Todas as metas — base técnica universal',
+        objetivoDesc: 'Alta frequência com volume moderado. Glúteo estimulado 2x/semana (LEGS A + LEGS B). V-taper construído com puxadas. Superior existe para estética, não para força.',
+        days: [
+          { id:'ff5m1l', name:'DIA 1 · LEGS A (Glúteo)', muscles:'Glúteos, Quadríceps, Abdutor',
+            exs:[
+              {name:'Hip Thrust Barra',s:3,r:'12-15'},
+              {name:'Agachamento Sumô',s:3,r:'12-15'},
+              {name:'Abdutor Máquina',s:3,r:'15'},
+              {name:'Abdução no Cabo (pé)',s:3,r:'15 reps/lado'},
+              {name:'Extensora',s:2,r:'15'}
+            ]
+          },
+          { id:'ff5m1p', name:'DIA 2 · PUSH (Estético)', muscles:'Deltóide, V-Taper, Tríceps',
+            exs:[
+              {name:'Elevação Lateral',s:3,r:'15'},
+              {name:'Crucifixo Inverso',s:3,r:'15'},
+              {name:'Desenvolvimento Halteres',s:2,r:'12-15'},
+              {name:'Tríceps Corda',s:2,r:'12-15'}
+            ]
+          },
+          { id:'ff5m1pu', name:'DIA 3 · PULL (V-Taper)', muscles:'Costas, Deltóide Post.',
+            exs:[
+              {name:'Puxada Alta',s:3,r:'12-15'},
+              {name:'Remada Baixa',s:3,r:'12-15'},
+              {name:'Remada Unilateral',s:2,r:'12-15 reps/lado'},
+              {name:'Crucifixo Inverso',s:2,r:'15'}
+            ]
+          },
+          { id:'ff5m1up', name:'DIA 4 · UPPER (V-Taper)', muscles:'Costas, Deltóide, V-Taper',
+            exs:[
+              {name:'Puxada Neutra',s:3,r:'12-15'},
+              {name:'Remada Máquina',s:3,r:'12-15'},
+              {name:'Elevação Lateral',s:3,r:'15'},
+              {name:'Crucifixo Inverso',s:2,r:'15'},
+              {name:'Tríceps Testa',s:2,r:'12-15'}
+            ]
+          },
+          { id:'ff5m1lo', name:'DIA 5 · LEGS B (Posterior)', muscles:'Posteriores, Glúteos, Coxas',
+            exs:[
+              {name:'Stiff Halteres',s:3,r:'12-15'},
+              {name:'Agachamento Sumô Haltere',s:3,r:'12-15'},
+              {name:'Cadeira Flexora',s:3,r:'15'},
+              {name:'Glute Kickback Cabo',s:3,r:'12 reps/lado'},
+              {name:'Abdução no Cabo (pé)',s:2,r:'15 reps/lado'}
+            ]
+          }
+        ]
+      },
+      meso2: {
+        name: 'A Forja',
+        desc: 'Acumulação de Volume · RIR 2-3 · 8-12 reps',
+        focus: 'Volume duplo no glúteo 3D; coxas grossas; V-taper reforçado em 5 sessões',
+        objetivo: 'Ganho estético / Recomposição corporal',
+        objetivoDesc: 'Dois dias exclusivos de LEGS com foco diferente: LEGS A (glúteo e abdutor) e LEGS B (posterior e kickback). V-taper com volume maior em puxadas e remadas.',
+        days: [
+          { id:'ff5m2l', name:'DIA 1 · LEGS A (Glúteo)', muscles:'Glúteos, Quadríceps, Abdutor',
+            exs:[
+              {name:'Hip Thrust Barra',s:4,r:'10-12'},
+              {name:'Agachamento Sumô',s:4,r:'8-12'},
+              {name:'Abdutor Máquina',s:4,r:'12-15'},
+              {name:'Abdução no Cabo (pé)',s:3,r:'12-15 reps/lado'},
+              {name:'Extensora',s:3,r:'12-15'}
+            ]
+          },
+          { id:'ff5m2p', name:'DIA 2 · PUSH (Estético)', muscles:'Deltóide, V-Taper, Tríceps',
+            exs:[
+              {name:'Elevação Lateral',s:4,r:'12-15'},
+              {name:'Crucifixo Inverso',s:3,r:'12-15'},
+              {name:'Desenvolvimento Halteres',s:3,r:'8-12'},
+              {name:'Tríceps Corda',s:3,r:'10-12'}
+            ]
+          },
+          { id:'ff5m2pu', name:'DIA 3 · PULL (V-Taper)', muscles:'Costas, Deltóide Post.',
+            exs:[
+              {name:'Puxada Alta',s:4,r:'8-12'},
+              {name:'Remada Baixa',s:4,r:'8-12'},
+              {name:'Remada Unilateral',s:3,r:'10-12 reps/lado'},
+              {name:'Crucifixo Inverso',s:3,r:'12-15'}
+            ]
+          },
 
-        // Observação sobre alimentação declarada
-        const p = state.profile;
-        const dietObs = p.alimentacao ? `<div style="background:rgba(220,38,38,0.06);border-left:3px solid var(--highlight);padding:12px 15px;margin-bottom:20px;border-radius:0 4px 4px 0;font-size:0.85rem;color:#ccc"><b style="color:var(--highlight)">Seu perfil alimentar declarado:</b> ${p.alimentacao}${p.compulsao && p.compulsao.toLowerCase().includes('sim') ? ' · ⚠️ Episódios de compulsão relatados' : ''}${p.medicamentos && p.medicamentos.toLowerCase().includes('sim') ? ' · 💊 Uso de medicamentos relatado' : ''}</div>` : '';
-        const dietObsEl = document.getElementById('diet-obs');
-        if (dietObsEl) dietObsEl.innerHTML = dietObs;
+          { id:'ff5m2up', name:'DIA 4 · UPPER (V-Taper)', muscles:'Costas, Deltóide, V-Taper',
+            exs:[
+              {name:'Puxada Neutra',s:4,r:'8-12'},
+              {name:'Remada Máquina',s:3,r:'8-12'},
+              {name:'Elevação Lateral',s:4,r:'12-15'},
+              {name:'Crucifixo Inverso',s:3,r:'12-15'},
+              {name:'Tríceps Testa',s:2,r:'10-12'}
+            ]
+          },
+          { id:'ff5m2lo', name:'DIA 5 · LEGS B (Posterior)', muscles:'Posteriores, Glúteos, Coxas',
+            exs:[
+              {name:'Stiff Halteres',s:4,r:'8-12'},
+              {name:'Agachamento Sumô Haltere',s:3,r:'10-12'},
+              {name:'Cadeira Flexora',s:3,r:'12-15'},
+              {name:'Glute Kickback Cabo',s:3,r:'12 reps/lado'},
+              {name:'Abdução no Cabo (pé)',s:3,r:'12-15 reps/lado'}
+            ]
+          }
+        ]
+      },
+      meso3: {
+        name: 'A Chama',
+        desc: 'Hipertrofia Intensiva · RIR 1-2 · 6-12 reps',
+        focus: 'Pico de intensidade: glúteo 3D, coxas máximo, V-taper definido em 5 sessões',
+        objetivo: 'Hipertrofia estética máxima',
+        objetivoDesc: 'Máxima intensidade em glúteos, posteriores e coxas. V-taper reforçado com puxadas pesadas. Deltóide lateral mantido para definição do ombro. Superior sem excesso de volume.',
+        days: [
+          { id:'ff5m3l', name:'DIA 1 · LEGS A (Glúteo)', muscles:'Glúteos, Quadríceps, Abdutor',
+            exs:[
+              {name:'Hip Thrust Barra',s:5,r:'8-12'},
+              {name:'Agachamento Sumô',s:4,r:'6-10'},
+              {name:'Abdutor Máquina',s:4,r:'12-15'},
+              {name:'Abdução no Cabo (pé)',s:3,r:'12-15 reps/lado'},
+              {name:'Extensora',s:3,r:'12-15'}
+            ]
+          },
+          { id:'ff5m3p', name:'DIA 2 · PUSH (Estético)', muscles:'Deltóide, V-Taper, Tríceps',
+            exs:[
+              {name:'Elevação Lateral',s:4,r:'12-15'},
+              {name:'Crucifixo Inverso',s:4,r:'12-15'},
+              {name:'Desenvolvimento Halteres',s:3,r:'8-12'},
+              {name:'Tríceps Corda',s:3,r:'10-12'}
+            ]
+          },
+          { id:'ff5m3pu', name:'DIA 3 · PULL (V-Taper)', muscles:'Costas, Deltóide Post.',
+            exs:[
+              {name:'Puxada Alta',s:4,r:'8-12'},
+              {name:'Remada Baixa',s:4,r:'6-10'},
+              {name:'Remada Unilateral',s:3,r:'8-12 reps/lado'},
+              {name:'Crucifixo Inverso',s:3,r:'12-15'}
+            ]
+          },
+          { id:'ff5m3up', name:'DIA 4 · UPPER (V-Taper)', muscles:'Costas, Deltóide, V-Taper',
+            exs:[
+              {name:'Puxada Neutra',s:4,r:'8-12'},
+              {name:'Remada Máquina',s:4,r:'8-12'},
+              {name:'Elevação Lateral',s:4,r:'12-15'},
+              {name:'Crucifixo Inverso',s:3,r:'12-15'},
+              {name:'Tríceps Testa',s:3,r:'10-12'}
+            ]
+          },
+          { id:'ff5m3lo', name:'DIA 5 · LEGS B (Posterior)', muscles:'Posteriores, Glúteos, Coxas',
+            exs:[
+              {name:'Terra Romeno',s:4,r:'6-10'},
+              {name:'Agachamento Sumô Haltere',s:4,r:'8-12'},
+              {name:'Cadeira Flexora',s:4,r:'12-15'},
+              {name:'Glute Kickback Cabo',s:4,r:'12 reps/lado'},
+              {name:'Abdução no Cabo (pé)',s:3,r:'12-15 reps/lado'}
+            ]
+          }
+        ]
+      }
+    },
+    freq6: {
+      meso1: {
+        name: 'O Despertar',
+        desc: 'Aprendizado Motor · RIR 4-5 · 12-15 reps',
+        focus: 'PPL×2 estético: glúteo dupla frequência, V-taper e deltóide leve em 6 sessões',
+        objetivo: 'Todas as metas — base técnica universal',
+        objetivoDesc: 'Alta frequência com volume baixo por sessão. Glúteo estimulado 2x/semana via Sumô + Hip Thrust. V-taper construído com puxadas. Sem exercícios de braço isolados.',
+        days: [
+          { id:'ff6m1l1', name:'DIA 1 · LEGS 1 (Glúteo)', muscles:'Glúteos, Quadríceps, Abdutor',
+            exs:[
+              {name:'Hip Thrust Barra',s:3,r:'12-15'},
+              {name:'Agachamento Sumô',s:3,r:'12-15'},
+              {name:'Abdutor Máquina',s:3,r:'15'},
+              {name:'Abdução no Cabo (pé)',s:2,r:'15 reps/lado'}
+            ]
+          },
+          { id:'ff6m1p1', name:'DIA 2 · PUSH (Estético)', muscles:'Deltóide, V-Taper, Tríceps',
+            exs:[
+              {name:'Elevação Lateral',s:3,r:'15'},
+              {name:'Crucifixo Inverso',s:3,r:'15'},
+              {name:'Desenvolvimento Halteres',s:2,r:'12-15'},
+              {name:'Tríceps Corda',s:2,r:'12-15'}
+            ]
+          },
+          { id:'ff6m1pu1', name:'DIA 3 · PULL 1 (V-Taper)', muscles:'Costas, Deltóide Post.',
+            exs:[
+              {name:'Puxada Alta',s:3,r:'12-15'},
+              {name:'Remada Máquina',s:3,r:'12-15'},
+              {name:'Crucifixo Inverso',s:2,r:'15'}
+            ]
+          },
+          { id:'ff6m1p2', name:'DIA 4 · PUSH 2 (Estético)', muscles:'Deltóide, V-Taper',
+            exs:[
+              {name:'Elevação Lateral Máquina',s:3,r:'15'},
+              {name:'Crucifixo Inverso',s:2,r:'15'},
+              {name:'Puxada Alta',s:3,r:'12-15'},
+              {name:'Tríceps Testa',s:2,r:'12-15'}
+            ]
+          },
+          { id:'ff6m1pu2', name:'DIA 5 · PULL 2 (V-Taper)', muscles:'Costas, Deltóide Post.',
+            exs:[
+              {name:'Remada Baixa',s:3,r:'12-15'},
+              {name:'Puxada Neutra',s:3,r:'12-15'},
+              {name:'Remada Unilateral',s:2,r:'12-15 reps/lado'}
+            ]
+          },
+          { id:'ff6m1l2', name:'DIA 6 · LEGS 2 (Posterior)', muscles:'Posteriores, Glúteos, Coxas',
+            exs:[
+              {name:'Stiff Halteres',s:3,r:'12-15'},
+              {name:'Agachamento Sumô Haltere',s:3,r:'12-15'},
+              {name:'Cadeira Flexora',s:2,r:'15'},
+              {name:'Glute Kickback Cabo',s:2,r:'12 reps/lado'},
+              {name:'Abdução no Cabo (pé)',s:2,r:'15 reps/lado'}
+            ]
+          }
+        ]
+      },
+      meso2: {
+        name: 'A Forja',
+        desc: 'Acumulação de Volume · RIR 2-3 · 8-12 reps',
+        focus: 'Dupla frequência no glúteo 3D; V-taper acumulado; coxas com volume alto',
+        objetivo: 'Ganho estético / Recomposição corporal',
+        objetivoDesc: 'Dois estímulos semanais para glúteo (Hip Thrust + Sumô) e duas sessões de V-taper (puxadas + remadas). Volume por sessão moderado para garantir recuperação.',
+        days: [
+          { id:'ff6m2l1', name:'DIA 1 · LEGS 1 (Glúteo)', muscles:'Glúteos, Quadríceps, Abdutor',
+            exs:[
+              {name:'Hip Thrust Barra',s:4,r:'10-12'},
+              {name:'Agachamento Sumô',s:4,r:'8-12'},
+              {name:'Abdutor Máquina',s:4,r:'12-15'},
+              {name:'Abdução no Cabo (pé)',s:3,r:'12-15 reps/lado'}
+            ]
+          },
+          { id:'ff6m2p1', name:'DIA 2 · PUSH (Estético)', muscles:'Deltóide, V-Taper, Tríceps',
+            exs:[
+              {name:'Elevação Lateral',s:4,r:'12-15'},
+              {name:'Crucifixo Inverso',s:3,r:'12-15'},
+              {name:'Desenvolvimento Halteres',s:3,r:'8-12'},
+              {name:'Tríceps Corda',s:3,r:'10-12'}
+            ]
+          },
+          { id:'ff6m2pu1', name:'DIA 3 · PULL 1 (V-Taper)', muscles:'Costas, Deltóide Post.',
+            exs:[
+              {name:'Puxada Alta',s:4,r:'8-12'},
+              {name:'Remada Baixa',s:4,r:'8-12'},
+              {name:'Crucifixo Inverso',s:3,r:'12-15'}
+            ]
+          },
+          { id:'ff6m2p2', name:'DIA 4 · PUSH 2 (Estético)', muscles:'Deltóide, V-Taper',
+            exs:[
+              {name:'Elevação Lateral Máquina',s:4,r:'12-15'},
+              {name:'Crucifixo Inverso',s:3,r:'12-15'},
+              {name:'Puxada Neutra',s:3,r:'8-12'},
+              {name:'Tríceps Testa',s:2,r:'10-12'}
+            ]
+          },
+          { id:'ff6m2pu2', name:'DIA 5 · PULL 2 (V-Taper)', muscles:'Costas, Deltóide Post.',
+            exs:[
+              {name:'Remada Unilateral',s:4,r:'8-12 reps/lado'},
+              {name:'Remada Máquina',s:3,r:'10-12'},
+              {name:'Crucifixo Inverso',s:3,r:'12-15'}
+            ]
+          },
+          { id:'ff6m2l2', name:'DIA 6 · LEGS 2 (Posterior)', muscles:'Posteriores, Glúteos, Coxas',
+            exs:[
+              {name:'Stiff Halteres',s:4,r:'8-12'},
+              {name:'Agachamento Sumô Haltere',s:3,r:'10-12'},
+              {name:'Cadeira Flexora',s:3,r:'12-15'},
+              {name:'Glute Kickback Cabo',s:3,r:'12 reps/lado'},
+              {name:'Abdução no Cabo (pé)',s:3,r:'12-15 reps/lado'}
+            ]
+          }
+        ]
+      },
+      meso3: {
+        name: 'A Chama',
+        desc: 'Hipertrofia Intensiva · RIR 1-2 · 6-12 reps',
+        focus: 'Pico estético: glúteo 3D dupla frequência, V-taper máximo, coxas e posterior na falha',
+        objetivo: 'Hipertrofia estética máxima',
+        objetivoDesc: 'Fase de pico de intensidade estética. Glúteo trabalhado 2x/semana em três planos (Hip Thrust, Sumô, Abdução). V-taper máximo com puxadas pesadas. Posterior na falha.',
+        days: [
+          { id:'ff6m3l1', name:'DIA 1 · LEGS 1 (Glúteo)', muscles:'Glúteos, Quadríceps, Abdutor',
+            exs:[
+              {name:'Hip Thrust Barra',s:5,r:'8-12'},
+              {name:'Agachamento Sumô',s:4,r:'6-10'},
+              {name:'Abdutor Máquina',s:4,r:'12-15'},
+              {name:'Abdução no Cabo (pé)',s:3,r:'12-15 reps/lado'}
+            ]
+          },
+          { id:'ff6m3p1', name:'DIA 2 · PUSH (Estético)', muscles:'Deltóide, V-Taper, Tríceps',
+            exs:[
+              {name:'Elevação Lateral',s:4,r:'12-15'},
+              {name:'Crucifixo Inverso',s:4,r:'12-15'},
+              {name:'Desenvolvimento Halteres',s:3,r:'8-12'},
+              {name:'Tríceps Corda',s:3,r:'10-12'}
+            ]
+          },
+          { id:'ff6m3pu1', name:'DIA 3 · PULL 1 (V-Taper)', muscles:'Costas, Deltóide Post.',
+            exs:[
+              {name:'Puxada Alta',s:4,r:'6-10'},
+              {name:'Remada Baixa',s:4,r:'6-10'},
+              {name:'Crucifixo Inverso',s:3,r:'12-15'}
+            ]
+          },
+          { id:'ff6m3p2', name:'DIA 4 · PUSH 2 (Estético)', muscles:'Deltóide, V-Taper',
+            exs:[
+              {name:'Elevação Lateral Máquina',s:4,r:'12-15'},
+              {name:'Crucifixo Inverso',s:4,r:'12-15'},
+              {name:'Puxada Neutra',s:4,r:'8-12'},
+              {name:'Tríceps Testa',s:3,r:'10-12'}
+            ]
+          },
+          { id:'ff6m3pu2', name:'DIA 5 · PULL 2 (V-Taper)', muscles:'Costas, Deltóide Post.',
+            exs:[
+              {name:'Remada Unilateral',s:4,r:'8-12 reps/lado'},
+              {name:'Remada Máquina',s:4,r:'8-12'},
+              {name:'Crucifixo Inverso',s:3,r:'12-15'}
+            ]
+          },
+          { id:'ff6m3l2', name:'DIA 6 · LEGS 2 (Posterior)', muscles:'Posteriores, Glúteos, Coxas',
+            exs:[
+              {name:'Terra Romeno',s:4,r:'6-10'},
+              {name:'Agachamento Sumô Haltere',s:4,r:'8-12'},
+              {name:'Cadeira Flexora',s:4,r:'12-15'},
+              {name:'Glute Kickback Cabo',s:4,r:'12 reps/lado'},
+              {name:'Abdução no Cabo (pé)',s:3,r:'12-15 reps/lado'}
+            ]
+          }
+        ]
+      }
+    }
+  }
+};
 
-        const meals = [
-          { t: 'Café da Manhã', d: 'Ovos mexidos (3 un) + Aveia com fruta + Café sem açúcar' },
-          { t: 'Almoço', d: 'Frango grelhado ou carne magra + Arroz + Feijão + Salada verde' },
-          { t: 'Pré-treino', d: 'Banana + Pasta de amendoim + Whey protein (opcional)' },
-          { t: 'Pós-treino / Jantar', d: 'Tilápia ou frango + Batata doce + Brócolis + Azeite' },
-        ];
+// Merge female DB into main DB
+DB.feminino = DB_FEM.iniciante;
 
-        document.getElementById('diet-container').innerHTML = meals
-          .map(
-            (meal) => `
-          <div class="meal-accordion">
-            <div class="meal-header" onclick="this.nextElementSibling.classList.toggle('open')">
-              <span class="meal-title">${meal.t}</span>
-              <span class="text-red">+</span>
-            </div>
-            <div class="meal-content">${meal.d} <br><small class="text-muted">Quantidades ajustadas para ${m.kcal}kcal</small></div>
+// ===== SCHEDULE CONFIG =====
+const TRAIN_DAYS = {
+  3: [1,3,5],
+  4: [1,2,4,5],
+  5: [1,2,3,5,6],
+  6: [1,2,3,4,5,6]
+};
+
+// ===== HELPER: GET DB BY GENDER =====
+function getDB() {
+  return STATE.genero === 'feminino' ? (DB.feminino || DB.iniciante) : DB.iniciante;
+}
+
+function getMobForDay(dayName) {
+  const n = (dayName||'').toUpperCase();
+  if (n.includes('PUSH')) return MOB_DATA.mobPush;
+  if (n.includes('PULL')) return MOB_DATA.mobPull;
+  if (n.includes('LEGS') || n.includes('LOWER') || n.includes('PERNAS') || n.includes('INFERIOR')) return MOB_DATA.mobLegs;
+  if (n.includes('FULL BODY') || n.includes('UPPER')) return MOB_DATA.mobPush;
+  return null;
+}
+
+// ===== STATE =====
+const STATE = { profile: null, logs: [], checkins: [], currentPlan: 'main', genero: 'masculino' };
+const PLANNED_SESSIONS = { 3:12, 4:16, 5:20, 6:24 };
+
+function save() { localStorage.setItem('ascensao_state', JSON.stringify(STATE)); }
+function load() {
+  const raw = localStorage.getItem('ascensao_state');
+  if (!raw) return;
+  try {
+    const s = JSON.parse(raw);
+    if (s.profile) STATE.profile = s.profile;
+    if (s.logs) STATE.logs = s.logs;
+    if (s.checkins) STATE.checkins = s.checkins;
+    if (s.genero) STATE.genero = s.genero;
+  } catch(e) {}
+}
+function getParam(name) { return new URLSearchParams(window.location.search).get(name) || ''; }
+function normStr(s) { return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').trim(); }
+
+// ===== INIT =====
+function initApp() {
+  load();
+  const nome = getParam('nome');
+  const nivel = getParam('nivel');
+  const freq  = getParam('freq');
+  const obj   = getParam('obj');
+  const meso  = getParam('meso');
+  const peso  = getParam('peso');
+  const alt   = getParam('altura');
+  const idade = getParam('idade');
+  const lim   = getParam('limitacao');
+  const gen   = getParam('genero');
+
+  // Sem parâmetro ?nome= → sempre mostrar a tela de acesso
+  if (!nome) {
+    document.getElementById('no-access-screen').classList.remove('hidden');
+    return;
+  }
+
+  if (nome) {
+    if (gen) STATE.genero = normStr(gen).includes('fem') ? 'feminino' : 'masculino';
+    const nomeClean = nome.replace(/[?!.,;:]+$/,'').trim();
+    const nRaw = normStr(nivel || 'iniciante');
+    let nv = 'iniciante';
+    if (nRaw.includes('inter')) nv = 'intermediario';
+    else if (nRaw.includes('avan')) nv = 'avancado';
+    const fr = Math.max(3, Math.min(6, parseInt(freq)||3));
+    const ms = Math.max(1, Math.min(3, parseInt(meso)||1));
+    const oRaw = normStr(obj || 'hipertrofia');
+    let objetivo = 'gain';
+    if (oRaw.includes('emagre')||oRaw.includes('cut')||oRaw.includes('perd')) objetivo='cut';
+    else if (oRaw.includes('recomp')) objetivo='recomp';
+    STATE.profile = {
+      nome: nomeClean, nivel: nv, freq: fr, meso: ms, objetivo,
+      weight: parseFloat(peso)||75, height: parseInt(alt)||175, age: parseInt(idade)||25,
+      limitacao: lim||'', startDate: new Date().toISOString().split('T')[0]
+    };
+    save();
+  }
+
+  if (STATE.profile) {
+    document.getElementById('no-access-screen').classList.add('hidden');
+    document.getElementById('app-screen').classList.remove('hidden');
+    renderDashboard();
+  } else {
+    document.getElementById('no-access-screen').classList.remove('hidden');
+  }
+}
+
+let IS_DEMO = false;
+
+function loadDemo() {
+  IS_DEMO = true;
+  localStorage.removeItem('ascensao_state');
+  STATE.profile = { nome:'Demo', nivel:'iniciante', freq:4, meso:1, objetivo:'gain',
+    weight:78, height:178, age:25, limitacao:'', startDate: new Date().toISOString().split('T')[0] };
+  STATE.logs = [];
+  STATE.genero = 'masculino';
+  const today = new Date();
+  for (let i=0;i<10;i++) {
+    const d=new Date(today); d.setDate(today.getDate()-i*2);
+    STATE.logs.push({date:d.toISOString().split('T')[0], dayId:'demo', exercises:[]});
+  }
+  save();
+  document.getElementById('no-access-screen').classList.add('hidden');
+  document.getElementById('app-screen').classList.remove('hidden');
+  document.getElementById('demo-bar').classList.remove('hidden');
+  updateDemoBar();
+  renderDashboard();
+}
+
+function updateDemoBar() {
+  const p = STATE.profile; if (!p) return;
+  // Gender buttons
+  const gmBtn = document.getElementById('dbg-masc');
+  const gfBtn = document.getElementById('dbg-fem');
+  if (gmBtn) gmBtn.classList.toggle('active', STATE.genero !== 'feminino');
+  if (gfBtn) gfBtn.classList.toggle('active', STATE.genero === 'feminino');
+  // Freq buttons
+  [3,4,5,6].forEach(f => {
+    const btn = document.getElementById('dbf'+f);
+    if (btn) btn.classList.toggle('active', p.freq === f);
+  });
+  // Meso buttons
+  [1,2,3].forEach(m => {
+    const btn = document.getElementById('dbm'+m);
+    if (btn) btn.classList.toggle('active', p.meso === m);
+  });
+  // Info text
+  const fk='freq'+p.freq, mk='meso'+p.meso;
+  const dbRef = getDB();
+  const mData = dbRef&&dbRef[fk]&&dbRef[fk][mk];
+  const infoEl = document.getElementById('demo-meso-info');
+  if (infoEl && mData) {
+    const sessoes = mData.days.length;
+    const gLabel = STATE.genero === 'feminino' ? '♀ Feminino' : '♂ Masculino';
+    infoEl.textContent = `${gLabel} · ${mData.name} · ${mData.desc} · ${sessoes} sessões rotacionais por semana`;
+  }
+}
+
+function setDemoFreq(f) {
+  if (!STATE.profile) return;
+  STATE.profile.freq = f;
+  save();
+  updateDemoBar();
+  renderDashboard();
+  const activeContent = [...document.querySelectorAll('.tab-content')].find(t=>!t.classList.contains('hidden'));
+  if (activeContent) {
+    const id = activeContent.id.replace('tab-','');
+    if (id === 'treino') renderWorkout(STATE.currentPlan);
+    if (id === 'agenda') renderAgenda();
+  }
+}
+
+function setDemoMeso(m) {
+  if (!STATE.profile) return;
+  STATE.profile.meso = m;
+  save();
+  updateDemoBar();
+  renderDashboard();
+  const activeContent = [...document.querySelectorAll('.tab-content')].find(t=>!t.classList.contains('hidden'));
+  if (activeContent) {
+    const id = activeContent.id.replace('tab-','');
+    if (id === 'treino') renderWorkout(STATE.currentPlan);
+    if (id === 'agenda') renderAgenda();
+  }
+}
+
+function setDemoGenero(g) {
+  STATE.genero = g;
+  save();
+  updateDemoBar();
+  renderDashboard();
+  const activeContent = [...document.querySelectorAll('.tab-content')].find(t=>!t.classList.contains('hidden'));
+  if (activeContent) {
+    const id = activeContent.id.replace('tab-','');
+    if (id === 'treino') renderWorkout(STATE.currentPlan);
+    if (id === 'agenda') renderAgenda();
+  }
+}
+
+// ===== DASHBOARD =====
+function renderDashboard() {
+  const p = STATE.profile; if(!p) return;
+  const name = p.nome.toUpperCase();
+  document.getElementById('hero-name').textContent = name;
+  const hn = document.getElementById('header-name');
+  hn.textContent = name; hn.style.display='block';
+  // Gender-aware welcome
+  const titleEl = document.querySelector('.welcome-title');
+  if (titleEl) titleEl.childNodes[0].textContent = STATE.genero === 'feminino' ? 'BEM-VINDA, ' : 'BEM-VINDO, ';
+  const lvl = {iniciante:'INICIANTE', intermediario:'INTERMEDIÁRIO', avancado:'AVANÇADO'};
+  document.getElementById('header-level').textContent = lvl[p.nivel]||'INICIANTE';
+  const gl = {gain:'+ Massa', cut:'- Gordura', recomp:'Recomp.'};
+  document.getElementById('hero-goal').textContent = gl[p.objetivo]||'Hipertrofia';
+  document.getElementById('dash-goal').textContent  = gl[p.objetivo]||'--';
+  if (p.startDate) {
+    const d=new Date(p.startDate+'T12:00:00');
+    document.getElementById('hero-date').textContent = d.toLocaleDateString('pt-BR',{month:'short',year:'numeric'});
+  }
+  document.getElementById('dash-weight').textContent = p.weight;
+  const fk='freq'+p.freq, mk='meso'+p.meso;
+  const dbRef = getDB();
+  const mData = dbRef&&dbRef[fk]&&dbRef[fk][mk];
+  if (mData) {
+    document.getElementById('dash-meso-name').textContent = 'Meso '+p.meso+' · '+mData.name;
+    document.getElementById('dash-meso-desc').textContent = mData.desc;
+    // Show female objective explanation if available
+    const objEl = document.getElementById('dash-obj-explain');
+    if (objEl && mData.objetivoDesc) {
+      objEl.innerHTML = `<div style="font-size:0.72rem;font-weight:700;color:#f97316;margin-bottom:4px;font-family:'Cinzel',serif">🎯 ${mData.objetivo}</div><div style="font-size:0.8rem;color:#999;line-height:1.5">${mData.objetivoDesc}</div>`;
+    } else if (objEl) {
+      objEl.innerHTML = '';
+    }
+  }
+  const planned = PLANNED_SESSIONS[p.freq]||12;
+  const now=new Date(), tm=now.getMonth(), ty=now.getFullYear();
+  const sess = STATE.logs.filter(l=>{ const d=new Date(l.date); return d.getMonth()===tm&&d.getFullYear()===ty; }).length;
+  document.getElementById('dash-workouts').textContent = STATE.logs.length;
+  document.getElementById('gauge-sessions').textContent = sess;
+  document.getElementById('gauge-planned').textContent  = planned+' sessões';
+  const pct = Math.min(100, Math.round((sess/planned)*100));
+  document.getElementById('gauge-text').textContent = pct+'%';
+  drawGauge(pct);
+  const badge=document.getElementById('unlock-badge'), cta=document.getElementById('cta-renewal');
+  if (pct>=80) { badge.classList.add('visible'); cta.classList.remove('hidden'); }
+  else { badge.classList.remove('visible'); cta.classList.add('hidden'); }
+  if (p.limitacao) {
+    document.getElementById('limitacao-alert').classList.remove('hidden');
+    document.getElementById('limitacao-text').textContent = p.limitacao;
+  }
+  if (STATE.checkins.length>0) {
+    const avg = STATE.checkins.reduce((a,c)=>a+(parseFloat(c.diet)||0),0)/STATE.checkins.length;
+    document.getElementById('dash-diet').textContent = Math.round(avg*10);
+  } else { document.getElementById('dash-diet').textContent='--'; }
+  const mac = calcMacros(p);
+  document.getElementById('dash-cal').textContent  = mac.cal;
+  document.getElementById('dash-prot').textContent = mac.prot+'g P';
+  document.getElementById('dash-carb').textContent = mac.carb+'g C';
+  document.getElementById('dash-fat').textContent  = mac.fat+'g G';
+  renderMiniWeek();
+  renderWorkout('main');
+  renderDiet(mac);
+  renderAgenda();
+  renderCheckinHistory();
+}
+
+function drawGauge(pct) {
+  const path=document.getElementById('gauge-path'); if(!path) return;
+  const r=80, cx=100, cy=100;
+  const ang = Math.PI + (Math.PI * pct/100);
+  const x = cx + r*Math.cos(ang), y = cy + r*Math.sin(ang);
+  const la = pct>50?1:0;
+  path.setAttribute('d',`M 20 100 A ${r} ${r} 0 ${la} 1 ${x.toFixed(2)} ${y.toFixed(2)}`);
+  path.style.stroke = pct>=80?'#16a34a':'#dc2626';
+}
+
+function calcMacros(p) {
+  const bmr = 10*p.weight + 6.25*p.height - 5*p.age + 5;
+  const af  = {3:1.375,4:1.55,5:1.55,6:1.725}[p.freq]||1.55;
+  let cal = Math.round(bmr*af);
+  if (p.objetivo==='gain') cal+=300;
+  else if (p.objetivo==='cut') cal-=400;
+  const prot=Math.round(p.weight*2.2), fat=Math.round(cal*0.25/9);
+  const carb=Math.round((cal-prot*4-fat*9)/4);
+  return {cal,prot,carb,fat};
+}
+
+// ===== WORKOUT =====
+function renderWorkout(type) {
+  STATE.currentPlan=type;
+  const p=STATE.profile; if(!p) return;
+  const wrap=document.getElementById('workout-wrapper');
+  document.getElementById('btn-main').classList.toggle('active', type==='main');
+  document.getElementById('btn-comp').classList.toggle('active', type==='comp');
+  if (type==='comp') { renderComplementares(); return; }
+  const dbRef = getDB();
+  const plan = dbRef&&dbRef['freq'+p.freq]&&dbRef['freq'+p.freq]['meso'+p.meso];
+  if (!plan||!plan.days) { wrap.innerHTML='<p class="text-muted" style="text-align:center;padding:40px">Plano não encontrado.</p>'; return; }
+
+  const todayDow = new Date().getDay();
+  const trainDays = TRAIN_DAYS[p.freq] || TRAIN_DAYS[3];
+  const todayIdx = trainDays.indexOf(todayDow);
+
+  const RIR_DESC = {
+    1: 'RIR 4-5 — foco em técnica e aprendizado motor. Pare quando ainda tem 4 ou 5 reps no tanque.',
+    2: 'RIR 2-3 — esforço considerável, mas ainda controlado. Pare com 2 a 3 reps de reserva.',
+    3: 'RIR 1-2 — alta intensidade, próximo à falha. Pare com apenas 1 ou 2 reps sobrando.'
+  };
+
+  let html = `<div style="margin-bottom:16px;padding:14px;background:rgba(220,38,38,0.06);border:1px solid rgba(220,38,38,0.3);border-radius:6px">
+    <div style="color:#dc2626;font-family:Cinzel,serif;font-size:0.75rem;font-weight:700;margin-bottom:4px">MESOCICLO ${p.meso} · ${plan.name.toUpperCase()}</div>
+    <div style="color:#888;font-size:0.82rem;font-style:italic">${plan.desc}</div>
+    <div style="color:#aaa;font-size:0.78rem;margin-top:6px">💡 ${plan.focus}</div>
+    ${plan.objetivo ? `<div style="color:#f97316;font-size:0.75rem;margin-top:6px;font-weight:600">🎯 ${plan.objetivo}</div>` : ''}
+  </div>
+  <div class="rir-info"><strong>O que é RIR?</strong> Repetições na Reserva — quantas reps você ainda conseguiria fazer antes de falhar. ${RIR_DESC[p.meso]||RIR_DESC[2]}</div>`;
+
+  if (todayIdx < 0) {
+    html += `<div style="background:rgba(22,163,74,0.08);border:1px solid rgba(22,163,74,0.3);border-radius:6px;padding:14px;margin-bottom:16px;text-align:center;color:#888;font-size:0.85rem">🛌 <strong style="color:#16a34a">Dia de descanso</strong> — Recuperação ativa: alongamento, foam roller ou descanso completo.</div>`;
+  }
+
+  plan.days.forEach((day, idx)=>{
+    const done = STATE.logs.some(l=>l.dayId===day.id);
+    const isToday = idx === todayIdx;
+    const mob = getMobForDay(day.name);
+
+    html+=`<div class="day-accordion${isToday?' open today-session':''}" data-day-id="${day.id}">
+      <div class="day-header" onclick="this.parentElement.classList.toggle('open')">
+        <div style="flex:1;min-width:0">
+          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+            <div class="day-title" style="font-size:0.92rem">${day.name}</div>
+            ${isToday?'<span class="today-badge">HOJE</span>':''}
+            ${done?'<span style="color:#16a34a;font-size:0.8rem;font-weight:700">✓ Feito</span>':''}
           </div>
-        `,
-          )
-          .join('');
-      }
+          <div class="day-muscles">${day.muscles||''}</div>
+        </div>
+        <span class="text-red" style="font-size:1.4rem;margin-left:8px">+</span>
+      </div>
+      <div class="day-content">`;
 
-      // EVALUATIONS
-      function renderEvaluations() {
-        // Load Progress List
-        const exs = Object.keys(state.logs);
-        const html = exs
-          .map((ex) => {
-            const hist = state.logs[ex];
-            if (hist.length < 2) return '';
-            const first = parseFloat(hist[hist.length - 1].load);
-            const last = parseFloat(hist[0].load);
-            const diff = ((last - first) / first) * 100;
-            const color = diff > 0 ? 'var(--success)' : diff < 0 ? 'var(--highlight)' : '#888';
-            const arrow = diff > 0 ? '↑' : diff < 0 ? '↓' : '→';
-            return `
-            <div style="background:#141414; padding:10px; display:flex; justify-content:space-between; border-radius:4px; border:1px solid #222">
-              <span style="color:#ccc; font-size:0.8rem">${ex}</span>
-              <span style="color:${color}; font-weight:700">${arrow} ${Math.abs(diff).toFixed(1)}%</span>
-            </div>
-          `;
-          })
-          .join('');
-        document.getElementById('load-progress-container').innerHTML =
-          html || '<div class="text-muted text-center">Registre mais treinos para ver evolução.</div>';
+    if (mob) {
+      html+=`<div class="mob-note">
+        <span class="mob-note-title">🧘 MOBILIDADE PRÉ-TREINO · ${mob.name.replace(/^🏃 /,'').replace(/– /,'')}</span>
+        <ul class="mob-note-list">${mob.exs.map(e=>`<li>${e.name} — ${e.s}×${e.r}</li>`).join('')}</ul>
+      </div>`;
+    }
 
-        // Checkin List
-        document.getElementById('checkin-list').innerHTML = state.checkins
-          .map(
-            (c) => `
-          <div style="background:#141414; padding:10px; border-radius:4px; border:1px solid #222; display:flex; justify-content:space-between">
-            <span style="color:white; font-weight:700">${new Date(c.date).toLocaleDateString().slice(0, 5)}</span>
-            <span style="color:var(--highlight)">${c.weight}kg</span>
-            <span style="color:#666; font-size:0.8rem">Dieta: ${c.diet}/10</span>
+    html+=`<div class="ex-cards">`;
+    day.exs.forEach((ex, exIdx)=>{
+      const exKey = ex.name.replace(/\s/g,'_');
+      html+=`<div class="ex-card">
+        ${exIdx===0?'<span class="ex-card-badge">🔥 AQUECIMENTO ESPECÍFICO — 1ª série leve, foco em técnica</span>':''}
+        <div class="ex-card-top">
+          <div class="ex-card-name">${ex.name}</div>
+          <div class="ex-card-meta">${ex.s}×${ex.r}</div>
+        </div>
+        <div class="ex-card-inputs">
+          <div><label class="ex-field-lbl">Carga (kg)</label><input type="number" class="ex-input" data-ex="${exKey}_load" placeholder="0" min="0" step="0.5" inputmode="decimal"/></div>
+          <div><label class="ex-field-lbl">Reps Realiz.</label><input type="number" class="ex-input" data-ex="${exKey}_reps" placeholder="0" min="0" inputmode="numeric"/></div>
+        </div>
+      </div>`;
+    });
+    html+=`</div><button class="btn-primary" onclick="saveDay('${day.id}')">✓ REGISTRAR TREINO</button></div></div>`;
+  });
+  wrap.innerHTML=html;
+}
+
+function togglePlan(type) { renderWorkout(type); }
+
+function renderComplementares() {
+  const wrap=document.getElementById('workout-wrapper');
+  let html=`<div style="margin-bottom:16px;padding:14px 16px;background:rgba(220,38,38,0.06);border:1px solid rgba(220,38,38,0.25);border-radius:6px">
+    <div style="color:var(--highlight);font-family:Cinzel,serif;font-size:0.72rem;font-weight:700;letter-spacing:1px;margin-bottom:6px">⚡ FINISHERS PÓS-TREINO</div>
+    <p style="color:#888;font-size:0.83rem;line-height:1.5">Execute estas rotinas <strong style="color:#ccc">ao final do treino principal</strong>, após salvar o treino do dia. Escolha 1 ou 2 blocos conforme o tempo disponível e o foco da sessão.</p>
+  </div>`;
+  const keys = Object.keys(COMPLEMENTARES);
+  keys.forEach(k=>{
+    const c = COMPLEMENTARES[k];
+    html+=`<div class="day-accordion">
+      <div class="day-header" onclick="this.parentElement.classList.toggle('open')">
+        <div style="flex:1">
+          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+            <div class="day-title" style="font-size:0.9rem">${c.name}</div>
+            <span style="background:rgba(249,115,22,0.15);color:#f97316;border:1px solid rgba(249,115,22,0.3);font-size:0.6rem;font-family:Cinzel,serif;font-weight:700;padding:2px 7px;border-radius:3px;letter-spacing:1px">${c.badge}</span>
           </div>
-        `,
-          )
-          .join('');
+          <div class="day-muscles">${c.muscles}</div>
+        </div>
+        <span class="text-red" style="font-size:1.4rem">+</span>
+      </div>
+      <div class="day-content">
+        <div style="color:#888;font-size:0.82rem;margin-bottom:10px;font-style:italic">${c.desc}</div>
+        <div style="background:rgba(220,38,38,0.05);border-left:3px solid var(--highlight);padding:8px 12px;border-radius:0 4px 4px 0;margin-bottom:12px;font-size:0.78rem;color:#aaa">💡 ${c.tip}</div>
+        <table class="ex-table">
+          <thead><tr><th>Exercício</th><th>Séries</th><th>Reps / Tempo</th></tr></thead>
+          <tbody>${c.exs.map(ex=>`<tr>
+            <td>${ex.name}</td>
+            <td style="text-align:center">${ex.s}</td>
+            <td style="text-align:center">${ex.r}</td>
+          </tr>`).join('')}</tbody>
+        </table>
+      </div>
+    </div>`;
+  });
+  wrap.innerHTML=html;
+}
 
-        // Chart (Simple Canvas implementation)
-        drawChart();
-      }
+// ===== SAVE DAY =====
+function saveDay(dayId) {
+  const acc=document.querySelector(`[data-day-id="${dayId}"]`); if(!acc) return;
+  const today=new Date().toISOString().split('T')[0];
+  const exercises=[];
+  acc.querySelectorAll('input[data-ex]').forEach(inp=>{
+    if (!inp.value) return;
+    const parts=inp.getAttribute('data-ex').split('_');
+    const type=parts.pop(), name=parts.join('_');
+    let e=exercises.find(x=>x.name===name);
+    if (!e) { e={name,load:'',reps:''}; exercises.push(e); }
+    if (type==='load') e.load=inp.value; else e.reps=inp.value;
+  });
+  STATE.logs=STATE.logs.filter(l=>!(l.date===today&&l.dayId===dayId));
+  STATE.logs.push({date:today,dayId,exercises});
+  save();
+  const btn=acc.querySelector('.btn-primary');
+  if (btn) { btn.textContent='✓ TREINO REGISTRADO!'; btn.style.background='#16a34a'; }
+  setTimeout(()=>renderDashboard(), 600);
+}
 
-      function drawChart() {
-        const cvs = document.getElementById('weightChart');
-        const ctx = cvs.getContext('2d');
-        const data = state.checkins.map((c) => c.weight).reverse();
-        if (data.length < 2) return;
+// ===== MINI WEEK =====
+function renderMiniWeek() {
+  const c=document.getElementById('mini-week-container'); if(!c) return;
+  const days=['D','S','T','Q','Q','S','S'], today=new Date();
+  const sow=new Date(today); sow.setDate(today.getDate()-today.getDay());
+  let html='';
+  for(let i=0;i<7;i++){
+    const d=new Date(sow); d.setDate(sow.getDate()+i);
+    const ds=d.toISOString().split('T')[0];
+    const hl=STATE.logs.some(l=>l.date===ds), it=i===today.getDay();
+    html+=`<div class="week-day ${hl?'done':''} ${it?'today':''}">
+      <div style="font-size:0.65rem;color:#666">${days[i]}</div>
+      <div style="font-size:0.8rem">${d.getDate()}</div>
+      ${hl?'<div style="font-size:0.7rem;color:#16a34a">✓</div>':''}
+    </div>`;
+  }
+  c.innerHTML=html;
+}
 
-        cvs.width = cvs.parentElement.offsetWidth;
-        cvs.height = 250;
+// ===== DIET =====
+function renderDiet(mac) {
+  if (!mac) { const p=STATE.profile; mac=p?calcMacros(p):null; } if (!mac) return;
+  const p=STATE.profile;
+  const gl={gain:'ganho de massa',cut:'emagrecimento',recomp:'recomposição corporal'};
+  const obs=gl[p?p.objetivo:'gain']||'ganho de massa';
+  const setEl=(id,v)=>{ const el=document.getElementById(id); if(el) el.textContent=v; };
+  setEl('diet-cal',mac.cal+' kcal'); setEl('diet-prot',mac.prot); setEl('diet-carb',mac.carb); setEl('diet-fat',mac.fat);
+  const od=document.getElementById('diet-obs');
+  if(od) od.innerHTML=`<p style="color:#888;font-style:italic;margin-bottom:20px">Distribuição para ${obs} · ${mac.cal} kcal</p>`;
+  const meals=[
+    {title:'☀️ Café da Manhã', items:[`${Math.round(mac.prot*0.25)}g prot · ${Math.round(mac.carb*0.3)}g carbo`,'Ex: ovos, tapioca, fruta']},
+    {title:'🏋️ Pré-Treino (1h antes)', items:[`${Math.round(mac.carb*0.25)}g carbo · ${Math.round(mac.prot*0.15)}g prot`,'Ex: banana, batata-doce, whey']},
+    {title:'🥗 Almoço', items:[`${Math.round(mac.prot*0.3)}g prot · ${Math.round(mac.carb*0.3)}g carbo`,'Ex: frango, arroz integral, legumes']},
+    {title:'⚡ Pós-Treino', items:[`${Math.round(mac.prot*0.2)}g prot · ${Math.round(mac.carb*0.15)}g carbo`,'Ex: whey, fruta, arroz']},
+    {title:'🌙 Jantar', items:[`${Math.round(mac.prot*0.1)}g prot · Gorduras boas`,'Ex: atum, ovos, azeite, salada']}
+  ];
+  const dc=document.getElementById('diet-container');
+  if(dc) dc.innerHTML=meals.map(m=>`<div class="meal-accordion">
+    <div class="meal-header" onclick="this.nextElementSibling.classList.toggle('open')">
+      <span class="meal-title">${m.title}</span><span class="text-red">+</span>
+    </div>
+    <div class="meal-content">${m.items.map(i=>`<p style="color:#ccc;font-size:0.85rem;margin:4px 0">• ${i}</p>`).join('')}</div>
+  </div>`).join('');
+}
 
-        const max = Math.max(...data) * 1.05;
-        const min = Math.min(...data) * 0.95;
-        const w = cvs.width;
-        const h = cvs.height;
-        const step = w / (data.length - 1);
+// ===== AGENDA =====
+function renderAgenda() {
+  const p=STATE.profile; if(!p) return;
+  const c=document.getElementById('agenda-container'); if(!c) return;
+  const dbRef = getDB();
+  const plan=dbRef&&dbRef['freq'+p.freq]&&dbRef['freq'+p.freq]['meso'+p.meso];
+  if(!plan) return;
 
-        ctx.strokeStyle = '#dc2626';
-        ctx.lineWidth = 2;
-        ctx.beginPath();
-        data.forEach((val, i) => {
-          const y = h - ((val - min) / (max - min)) * h;
-          const x = i * step;
-          if (i === 0) ctx.moveTo(x, y);
-          else ctx.lineTo(x, y);
-        });
-        ctx.stroke();
-      }
+  const todayDow = new Date().getDay();
+  const trainDays = TRAIN_DAYS[p.freq] || TRAIN_DAYS[3];
+  const todayIdx = trainDays.indexOf(todayDow);
+  const DAY_NAMES = ['Dom','Seg','Ter','Qua','Qui','Sex','Sáb'];
 
-      // UTILS
-      function switchTab(id, btn) {
-        document.querySelectorAll('.tab-content').forEach((el) => el.classList.add('hidden'));
-        document.getElementById('tab-' + id).classList.remove('hidden');
-        document.querySelectorAll('.tab-btn').forEach((b) => b.classList.remove('active'));
-        if (btn) btn.classList.add('active');
-        if (id === 'avaliacoes') drawChart();
-      }
+  let html = `<div style="margin-bottom:16px;padding:12px 14px;background:rgba(220,38,38,0.06);border:1px solid rgba(220,38,38,0.2);border-radius:6px">
+    <div style="color:var(--highlight);font-family:Cinzel,serif;font-size:0.7rem;font-weight:700;margin-bottom:4px">MESOCICLO ${p.meso} · ${plan.name}</div>
+    <div style="color:#888;font-size:0.78rem">${p.freq}x por semana · ${plan.days.length} sessões rotacionais</div>
+  </div>`;
 
-      function checkCheckin() {
-        const last = state.checkins[0]?.date || state.profile.start;
-        const diff = (new Date() - new Date(last)) / (1000 * 60 * 60 * 24);
-        if (diff > 30) openCheckinModal();
-      }
+  plan.days.forEach((d, idx)=>{
+    const isToday = idx === todayIdx;
+    const prefDay = trainDays[idx] !== undefined ? DAY_NAMES[trainDays[idx]] : '—';
+    const done = STATE.logs.some(l=>l.dayId===d.id);
+    const mob = getMobForDay(d.name);
 
-      function openCheckinModal() {
-        document.getElementById('checkin-modal').classList.add('active');
-      }
+    html+=`<div class="agenda-accordion${isToday?' open today-agenda':''}">
+      <div class="agenda-header" onclick="this.parentElement.classList.toggle('open')">
+        <div style="flex:1">
+          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+            <div style="font-weight:600;font-size:0.9rem;color:white">${d.name}</div>
+            ${isToday?'<span class="today-badge">HOJE</span>':''}
+            ${done?'<span style="color:#16a34a;font-size:0.8rem;font-weight:700">✓</span>':''}
+          </div>
+          <div style="color:#888;font-size:0.75rem;margin-top:3px">${d.muscles||''} · Dia preferencial: ${prefDay}</div>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px">
+          <div style="color:var(--highlight);font-family:Cinzel,serif;font-size:0.72rem">${d.exs.length} ex.</div>
+          <span class="text-red" style="font-size:1.3rem">+</span>
+        </div>
+      </div>
+      <div class="agenda-content">
+        ${mob?`<div style="margin-bottom:12px;padding:10px;background:rgba(220,38,38,0.05);border-radius:4px">
+          <div style="color:var(--highlight);font-size:0.68rem;font-family:Cinzel,serif;font-weight:700;margin-bottom:6px">🧘 MOBILIDADE PRÉ: ${mob.name.replace(/^🏃 /,'').replace(/– /,'')}</div>
+          ${mob.exs.map(e=>`<div style="font-size:0.78rem;color:#888;padding:2px 0">• ${e.name} — ${e.r}</div>`).join('')}
+        </div>`:''}
+        <ul class="agenda-ex-list">
+          ${d.exs.map((ex,i)=>`<li>
+            <span>${i===0?'<span style="color:#f97316;margin-right:4px">🔥</span>':''}<span style="color:${i===0?'#f97316':'#ccc'}">${ex.name}</span></span>
+            <span style="color:#666;font-size:0.78rem">${ex.s}x ${ex.r}</span>
+          </li>`).join('')}
+        </ul>
+      </div>
+    </div>`;
+  });
+  c.innerHTML=html;
+}
 
-      function previewImg(inp, id) {
-        const reader = new FileReader();
-        reader.onload = (e) => {
-          const img = document.getElementById(id);
-          img.src = e.target.result;
-          img.style.display = 'block';
-        };
-        reader.readAsDataURL(inp.files[0]);
-      }
+// ===== CHECKIN HISTORY =====
+function renderCheckinHistory() {
+  const l=document.getElementById('checkin-list'); if(!l) return;
+  if (!STATE.checkins.length) { l.innerHTML='<p class="text-muted" style="text-align:center;padding:20px">Nenhum check-in registrado.</p>'; return; }
+  l.innerHTML=STATE.checkins.slice().reverse().map(c=>`<div style="background:var(--card-bg);border:1px solid var(--border);padding:14px;border-radius:6px">
+    <div style="display:flex;justify-content:space-between;margin-bottom:8px">
+      <span style="font-weight:600">${new Date(c.date+'T12:00:00').toLocaleDateString('pt-BR')}</span>
+      <span style="color:#888;font-size:0.8rem">Peso: ${c.weight} kg</span>
+    </div>
+    <div style="color:#888;font-size:0.8rem">Dieta: ${c.diet}/10 · ${c.comment||''}</div>
+  </div>`).join('');
+}
 
-      document.getElementById('checkin-form').addEventListener('submit', (e) => {
-        e.preventDefault();
-        const weight = parseFloat(document.getElementById('checkin-weight').value);
-        state.checkins.unshift({
-          date: new Date(),
-          weight: weight,
-          diet: document.getElementById('checkin-diet').value,
-          comment: document.getElementById('checkin-comment').value,
-        });
-        state.profile.weight = weight; // update current
-        save();
-        document.getElementById('checkin-modal').classList.remove('active');
-        renderDashboard();
-      });
+// ===== LOAD PROGRESS =====
+function renderLoadProgress() {
+  const c=document.getElementById('load-progress-container'); if(!c) return;
+  const map={};
+  STATE.logs.forEach(log=>{ (log.exercises||[]).forEach(ex=>{ if(ex.load){ if(!map[ex.name]) map[ex.name]=[]; map[ex.name].push(parseFloat(ex.load)); }}); });
+  const entries=Object.entries(map).slice(0,6);
+  if (!entries.length) { c.innerHTML='<p class="text-muted" style="text-align:center">Registre treinos para ver evolução de cargas.</p>'; return; }
+  c.innerHTML=entries.map(([n,ls])=>{
+    const f=ls[0],l=ls[ls.length-1],pct=f>0?Math.round(((l-f)/f)*100):0;
+    return `<div style="background:var(--card-bg);padding:10px;border-radius:4px;display:flex;justify-content:space-between;align-items:center">
+      <span style="font-size:0.85rem">${n}</span>
+      <span style="color:${pct>=0?'#16a34a':'#dc2626'};font-weight:600">${pct>=0?'+':''}${pct}%</span>
+    </div>`;
+  }).join('');
+}
 
-      // Demo mode — para testes sem URL params
-      function loadDemo() {
-        state.profile = {
-          name: 'ALUNO DEMO',
-          level: 'iniciante',
-          goal: 'gain',
-          weight: 75,
-          height: 175,
-          age: 25,
-          frequencia: 5,
-          plannedMonth: 20,
-          limitacao: '',
-          start: new Date().toISOString(),
-        };
-        save();
-        document.getElementById('no-access-screen').classList.add('hidden');
-        document.getElementById('app-screen').classList.remove('hidden');
-        renderDashboard();
-      }
+// ===== SWITCH TAB =====
+function switchTab(id, btn) {
+  document.querySelectorAll('.tab-content').forEach(t=>t.classList.add('hidden'));
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  const tab=document.getElementById('tab-'+id); if(tab) tab.classList.remove('hidden');
+  if(btn) btn.classList.add('active');
+  if(id==='avaliacoes'){renderCheckinHistory();renderLoadProgress();drawWeightChart();}
+  if(id==='agenda') renderAgenda();
+  if(id==='treino' && STATE.currentPlan) renderWorkout(STATE.currentPlan);
+  if(IS_DEMO) updateDemoBar();
+}
 
-      // Start
-      initApp();
+// ===== CHECKIN MODAL =====
+function openCheckinModal() { document.getElementById('checkin-modal').classList.add('active'); }
+
+function previewImg(input, pid) {
+  const f=input.files[0]; if(!f) return;
+  const r=new FileReader();
+  r.onload=e=>{ const i=document.getElementById(pid); i.src=e.target.result; i.style.display='block'; };
+  r.readAsDataURL(f);
+}
+
+// ===== WEIGHT CHART =====
+function drawWeightChart() {
+  const canvas=document.getElementById('weightChart'); if(!canvas) return;
+  const ctx=canvas.getContext('2d');
+  const cins=STATE.checkins;
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  if (cins.length<2) {
+    ctx.fillStyle='#555'; ctx.font='14px Montserrat'; ctx.textAlign='center';
+    ctx.fillText('Adicione check-ins para ver o gráfico',canvas.width/2,canvas.height/2); return;
+  }
+  const ws=cins.map(c=>c.weight), W=canvas.width, H=canvas.height;
+  const mx=Math.max(...ws)+2, mn=Math.min(...ws)-2;
+  ctx.strokeStyle='#dc2626'; ctx.lineWidth=2; ctx.beginPath();
+  ws.forEach((w,i)=>{ const x=(i/(ws.length-1))*(W-40)+20, y=H-((w-mn)/(mx-mn))*(H-40)-20; i===0?ctx.moveTo(x,y):ctx.lineTo(x,y); });
+  ctx.stroke();
+  ctx.fillStyle='#dc2626';
+  ws.forEach((w,i)=>{
+    const x=(i/(ws.length-1))*(W-40)+20, y=H-((w-mn)/(mx-mn))*(H-40)-20;
+    ctx.beginPath(); ctx.arc(x,y,4,0,Math.PI*2); ctx.fill();
+    ctx.fillStyle='#888'; ctx.font='10px Montserrat'; ctx.fillText(w+'kg',x,y-8); ctx.fillStyle='#dc2626';
+  });
+}
+
+// ===== BOOT =====
+document.addEventListener('DOMContentLoaded', ()=>{
+  const form=document.getElementById('checkin-form');
+  if(form) form.addEventListener('submit', e=>{
+    e.preventDefault();
+    const w=parseFloat(document.getElementById('checkin-weight').value);
+    const d=parseInt(document.getElementById('checkin-diet').value);
+    const cm=document.getElementById('checkin-comment').value;
+    if(!w||isNaN(d)) return alert('Preencha peso e adesão à dieta.');
+    STATE.checkins.push({date:new Date().toISOString().split('T')[0],weight:w,diet:d,comment:cm});
+    if(STATE.profile) STATE.profile.weight=w;
+    save();
+    document.getElementById('checkin-modal').classList.remove('active');
+    form.reset();
+    renderDashboard();
+  });
+  initApp();
+});
     </script>
-  <script defer="" src="./index_files/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;4edd5f8ec12a48cfa682ab8261b80a79&quot;,&quot;server_timing&quot;:{&quot;name&quot;:{&quot;cfCacheStatus&quot;:true,&quot;cfEdge&quot;:true,&quot;cfExtPri&quot;:true,&quot;cfL4&quot;:true,&quot;cfOrigin&quot;:true,&quot;cfSpeedBrain&quot;:true},&quot;location_startswith&quot;:null}}" crossorigin="anonymous"></script>
-
-
+  
+<script defer="" src="./index_files/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;4edd5f8ec12a48cfa682ab8261b80a79&quot;,&quot;server_timing&quot;:{&quot;name&quot;:{&quot;cfCacheStatus&quot;:true,&quot;cfEdge&quot;:true,&quot;cfExtPri&quot;:true,&quot;cfL4&quot;:true,&quot;cfOrigin&quot;:true,&quot;cfSpeedBrain&quot;:true},&quot;location_startswith&quot;:null}}" crossorigin="anonymous"></script>
 </body></html>
